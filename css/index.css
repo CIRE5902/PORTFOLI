@@ -11,11 +11,21 @@ body {
     background-color: #f4f4f4;
 }
 
+.container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 3rem;
+    display: grid;
+    grid-template-columns: minmax(100px, 0.1fr) minmax(400px, 1fr); /* La barra lateral es mínima de 100px y el contenido mínimo de 400px */
+    grid-gap: 20px;
+    width: 100%;
+}
+
 /* Sidebar fijo en escritorio */
 .sidebar {
     position: fixed;
     top: 0;
-    left: 0;
+    left: 1rem; /* Respeta el padding-left del contenedor */
     height: 100%;
     width: 60px;
     background-color: #333;
@@ -23,6 +33,7 @@ body {
     overflow: hidden;
     z-index: 1000;
     padding-top: 20px;
+    padding-left: 1rem; /* Para que el contenido dentro del sidebar esté alineado */
 }
 
 /* Sidebar expandido en hover en escritorio */
@@ -32,7 +43,8 @@ body {
 
 /* Estilo del icono de menú (solo visible en móvil) */
 .menu-icon {
-    display: none; /* Oculto por defecto en escritorio */
+    display: none;
+    /* Oculto por defecto en escritorio */
     font-size: 30px;
     padding: 15px;
     cursor: pointer;
@@ -88,18 +100,20 @@ body {
 
 /* Estilos del contenido principal en escritorio */
 .content {
-    margin-left: 60px;
+    padding-left: calc(60px + 1rem); /* Respeta el padding del contenedor */
     padding: 20px;
     transition: margin-left 0.3s ease;
 }
 
 /* Mover el contenido cuando el sidebar está expandido en hover */
-.sidebar:hover + .content {
-    margin-left: 200px;
+.sidebar:hover+.content {
+    padding-left: calc(200px + 1rem); /* Aumenta el padding cuando el sidebar se expande */
+    /* margin-left: 200px; */
 }
 
 /* Solo para dispositivos móviles */
 @media (max-width: 768px) {
+
     /* Ocultar el sidebar fijo en móviles */
     .sidebar {
         left: -250px;
@@ -109,7 +123,8 @@ body {
 
     /* Mostrar el icono del menú en móviles */
     .menu-icon {
-        display: block; /* Solo visible en móvil */
+        display: block;
+        /* Solo visible en móvil */
     }
 
     /* Sidebar abierto en móvil */
@@ -123,13 +138,14 @@ body {
     }
 
     /* Mover el contenido cuando el menú está abierto en móvil */
-    .sidebar.open + .content {
+    .sidebar.open+.content {
         margin-left: 250px;
     }
 
     /* En móviles, mostrar los textos (títulos) cuando el menú está desplegado */
     .sidebar.open .title {
-        opacity: 1;  /* Mostrar los títulos de los enlaces cuando el menú está abierto */
+        opacity: 1;
+        /* Mostrar los títulos de los enlaces cuando el menú está abierto */
     }
 
     /* En móviles, el contenido no se desplaza si el menú está cerrado */
