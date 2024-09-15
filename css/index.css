@@ -1,0 +1,139 @@
+/* Resetear estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+    background-color: #f4f4f4;
+}
+
+/* Sidebar fijo en escritorio */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 60px;
+    background-color: #333;
+    transition: width 0.3s ease;
+    overflow: hidden;
+    z-index: 1000;
+    padding-top: 20px;
+}
+
+/* Sidebar expandido en hover en escritorio */
+.sidebar:hover {
+    width: 200px;
+}
+
+/* Estilo del icono de menú (solo visible en móvil) */
+.menu-icon {
+    display: none; /* Oculto por defecto en escritorio */
+    font-size: 30px;
+    padding: 15px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #fff;
+    background-color: #333;
+    z-index: 1001;
+    transition: left 0.3s ease;
+}
+
+/* Iconos y títulos dentro del sidebar */
+.sidebar .sidebar-links {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar .sidebar-links li {
+    margin: 20px 0;
+}
+
+.sidebar .sidebar-links a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar .sidebar-links a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+.icon {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.title {
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Mostrar los títulos solo cuando el sidebar está expandido */
+.sidebar:hover .title {
+    opacity: 1;
+}
+
+/* Estilos del contenido principal en escritorio */
+.content {
+    margin-left: 60px;
+    padding: 20px;
+    transition: margin-left 0.3s ease;
+}
+
+/* Mover el contenido cuando el sidebar está expandido en hover */
+.sidebar:hover + .content {
+    margin-left: 200px;
+}
+
+/* Solo para dispositivos móviles */
+@media (max-width: 768px) {
+    /* Ocultar el sidebar fijo en móviles */
+    .sidebar {
+        left: -250px;
+        width: 200px;
+        transition: left 0.3s ease-in-out;
+    }
+
+    /* Mostrar el icono del menú en móviles */
+    .menu-icon {
+        display: block; /* Solo visible en móvil */
+    }
+
+    /* Sidebar abierto en móvil */
+    .sidebar.open {
+        left: 0;
+    }
+
+    /* Mover el icono de menú junto con el sidebar */
+    .menu-icon.menu-open {
+        left: 260px;
+    }
+
+    /* Mover el contenido cuando el menú está abierto en móvil */
+    .sidebar.open + .content {
+        margin-left: 250px;
+    }
+
+    /* En móviles, mostrar los textos (títulos) cuando el menú está desplegado */
+    .sidebar.open .title {
+        opacity: 1;  /* Mostrar los títulos de los enlaces cuando el menú está abierto */
+    }
+
+    /* En móviles, el contenido no se desplaza si el menú está cerrado */
+    .content {
+        margin-left: 0;
+    }
+}
