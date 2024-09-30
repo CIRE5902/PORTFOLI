@@ -4,36 +4,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Portafolio</title>
+    <title>Portfolio - Éric Perez</title>
     <link rel="stylesheet" href="css/index.css">
 </head>
 
-<body>
-    <header>
-        <!-- Icono del menú para móvil -->
-        <div class="menu-icon" id="menu-toggle">
-            ☰
-        </div>
-    </header>
-
+<body class="dark-mode"> <!-- Iniciamos con el modo oscuro por defecto -->
     <div class="container">
         <!-- Sidebar -->
-        <nav class="sidebar" id="mobile-sidebar">
-            <ul class="sidebar-links">
-                <li><a href="#"><span class="icon">🏠</span><span class="title">Home</span></a></li>
-                <li><a href="#"><span class="icon">👤</span><span class="title">About</span></a></li>
-                <li><a href="#"><span class="icon">🛠</span><span class="title">Services</span></a></li>
-                <li><a href="#"><span class="icon">📁</span><span class="title">Portfolio</span></a></li>
-                <li><a href="#"><span class="icon">✉️</span><span class="title">Contact</span></a></li>
-            </ul>
-        </nav>
+        <div class="sidebar" id="sidebar">
+            <div class="icon-wrapper" data-tooltip="Inicio">
+                <img src="images/avatar.png" href="#" class="sidebar-icon" alt="Avatar">
+                <span class="icon-title">Inicio</span>
+            </div>
+            
+            <div class="icon-wrapper" data-tooltip="Proyectos">
+                <a href="#" class="sidebar-icon">💻</a>
+                <span class="icon-title">Proyectos</span>
+            </div>
+            
+            <div class="icon-wrapper" data-tooltip="Estudios">
+                <a href="#" class="sidebar-icon">📚</a>
+                <span class="icon-title">Estudios</span>
+            </div>
+        </div>
 
-        <!-- Contenido principal -->
-        <main class="content">
-            <h1>Bienvenido a Mi Portafolio</h1>
-            <p>Aquí puedes ver mis proyectos y obtener más información.</p>
-        </main>
+        <!-- Botón de menú móvil (hamburguesa) -->
+        <div class="menu-btn" id="menu-btn">
+            &#9776;
+        </div>
+
+        <!-- Barra superior fija a la derecha (Idioma y Modo Oscuro) -->
+        <div class="top-bar">
+            <!-- Idioma -->
+            <div class="icon-wrapper" data-tooltip="Idioma">
+                <a href="#" class="sidebar-icon">🌍</a>
+            </div>
+
+            <!-- Modo Claro/Oscuro -->
+            <div class="icon-wrapper" id="theme-toggle" data-tooltip="Modo Oscuro">
+                <a href="#" class="sidebar-icon">
+                    <img id="theme-icon" src="images/moon.png" alt="Modo Oscuro" width="30" height="30">
+                </a>
+            </div>
+        </div>
+
+        <!-- Contenido principal centrado -->
+        <div class="content">
+            <img src="images/avatar.png" href="#" class="content-avatar" alt="Avatar">
+            <h1>Éric Pérez</h1>
+            <h2>Desarrollador web y frontend en formación con títulos en DAW y ASIX.</h2>
+            <div class="btn btn-curriculum">
+                <img src="images/curriculum.png" alt="curriculum">
+                <p>Curriculum</p>
+            </div>
+            <div class="btn btn-work">
+                <img src="images/work.png" alt="work">
+                <p>Disponible para trabajar</p>
+            </div>
+        </div>
     </div>
+
+    <!-- Enlazamos el archivo JS externo -->
     <script src="js/index.js"></script>
 </body>
 
