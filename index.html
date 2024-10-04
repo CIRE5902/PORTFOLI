@@ -6,76 +6,187 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Éric Perez</title>
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body class="dark-mode"> <!-- Iniciamos con el modo oscuro por defecto -->
     <div class="container">
         <!-- Sidebar -->
-        <div class="sidebar" id="sidebar">
+        <aside class="sidebar" id="sidebar">
             <div class="icon-wrapper" data-tooltip="Inicio">
-                <img src="images/avatar.png" href="#" class="sidebar-icon" alt="Avatar">
+                <a href="#">
+                    <img src="images/avatar.png" class="sidebar-icon" alt="Avatar">
+                </a>
                 <span class="icon-title">Inicio</span>
             </div>
-            
+
             <div class="icon-wrapper" data-tooltip="Proyectos">
                 <a href="#" class="sidebar-icon">💻</a>
                 <span class="icon-title">Proyectos</span>
             </div>
-            
+
             <div class="icon-wrapper" data-tooltip="Estudios">
                 <a href="#" class="sidebar-icon">📚</a>
                 <span class="icon-title">Estudios</span>
             </div>
-        </div>
+        </aside>
 
         <!-- Botón de menú móvil (hamburguesa) -->
-        <div class="menu-btn" id="menu-btn">
+        <button class="menu-btn" id="menu-btn" aria-label="Abrir menú">
             &#9776;
-        </div>
+        </button>
 
         <!-- Barra superior fija a la derecha (Idioma y Modo Oscuro) -->
-        <div class="top-bar">
+        <header class="top-bar">
             <!-- Idioma -->
             <div class="icon-wrapper" data-tooltip="Idioma">
-                <a href="#" class="sidebar-icon">🌍</a>
+                <i class="fa-solid fa-language"></i>
+                <!-- <a href="#" class="sidebar-icon">🌍</a> -->
             </div>
 
             <!-- Modo Claro/Oscuro -->
             <div class="icon-wrapper" id="theme-toggle" data-tooltip="Modo Oscuro">
-                <a href="#" class="sidebar-icon">
-                    <img id="theme-icon" src="images/moon.png" alt="Modo Oscuro" width="30" height="30">
-                </a>
+                <button aria-label="Alternar modo">
+                    <i class="fa-solid fa-moon"></i>
+                    <!-- <img id="theme-icon" src="images/moon.png" alt="Modo Oscuro" width="30" height="30"> -->
+                </button>
             </div>
-        </div>
+        </header>
 
         <!-- Contenido principal centrado -->
-        <div class="content">
-            <img src="images/avatar.png" href="#" class="content-avatar" alt="Avatar">
+        <main class="content">
+            <img src="images/avatar.png" class="main-avatar" alt="Avatar">
             <h1>Éric Pérez</h1>
             <h2>Desarrollador web y frontend en formación con títulos en DAW y ASIX.</h2>
+
             <div class="btn btn-curriculum">
-                <img src="images/curriculum.png" alt="curriculum">
+                <img class="btn-icon" src="images/curriculum.png" alt="Curriculum">
                 <p>Curriculum</p>
             </div>
+
             <div class="btn btn-work">
-                <img src="images/work.png" alt="work">
-                <p>Disponible para trabajar</p>
+                <img class="btn-icon" src="images/work.png" alt="Disponible">
+                <p>Disponible</p>
             </div>
+
             <div class="social-networks">
-                <img src="images/linkedin.png" alt="work">
-                <img src="images/mail.png" alt="work">
-                <img src="images/github.png" alt="work">
-                <img src="images/figma.png" alt="work">
+                <a href="#" aria-label="LinkedIn">
+                    <!-- <img src="images/linkedin.png" alt="LinkedIn"> -->
+                    <i class="social-icon fab fa-linkedin"></i>
+                </a>
+                <a href="#" aria-label="Correo">
+                    <!-- <img src="images/mail.png" alt="Correo"> -->
+                    <i class="social-icon fas fa-envelope"></i> <!-- Ícono de Correo -->
+                </a>
+                <a href="#" aria-label="GitHub">
+                    <!-- <img src="images/github.png" alt="GitHub"> -->
+                    <i class="social-icon fab fa-github"></i>
+                </a>
+                <a href="#" aria-label="Figma">
+                    <!-- <img src="images/figma.png" alt="Figma"> -->
+                    <i class="social-icon fa-brands fa-figma"></i>
+                </a>
             </div>
-            <div class="expstu">
-                <div class="exp">
-                    dsfsdfsdfdsf
-                </div>
-                <div class="stu">
-                    sdfdsfsdfsdfsdf
-                </div>
+
+            <div class="box-expstu">
+                <section class="box-exp">
+                    <!-- Contenido de Experiencia -->
+                    <div class="box-title">
+                        <!-- <img src="images/experiencia.png" alt="Experiencia"> -->
+                        <i class="profile-details-icon fas fa-briefcase"></i> 
+                        <h3>Experiencia</h3>
+                    </div>
+                    <div class="box-experiences">
+                        <div class="box-info">
+                            <div class="box-info-image">
+                                <img class="box-icon" src="images/softgam.png" alt="Softgam">
+                            </div>
+                            <div class="box-info-desc">
+                                <h3>Softgam</h3>
+                                <p>TÉCNICO SUPERIOR EN DESARROLLO DE
+                                    APLICACIONES WEB</p>
+                            </div>
+                            <p class="date">02/2024 - 08/2024</p>
+                        </div>
+                        <div class="box-info">
+                            <div class="box-info-image">
+                                <img class="box-icon" src="images/softgam.png" alt="Softgam">
+                            </div>
+                            <div class="box-info-desc">
+                                <h3>Softgam</h3>
+                                <p>TÉCNICO SUPERIOR EN DESARROLLO DE
+                                    APLICACIONES WEB</p>
+                            </div>
+                            <p class="date">02/2024 - 08/2024</p>
+                        </div>
+                        <div class="box-info">
+                            <div class="box-info-image">
+                                <img class="box-icon" src="images/softgam.png" alt="Softgam">
+                            </div>
+                            <div class="box-info-desc">
+                                <h3>Softgam</h3>
+                                <p>TÉCNICO SUPERIOR EN DESARROLLO DE
+                                    APLICACIONES WEB</p>
+                            </div>
+                            <p class="date">02/2024 - 08/2024</p>
+                        </div>
+                        <div class="box-info">
+                            <div class="box-info-image">
+                                <img class="box-icon" src="images/softgam.png" alt="Softgam">
+                            </div>
+                            <div class="box-info-desc">
+                                <h3>Softgam</h3>
+                                <p>TÉCNICO SUPERIOR EN DESARROLLO DE
+                                    APLICACIONES WEB</p>
+                            </div>
+                            <p class="date">02/2024 - 08/2024</p>
+                        </div>
+                    </div>
+
+                </section>
+                <section class="box-stu">
+                    <div class="box-title">
+                        <!-- <img src="images/experiencia.png" alt="Experiencia"> -->
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        <h3>Estudios</h3>
+                    </div>
+                    <div class="box-studys">
+                        <div class="box-info">
+                            <div class="box-info-image">
+                                <img class="box-icon" src="images/copernic.png" alt="Copernic">
+                            </div>
+                            <div class="box-info-desc">
+                                <h3>INS Nicolau Copèrnic</h3>
+                                <p>Desarrollo de Aplicaciones Web (DAW)</p>
+                            </div>
+                            <p class="date">09/2023 - 06/2024</p>
+                        </div>
+
+                        <div class="box-info">
+                            <div class="box-info-image">
+                                <img class="box-icon" src="images/copernic.png" alt="Copernic">
+                            </div>
+                            <div class="box-info-desc">
+                                <h3>INS Nicolau Copèrnic</h3>
+                                <p>Administración de Sistemas Informáticos en Red (ASIR)</p>
+                            </div>
+                            <p class="date">09/2021 - 06/2023</p>
+                        </div>
+
+                        <div class="box-info">
+                            <div class="box-info-image">
+                                <img class="box-icon" src="images/copernic.png" alt="Copernic">
+                            </div>
+                            <div class="box-info-desc">
+                                <h3>INS Nicolau Copèrnic</h3>
+                                <p>Sistemas Microinformáticos y Redes (SMIX)</p>
+                            </div>
+                            <p class="date">09/2018 - 06/2021</p>
+                        </div>
+                    </div>
+                </section>
             </div>
-        </div>
+        </main>
     </div>
 
     <!-- Enlazamos el archivo JS externo -->

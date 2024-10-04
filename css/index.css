@@ -1,3 +1,4 @@
+/* Reset de estilos básicos */
 * {
     margin: 0;
     padding: 0;
@@ -9,6 +10,56 @@ body {
     transition: background 0.3s ease, color 0.3s ease;
 }
 
+
+/* Estilos tipografia */
+.content h1 {
+    font-size: 3rem;
+    font-weight: bolder;
+}
+
+.content h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.content h3 {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.content p {
+    font-size: 0.7rem;
+}
+
+/* Estilos iconos */
+.sidebar-icon {
+    width: 60px;
+    height: 60px;
+    display: inline-block;
+    object-fit: cover;
+    margin-right: 15px;
+    font-size: 50px;
+}
+
+.main-avatar {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+}
+
+.social-icon {
+    font-size: 40px;
+    transition: transform 0.3s ease;
+}
+
+.btn-icon {
+    width: 30px;
+    height: 30px;
+}
+
+.box-icon {}
+
+/* Modos de color */
 .dark-mode {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
         linear-gradient(137deg, #4B0082 0%, #9932CC 50%, #8A2BE2 100%);
@@ -21,6 +72,9 @@ body {
     color: black;
 }
 
+
+
+/* Contenedor principal */
 .container {
     display: flex;
     min-height: 100vh;
@@ -28,6 +82,8 @@ body {
     justify-content: flex-start;
 }
 
+
+/* Barra lateral */
 .sidebar {
     position: fixed;
     top: 0;
@@ -42,7 +98,7 @@ body {
     background-color: rgba(0, 0, 0, 0.7);
     backdrop-filter: blur(10px);
     transition: width 0.3s ease;
-    box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .light-mode .sidebar {
@@ -53,10 +109,10 @@ body {
     width: 220px;
 }
 
+/* Iconos en la barra lateral */
 .icon-wrapper {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
     width: 100%;
     height: 70px;
     padding-left: 10px;
@@ -64,16 +120,7 @@ body {
     overflow: hidden;
 }
 
-.sidebar-icon,
-.sidebar img {
-    width: 60px;
-    height: 60px;
-    display: inline-block;
-    object-fit: cover;
-    margin-right: 15px;
-    vertical-align: middle;
-    font-size: 50px;
-}
+
 
 .light-mode .sidebar-icon {
     color: black;
@@ -95,34 +142,22 @@ body {
     opacity: 1;
 }
 
+/* Barra superior */
 .top-bar {
     position: fixed;
     top: 10px;
     right: 10px;
     display: flex;
     gap: 20px;
-    /* z-index: 1000; */
 }
 
-/* .top-bar .icon-wrapper {
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-} */
 
-/* .top-bar img,
-.top-bar .sidebar-icon {
-    width: 30px;
-    height: 30px;
-} */
 
+
+/* Contenido principal */
 .content {
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
-    /* align-items: flex-start; */
     text-align: left;
     margin-left: 90px;
     width: 100%;
@@ -131,31 +166,16 @@ body {
     gap: 10px;
 }
 
-.content h1 {
-    font-size: 3rem;
-}
-
-.content p {
-    font-size: 1.5rem;
-}
-
-.menu-btn {
-    display: none;
-}
-
-.content-avatar {
-    height: 150px;
-    width: 150px;
-}
-
 .btn {
     margin-top: 20px;
     padding: 15px;
     border-radius: 5px;
     display: flex;
-    flex-direction: row;
-    gap: 10px;
+    align-items: center;
+    gap: 20px;
     width: 400px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .btn-curriculum {
@@ -174,11 +194,6 @@ body {
     background-color: #45a049;
 }
 
-.btn img {
-    width: 30px;
-    height: 30px;
-}
-
 .btn p {
     font-size: 24px;
     font-weight: bold;
@@ -187,43 +202,110 @@ body {
 .social-networks {
     margin-top: 30px;
     display: flex;
-    flex-direction: row;
-    align-items: center;
     gap: 50px;
 }
 
-.social-networks img {
-    width: 40px;
-    height: 40px;
+.social-networks a img:hover {
+    transform: scale(1.1);
 }
 
-.expstu {
+/* Secciones de experiencia y estudios */
+.box-expstu {
     margin-top: 100px;
-    height: 300px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 20px;
 }
 
-.exp, .stu{
+.box-exp,
+.box-stu {
     overflow: hidden;
-    height: 300px;
+    padding: 20px;
     border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.1); 
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); 
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    height: 250px;
+
+    border-color: hsla(0, 0%, 100%, .1);
+    /* background-color: rgba(24, 24, 27, .2); */
+    outline-color: #1a1a1a;
+}
+
+.box-exp:hover,
+.box-stu:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* Botón de menú móvil */
+.menu-btn {
+    display: none;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    z-index: 1000;
+    background: none;
+    border: none;
+}
+
+.box-title {
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 5px 15px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+
+    width: min-content;
+}
+
+.box-title img {
+    height: 25px;
+    width: 25px;
+}
+
+.box-experiences, .box-studys {
+    gap: 10px;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+}
+
+.box-info {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 10fr 3fr;
+    gap: 10px;
+}
+
+.box-info-desc {
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+}
+
+.box-info-image {
+    display: flex;
+    align-items: center;
+}
+
+.box-info .date
+
+/* ,.box-info .box-icon */
+    {
+    display: flex;
+    align-items: end;
 }
 
 
+/* Responsividad */
 @media (max-width: 768px) {
     .menu-btn {
-        position: fixed;
-        top: 10px;
-        left: 10px;
-        font-size: 30px;
-        color: white;
-        cursor: pointer;
-        z-index: 1000;
         display: block;
     }
 
@@ -231,6 +313,7 @@ body {
         width: 220px;
         transform: translateX(-100%);
         opacity: 0;
+        transition: transform 0.3s ease, opacity 0.3s ease;
     }
 
     .sidebar.show {
@@ -240,7 +323,7 @@ body {
 
     .content {
         margin-left: 0;
-        width: 100%;
+        padding: 70px 20px 20px 20px;
     }
 
     .icon-wrapper {
@@ -249,5 +332,9 @@ body {
 
     .icon-title {
         opacity: 1;
+    }
+
+    .btn {
+        width: 100%;
     }
 }
