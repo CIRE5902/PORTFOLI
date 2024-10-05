@@ -10,8 +10,7 @@ body {
     transition: background 0.3s ease, color 0.3s ease;
 }
 
-
-/* Estilos tipografia */
+/* Tipografía */
 .content h1 {
     font-size: 3rem;
     font-weight: bolder;
@@ -31,7 +30,7 @@ body {
     font-size: 0.7rem;
 }
 
-/* Estilos iconos */
+/* Iconos */
 .sidebar-icon {
     width: 60px;
     height: 60px;
@@ -71,11 +70,42 @@ body {
 
 .light-mode {
     background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
-        linear-gradient(137deg, #FFD700 0%, #FFE135 50%, #FFD700 100%);
+        linear-gradient(137deg, #00BFFF 0%, #1E90FF 50%, #00BFFF 100%);
     color: black;
 }
 
+.dark-mode .social-icon {
+    color: white;
+}
 
+.light-mode .social-icon {
+    color: black;
+}
+
+/* Hover de iconos sociales */
+.social-icon.fa-linkedin:hover {
+    background: linear-gradient(45deg, #0077b5, #00a0dc);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.social-icon.fa-envelope:hover {
+    background: linear-gradient(45deg, #d44638, #ff5722);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.social-icon.fa-github:hover {
+    background: linear-gradient(45deg, #333, #6e5494);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.social-icon.fa-figma:hover {
+    background: linear-gradient(45deg, #0acf83, #a259ff);
+    -webkit-background-clip: text;
+    color: transparent;
+}
 
 /* Contenedor principal */
 .container {
@@ -84,7 +114,6 @@ body {
     height: 100%;
     justify-content: flex-start;
 }
-
 
 /* Barra lateral */
 .sidebar {
@@ -123,8 +152,6 @@ body {
     overflow: hidden;
 }
 
-
-
 .light-mode .sidebar-icon {
     color: black;
 }
@@ -154,9 +181,6 @@ body {
     gap: 20px;
 }
 
-
-
-
 /* Contenido principal */
 .content {
     display: flex;
@@ -164,11 +188,11 @@ body {
     text-align: left;
     margin-left: 90px;
     width: 100%;
-    /* margin-top: 100px; */
     padding: 100px 50px 30px 50px;
     gap: 10px;
 }
 
+/* Botones */
 .btn {
     margin-top: 20px;
     padding: 15px;
@@ -202,6 +226,7 @@ body {
     font-weight: bold;
 }
 
+/* Redes sociales */
 .social-networks {
     margin-top: 30px;
     display: flex;
@@ -232,15 +257,13 @@ body {
 .box-pro,
 .box-hab,
 .box-spotify,
-.box-book{
+.box-book {
     overflow: hidden;
     padding: 15px;
     border-radius: 10px;
     background-color: rgba(255, 255, 255, 0.1);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-
     border-color: hsla(0, 0%, 100%, .1);
-    /* background-color: rgba(24, 24, 27, .2); */
     outline-color: #1a1a1a;
 }
 
@@ -248,7 +271,7 @@ body {
 .box-stu,
 .box-pro,
 .box-hab,
-.box-spocon{
+.box-spocon {
     height: 300px;
 }
 
@@ -258,13 +281,50 @@ body {
     gap: 10px;
 }
 
-.box-book{
+/* Libros */
+.box-book {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     gap: 25px;
 }
+
+.carousel-container {
+    width: 100%;
+    overflow: hidden; 
+    position: relative;
+}
+
+.carousel-track {
+    display: flex;
+    animation: scroll 20s linear infinite; 
+    width: max-content; 
+}
+
+.carousel-track a {
+    display: inline-block;
+    padding: 0 20px; 
+}
+
+.carousel-track img {
+    border-radius: 10px;
+}
+
+.carousel-container:hover .carousel-track {
+    animation-play-state: paused; 
+}
+
+/* Animación */
+@keyframes scroll {
+    0% {
+        transform: translateX(0); 
+    }
+    100% {
+        transform: translateX(-50%); 
+    }
+}
+
 
 /* Botón de menú móvil */
 .menu-btn {
@@ -280,19 +340,17 @@ body {
     border: none;
 }
 
+/* Títulos */
 .box-title {
     border: 2px;
     border-radius: 20px;
     padding: 10px 25px;
-
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 10px;
-
     width: min-content;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-    
 }
 
 .box-title img {
@@ -300,6 +358,7 @@ body {
     width: 25px;
 }
 
+/* Experiencias y estudios */
 .box-experiences,
 .box-studys {
     gap: 10px;
@@ -308,6 +367,7 @@ body {
     flex-direction: column;
 }
 
+/* Imágenes de los proyectos */
 .box-imagen {
     width: 100%;
     height: 100%;
@@ -319,6 +379,7 @@ body {
     height: 100%;
 }
 
+/* Información dentro de las cajas */
 .box-info {
     margin-top: 20px;
     display: grid;
@@ -337,14 +398,10 @@ body {
     align-items: center;
 }
 
-.box-info .date
-
-/* ,.box-info .box-icon */
-    {
+.box-info .date {
     display: flex;
     align-items: end;
 }
-
 
 /* Responsividad */
 @media (max-width: 768px) {
