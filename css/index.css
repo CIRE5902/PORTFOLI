@@ -183,17 +183,18 @@ body {
 
 }
 
-.top-bar .icon-wrapper{
-    backdrop-filter: blur(10px); 
-    background-color: rgba(0, 0, 0, 0.5); 
+.top-bar .icon-wrapper {
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 10px 20px;
-    border-radius: 15px; 
+    border-radius: 15px;
 }
 
 .top-bar .icon-wrapper i {
     /* color: white;  */
     font-size: 24px;
 }
+
 /* Contenido principal */
 .content {
     display: flex;
@@ -206,7 +207,10 @@ body {
 }
 
 /* Botones */
+/* Estilo base para los botones */
 .btn {
+    position: relative;
+    /* Para posicionar el icono en la esquina */
     margin-top: 20px;
     padding: 15px;
     border-radius: 5px;
@@ -215,24 +219,64 @@ body {
     gap: 20px;
     width: 400px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
+/* Icono de la mano, oculto por defecto */
+.interaction-icon {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.7);
+    opacity: 0;
+    /* Ocultar el icono inicialmente */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    /* Transición suave para mostrarlo */
+}
+
+/* Mostrar el icono de la mano al hacer hover sobre el botón */
+.btn:hover .interaction-icon {
+    opacity: 1;
+    /* Mostrar el icono */
+    transform: scale(1.2);
+    /* Aumentar tamaño al hacer hover */
+}
+
+/* Efecto hover en el botón de curriculum */
 .btn-curriculum {
     background-color: #5ba3af;
 }
 
 .btn-curriculum:hover {
     background-color: #5195a0;
+    transform: translateY(-5px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
+/* Efecto hover en el botón de disponible */
 .btn-work {
     background-color: #4CAF50;
 }
 
 .btn-work:hover {
     background-color: #45a049;
+    transform: translateY(-5px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
+
+/* Icono del botón */
+.btn-icon {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+/* Hacer que el icono dentro del botón gire ligeramente al pasar el mouse */
+.btn:hover .btn-icon {
+    transform: rotate(15deg);
+}
+
 
 .btn p {
     font-size: 24px;
@@ -305,19 +349,19 @@ body {
 
 .carousel-container {
     width: 100%;
-    overflow: hidden; 
+    overflow: hidden;
     position: relative;
 }
 
 .carousel-track {
     display: flex;
-    animation: scroll 20s linear infinite; 
-    width: max-content; 
+    animation: scroll 20s linear infinite;
+    width: max-content;
 }
 
 .carousel-track a {
     display: inline-block;
-    padding: 0 20px; 
+    padding: 0 20px;
 }
 
 .carousel-track img {
@@ -327,23 +371,24 @@ body {
 }
 
 .carousel-container:hover .carousel-track {
-    animation-play-state: paused; 
+    animation-play-state: paused;
 }
 
 /* Efecto hover en los libros */
 .carousel-track img:hover {
     cursor: pointer;
-    transform: rotateY(-28deg) rotateZ(-2deg) scale(1.05); 
-    box-shadow: 1px 3px 2px #eaeaee, 20px 8px 0 rgba(243, 243, 245, 0.7); 
+    transform: rotateY(-28deg) rotateZ(-2deg) scale(1.05);
+    box-shadow: 1px 3px 2px #eaeaee, 20px 8px 0 rgba(243, 243, 245, 0.7);
 }
 
 /* Animación */
 @keyframes scroll {
     0% {
-        transform: translateX(0); 
+        transform: translateX(0);
     }
+
     100% {
-        transform: translateX(-50%); 
+        transform: translateX(-50%);
     }
 }
 
@@ -422,6 +467,30 @@ body {
 .box-info .date {
     display: flex;
     align-items: end;
+}
+
+.box-habilidades {
+    padding: 40px 20px;
+    overflow: hidden;
+    width: 100%;
+    height: 150%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
+    gap: 10px;
+}
+
+.box-habilidades i {
+    font-size: 50px;
+    gap: 20px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    border-color: hsla(0, 0%, 100%, .1);
+    outline-color: #1a1a1a;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Responsividad */
