@@ -309,10 +309,19 @@ body {
 
 .carousel-track img {
     border-radius: 10px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    transform-origin: left center;
 }
 
 .carousel-container:hover .carousel-track {
     animation-play-state: paused; 
+}
+
+/* Efecto hover en los libros */
+.carousel-track img:hover {
+    cursor: pointer;
+    transform: rotateY(-28deg) rotateZ(-2deg) scale(1.05); 
+    box-shadow: 1px 3px 2px #eaeaee, 20px 8px 0 rgba(243, 243, 245, 0.7); 
 }
 
 /* Animación */
@@ -324,7 +333,6 @@ body {
         transform: translateX(-50%); 
     }
 }
-
 
 /* Botón de menú móvil */
 .menu-btn {
