@@ -20,14 +20,30 @@
                 <span class="icon-title">Inicio</span>
             </div>
 
+
+            <div class="icon-wrapper" data-tooltip="Estudios">
+                <a href="#" class="sidebar-icon">👤</a>
+                <span class="icon-title">Sobre mi</span>
+            </div>
+
             <div class="icon-wrapper" data-tooltip="Proyectos">
-                <a href="#" class="sidebar-icon">💻</a>
+                <a href="#" class="sidebar-icon">&lt;&gt;</a>
                 <span class="icon-title">Proyectos</span>
             </div>
 
             <div class="icon-wrapper" data-tooltip="Estudios">
-                <a href="#" class="sidebar-icon">📚</a>
+                <a href="#" class="sidebar-icon">🎓</a>
                 <span class="icon-title">Estudios</span>
+            </div>
+
+            <div class="icon-wrapper" data-tooltip="Estudios">
+                <a href="#" class="sidebar-icon">💼</a>
+                <span class="icon-title">Experiencia</span>
+            </div>
+
+            <div class="icon-wrapper" data-tooltip="Estudios">
+                <a href="#" class="sidebar-icon">🖥️</a>
+                <span class="icon-title">Tecnologias</span>
             </div>
         </aside>
 
@@ -39,9 +55,13 @@
         <!-- Barra superior fija a la derecha (Idioma y Modo Oscuro) -->
         <header class="top-bar">
             <!-- Idioma -->
+            <!-- Idioma -->
             <div class="icon-wrapper" data-tooltip="Idioma">
-                <i class="fa-solid fa-language"></i>
-                <!-- <a href="#" class="sidebar-icon">🌍</a> -->
+                <select id="language-select" aria-label="Seleccionar idioma">
+                    <option class="flag-option" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/9/9a/Flag_of_Spain.svg');" value="es">Español</option>
+                    <option class="flag-option" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/c/ce/Flag_of_Catalonia.svg');" value="ca">Català</option>
+                    <option class="flag-option" style="background-image: url('https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg');" value="en">English</option>
+                </select>
             </div>
 
             <!-- Modo Claro/Oscuro -->
@@ -59,11 +79,12 @@
             <h1>Éric Pérez</h1>
             <h2>Desarrollador web y frontend en formación con títulos en DAW y ASIX.</h2>
 
-            <div class="btn btn-curriculum">
+            <a class="btn btn-curriculum" href="otros/CV_ERIC_PEREZ_VERA.pdf" target="_blank" download>
                 <img class="btn-icon" src="images/curriculum.png" alt="Curriculum">
                 <p>Curriculum</p>
                 <i class="fa fa-hand-pointer interaction-icon"></i>
-            </div>
+            </a>
+
 
             <div class="btn btn-work">
                 <img class="btn-icon" src="images/work.png" alt="Disponible">
@@ -73,19 +94,19 @@
             </div>
 
             <div class="social-networks">
-                <a href="#" aria-label="LinkedIn">
+                <a href="https://www.linkedin.com/in/ericperezvera" target="_blank" aria-label="LinkedIn">
                     <!-- <img src="images/linkedin.png" alt="LinkedIn"> -->
                     <i class="social-icon fab fa-linkedin"></i>
                 </a>
-                <a href="#" aria-label="Correo">
+                <a href="mailto:ericperezvera02@gmail.com" target="_blank" aria-label="Correo">
                     <!-- <img src="images/mail.png" alt="Correo"> -->
                     <i class="social-icon fas fa-envelope"></i> <!-- Ícono de Correo -->
                 </a>
-                <a href="#" aria-label="GitHub">
+                <a href="https://github.com/CIRE5902" target="_blank" aria-label="GitHub">
                     <!-- <img src="images/github.png" alt="GitHub"> -->
                     <i class="social-icon fab fa-github"></i>
                 </a>
-                <a href="#" aria-label="Figma">
+                <a href="https://www.figma.com/@d5318559_4aaa_4" target="_blank" aria-label="Figma">
                     <!-- <img src="images/figma.png" alt="Figma"> -->
                     <i class="social-icon fa-brands fa-figma"></i>
                 </a>
@@ -267,44 +288,46 @@
                     <div class="box-hab">
                         <div class="box-title">
                             <i class="fas fa-code"></i>
-                            <h3>Habilidades</h3>
+                            <h3>Tecnologias</h3>
                         </div>
                         <div class="box-habilidades">
-                                <i class="fab fa-html5"></i>
-                                <i class="fab fa-css3-alt"></i>
-                                <i class="fab fa-js-square"></i>
-                                <i class="fab fa-php"></i>
-                                <i class="fab fa-node-js"></i>
-                                <i class="fab fa-react"></i>
-                                <i class="fab fa-vuejs"></i>
-                                <i class="fab fa-angular"></i>
-                     
-                                <i class="fab fa-python"></i>
-                                <i class="fab fa-laravel"></i>
-                                <i class="fab fa-docker"></i>
-                                <i class="fab fa-git"></i>
-                                <i class="fab fa-github"></i>
-                                <i class="fab fa-bootstrap"></i>
-                                <i class="fab fa-sass"></i>
-                                <i class="fab fa-less"></i>
-             
-                                <i class="fab fa-java"></i>
-                                <i class="fab fa-database"></i>
-                                <i class="fab fa-mysql"></i>
-                                <i class="fas fa-server"></i>
-                                <i class="fab fa-aws"></i>
-                                <i class="fab fa-linux"></i>
-                                <i class="fab fa-apple"></i>
-                                <i class="fab fa-windows"></i>
-                            
-                                <i class="fab fa-wordpress"></i>
-                                <i class="fab fa-drupal"></i>
-                                <i class="fab fa-joomla"></i>
-                                <i class="fab fa-figma"></i>
-                                <i class="fab fa-adobe"></i>
-                                <i class="fab fa-slack"></i>
-                                <i class="fab fa-trello"></i>
-                                <i class="fab fa-stack-overflow"></i>                            
+                            <i class="fab fa-html5"></i>
+                            <i class="fab fa-css3-alt"></i>
+                            <i class="fab fa-js-square"></i>
+                            <i class="fab fa-php"></i>
+                            <i class="fab fa-node-js"></i>
+                            <i class="fab fa-react"></i>
+                            <i class="fab fa-vuejs"></i>
+                            <i class="fab fa-angular"></i>
+
+                            <i class="fab fa-python"></i>
+                            <i class="fab fa-laravel"></i>
+                            <i class="fab fa-docker"></i>
+                            <i class="fab fa-git"></i>
+                            <i class="fab fa-github"></i>
+                            <i class="fab fa-bootstrap"></i>
+                            <i class="fab fa-sass"></i>
+                            <i class="fab fa-less"></i>
+
+                            <i class="fab fa-java"></i>
+                            <i class="fab fa-database"></i>
+                            <i class="fab fa-mysql"></i>
+                            <i class="fas fa-server"></i>
+                            <i class="fab fa-aws"></i>
+                            <i class="fab fa-linux"></i>
+                            <i class="fab fa-apple"></i>
+                            <i class="fab fa-windows"></i>
+
+                            <i class="fab fa-wordpress"></i>
+                            <i class="fab fa-drupal"></i>
+                            <i class="fab fa-joomla"></i>
+                            <i class="fab fa-figma"></i>
+                            <i class="fab fa-adobe"></i>
+                            <i class="fab fa-slack"></i>
+                            <i class="fab fa-trello"></i>
+                            <i class="fab fa-stack-overflow"></i>
+                        </div>
+
                     </div>
                 </div> <!-- Cerramos el contenedor .box-prohab -->
 

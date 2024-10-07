@@ -59,6 +59,7 @@ body {
 .box-icon {
     height: 30px;
     width: 30px;
+    border-radius: 15px;
 }
 
 /* Modos de color */
@@ -209,8 +210,6 @@ body {
 /* Botones */
 /* Estilo base para los botones */
 .btn {
-    position: relative;
-    /* Para posicionar el icono en la esquina */
     margin-top: 20px;
     padding: 15px;
     border-radius: 5px;
@@ -246,6 +245,8 @@ body {
 /* Efecto hover en el botón de curriculum */
 .btn-curriculum {
     background-color: #5ba3af;
+    text-decoration: none;
+    color: inherit;
 }
 
 .btn-curriculum:hover {
@@ -437,7 +438,7 @@ body {
 .box-imagen {
     width: 100%;
     height: 100%;
-    padding: 40px 20px;
+    padding: 20px 10px;
 }
 
 .box-imagen img {
@@ -492,6 +493,8 @@ body {
     align-items: center;
     justify-content: center;
 }
+
+
 
 /* Responsividad */
 @media (max-width: 768px) {
