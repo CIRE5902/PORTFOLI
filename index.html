@@ -57,11 +57,26 @@
             <!-- Idioma -->
             <!-- Idioma -->
             <div class="icon-wrapper" data-tooltip="Idioma">
-                <select id="language-select" aria-label="Seleccionar idioma">
-                    <option class="flag-option" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/9/9a/Flag_of_Spain.svg');" value="es">Español</option>
-                    <option class="flag-option" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/c/ce/Flag_of_Catalonia.svg');" value="ca">Català</option>
-                    <option class="flag-option" style="background-image: url('https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg');" value="en">English</option>
-                </select>
+                <div class="language-selector" id="languageSelector">
+                    <div class="selected-language" id="selectedLanguage">
+                        <img src="images/espana.png" alt="Bandera de Español">
+                    </div>
+                    <div class="language-options">
+                        <!-- Opción para Español -->
+                        <div data-lang="es">
+                            <img src="images/espana.png" alt="Bandera de Español">
+                        </div>
+                        <!-- Opción para Catalán -->
+                        <div data-lang="ca">
+                            <img src="images/catala.png" alt="Bandera de Catalán">
+                        </div>
+                        <!-- Opción para Inglés -->
+                        <div data-lang="en">
+                            <img src="images/ingles.png" alt="Bandera de Inglés">
+                        </div>
+                    </div>
+                </div>
+                
             </div>
 
             <!-- Modo Claro/Oscuro -->
