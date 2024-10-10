@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Lexend', sans-serif;
     transition: background 0.3s ease, color 0.3s ease;
 }
 
@@ -45,6 +45,23 @@ body {
     height: 150px;
     width: 150px;
     border-radius: 50%;
+}
+
+.description{
+display: block;
+white-space: nowrap;
+border-right: 4px solid;
+width: 54ch;
+
+animation: typing 5s steps(30), blink .5s infinite step-end alternate;
+overflow: hidden;
+}
+
+@keyframes typing {
+    from { width: 0;}
+}
+@keyframes blink {
+    50% { border-color: transparent;}
 }
 
 .social-icon {
