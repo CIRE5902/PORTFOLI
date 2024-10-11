@@ -209,7 +209,7 @@ body {
 .top-bar .icon-wrapper {
     backdrop-filter: blur(10px);
     background-color: rgba(0, 0, 0, 0.5);
-    /* padding: 0px; */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
     width: 60px;
     height: 60px;
     border-radius: 50px;
@@ -349,12 +349,13 @@ body {
     height: 350px;
 }
 
-.box-imagen{
+.box-imagen {
     padding-top: 20px;
 }
-.box-imagen img{
-width: 100%;
-height: 100%;
+
+.box-imagen img {
+    width: 100%;
+    height: 100%;
 }
 
 /* Cajas de Spotify y libros */
