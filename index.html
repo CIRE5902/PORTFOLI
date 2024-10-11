@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap" rel="stylesheet">
     <link rel="icon" href="images/avatar.png" type="image/png">
-    <title>Éric Perez</title>
+    <title id="page-title">Éric Perez</title>
     <meta name="description" content="Portfolio de Eric Pérez, desarrollador web y frontend en formación.">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -21,33 +21,32 @@
                 <a href="#">
                     <img src="images/avatar.png" class="sidebar-icon" alt="Avatar">
                 </a>
-                <span class="icon-title">Inicio</span>
+                <span class="icon-title" id="menu-home">Inicio</span>
             </div>
-
 
             <div class="icon-wrapper" data-tooltip="Sobre mí">
                 <a href="#" class="sidebar-icon"><i class="fas fa-user"></i></a>
-                <span class="icon-title">Sobre mí</span>
+                <span class="icon-title" id="menu-about">Sobre mí</span>
             </div>
 
             <div class="icon-wrapper" data-tooltip="Proyectos">
                 <a href="#" class="sidebar-icon"><i class="fas fa-code"></i></a>
-                <span class="icon-title">Proyectos</span>
+                <span class="icon-title" id="menu-projects">Proyectos</span>
             </div>
 
             <div class="icon-wrapper" data-tooltip="Estudios">
                 <a href="#" class="sidebar-icon"><i class="fas fa-graduation-cap"></i></a>
-                <span class="icon-title">Estudios</span>
+                <span class="icon-title" id="menu-studies">Estudios</span>
             </div>
 
             <div class="icon-wrapper" data-tooltip="Experiencia">
                 <a href="#" class="sidebar-icon"><i class="fas fa-briefcase"></i></a>
-                <span class="icon-title">Experiencia</span>
+                <span class="icon-title" id="menu-experience">Experiencia</span>
             </div>
 
             <div class="icon-wrapper" data-tooltip="Tecnologías">
                 <a href="#" class="sidebar-icon"> <i class="fas fa-layer-group"></i></a>
-                <span class="icon-title">Stack</span>
+                <span class="icon-title" id="menu-stack">Stack</span>
             </div>
 
         </aside>
@@ -77,14 +76,12 @@
                         </div>
                     </div>
                 </div>
-
             </div>
 
             <!-- Modo Claro/Oscuro -->
             <div class="icon-wrapper" id="theme-toggle" data-tooltip="Modo Oscuro">
                 <button class="btn-mode" aria-label="Alternar modo">
                     <i class="fa-solid fa-moon"></i>
-                    <!-- <img id="theme-icon" src="images/moon.png" alt="Modo Oscuro" width="30" height="30"> -->
                 </button>
             </div>
         </header>
@@ -92,38 +89,32 @@
         <!-- Contenido principal centrado -->
         <main class="content">
             <img src="images/avatar.png" class="main-avatar" alt="Avatar">
-            <h1>Éric Pérez</h1>
-            <h2>Desarrollador web y frontend en formación con títulos en DAW y ASIX.</h2>
+            <h1 id="main-title">Éric Pérez</h1>
+            <h2 id="main-description">Desarrollador web y frontend en formación con títulos en DAW y ASIX.</h2>
 
             <a class="btn btn-curriculum" href="otros/CV_ERIC_PEREZ_VERA.pdf" target="_blank" download>
                 <img class="btn-icon" src="images/curriculum.png" alt="Curriculum">
-                <p>Curriculum</p>
+                <p id="btn-cv">Curriculum</p>
                 <i class="fa fa-hand-pointer interaction-icon"></i>
             </a>
 
-
             <div class="btn btn-work">
                 <img class="btn-icon" src="images/work.png" alt="Disponible">
-                <p>Disponible</p>
+                <p id="btn-available">Disponible</p>
                 <i class="fa fa-hand-pointer interaction-icon"></i>
-
             </div>
 
             <div class="social-networks">
                 <a href="https://www.linkedin.com/in/ericperezvera" target="_blank" aria-label="LinkedIn">
-                    <!-- <img src="images/linkedin.png" alt="LinkedIn"> -->
                     <i class="social-icon fab fa-linkedin"></i>
                 </a>
                 <a href="mailto:ericperezvera02@gmail.com" target="_blank" aria-label="Correo">
-                    <!-- <img src="images/mail.png" alt="Correo"> -->
-                    <i class="social-icon fas fa-envelope"></i> <!-- Ícono de Correo -->
+                    <i class="social-icon fas fa-envelope"></i> 
                 </a>
                 <a href="https://github.com/CIRE5902" target="_blank" aria-label="GitHub">
-                    <!-- <img src="images/github.png" alt="GitHub"> -->
                     <i class="social-icon fab fa-github"></i>
                 </a>
                 <a href="https://www.figma.com/@d5318559_4aaa_4" target="_blank" aria-label="Figma">
-                    <!-- <img src="images/figma.png" alt="Figma"> -->
                     <i class="social-icon fa-brands fa-figma"></i>
                 </a>
             </div>
@@ -134,7 +125,7 @@
                         <!-- Contenido de Experiencia -->
                         <div class="box-title">
                             <i class="profile-details-icon fas fa-briefcase"></i>
-                            <h3>Experiencia</h3>
+                            <h3 id="experience-title">Experiencia</h3>
                         </div>
                         <div class="box-experiences">
                             <div class="box-info">
@@ -143,29 +134,29 @@
                                 </div>
                                 <div class="box-info-desc">
                                     <h3>Softgam</h3>
-                                    <p>TÉCNICO SUPERIOR EN DESARROLLO DE
+                                    <p id="thirdExperience">TÉCNICO SUPERIOR EN DESARROLLO DE
                                         APLICACIONES WEB</p>
                                 </div>
                                 <p class="date">02/2024 - 08/2024</p>
                             </div>
                             <div class="box-info">
                                 <div class="box-info-image">
-                                    <img class="box-icon" src="images/canroca.png" alt="Softgam">
+                                    <img class="box-icon" src="images/canroca.png" alt="CanRoca">
                                 </div>
                                 <div class="box-info-desc">
                                     <h3>Ins CanRoca</h3>
-                                    <p>TÉCNICO SUPERIOR EN ADMINISTRACIÓN DE
+                                    <p id="secondExperience">TÉCNICO SUPERIOR EN ADMINISTRACIÓN DE
                                         SISTEMAS INFORMÁTICOS EN RED</p>
                                 </div>
                                 <p class="date">09/2022 - 02/2023</p>
                             </div>
                             <div class="box-info">
                                 <div class="box-info-image">
-                                    <img class="box-icon" src="images/quibac.jpeg" alt="Softgam">
+                                    <img class="box-icon" src="images/quibac.jpeg" alt="Quibac S.L">
                                 </div>
                                 <div class="box-info-desc">
                                     <h3>Quibac S.L</h3>
-                                    <p>TÉCNICO SUPERIOR EN ADMINISTRACIÓN DE
+                                    <p id="firstExperience">TÉCNICO SUPERIOR EN ADMINISTRACIÓN DE
                                         SISTEMAS INFORMÁTICOS EN RED</p>
                                 </div>
                                 <p class="date">06/2022 - 07/2022</p>
@@ -176,7 +167,7 @@
                     <section class="box-stu">
                         <div class="box-title">
                             <i class="fa-solid fa-graduation-cap"></i>
-                            <h3>Estudios</h3>
+                            <h3 id="studies-title">Estudios</h3>
                         </div>
                         <div class="box-studys">
                             <div class="box-info">
@@ -185,7 +176,7 @@
                                 </div>
                                 <div class="box-info-desc">
                                     <h3>INS Nicolau Copèrnic</h3>
-                                    <p>Desarrollo de Aplicaciones Web (DAW)</p>
+                                    <p id="thirdStudies">Desarrollo de Aplicaciones Web (DAW)</p>
                                 </div>
                                 <p class="date">09/2023 - 06/2024</p>
                             </div>
@@ -196,7 +187,7 @@
                                 </div>
                                 <div class="box-info-desc">
                                     <h3>INS Nicolau Copèrnic</h3>
-                                    <p>Administración de Sistemas Informáticos en Red (ASIR)</p>
+                                    <p id="secondStudies">Administración de Sistemas Informáticos en Red (ASIR)</p>
                                 </div>
                                 <p class="date">09/2021 - 06/2023</p>
                             </div>
@@ -207,7 +198,7 @@
                                 </div>
                                 <div class="box-info-desc">
                                     <h3>INS Nicolau Copèrnic</h3>
-                                    <p>Sistemas Microinformáticos y Redes (SMIX)</p>
+                                    <p id="firstStudies">Sistemas Microinformáticos y Redes (SMIX)</p>
                                 </div>
                                 <p class="date">09/2018 - 06/2021</p>
                             </div>
@@ -219,7 +210,7 @@
                     <div class="box-pro">
                         <div class="box-title">
                             <i class="fas fa-laptop-code"></i>
-                            <h3>Proyectos</h3>
+                            <h3 id="projects-title">Proyectos</h3>
                         </div>
                         <div class="box-imagen">
                             <img src="images/comingsoon.png" alt="Proyectos">
@@ -272,41 +263,6 @@
                                             alt="The Hobbit" width="110" height="150"
                                             style="position: relative; z-index: 0;">
                                     </a>
-                                    <!-- Repetimos los libros para dar efecto de continuidad -->
-                                    <a href="https://www.goodreads.com/book/show/724659.The_Iron_Giant?from_search=true&from_srp=true&qid=fko4cHdxRp&rank=2"
-                                        target="_blank">
-                                        <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1333577862i/724659.jpg"
-                                            alt="The Iron Giant" width="110" height="150"
-                                            style="position: relative; z-index: 0;">
-                                    </a>
-                                    <a href="https://www.goodreads.com/book/show/25034555-hachiko-el-perro-que-esperaba?from_search=true&from_srp=true&qid=4OZAgqzCPe&rank=4"
-                                        target="_blank">
-                                        <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1425065572i/25034555.jpg"
-                                            alt="Hachiko: The True Story of a Loyal Dog" width="110" height="150"
-                                            style="position: relative; z-index: 0;">
-                                    </a>
-                                    <a href="https://www.goodreads.com/book/show/3735293-clean-code" target="_blank">
-                                        <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1436202607l/3735293.jpg"
-                                            alt="Clean Code" width="110" height="150"
-                                            style="position: relative; z-index: 0;">
-                                    </a>
-                                    <a href="https://www.goodreads.com/book/show/40121378-atomic-habits"
-                                        target="_blank">
-                                        <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1535115320l/40121378.jpg"
-                                            alt="Atomic Habits" width="110" height="150"
-                                            style="position: relative; z-index: 0;">
-                                    </a>
-                                    <a href="https://www.goodreads.com/book/show/33.The_Lord_of_the_Rings"
-                                        target="_blank">
-                                        <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1566425108l/33.jpg"
-                                            alt="The Lord of the Rings" width="110" height="150"
-                                            style="position: relative; z-index: 0;">
-                                    </a>
-                                    <a href="https://www.goodreads.com/book/show/5907.The_Hobbit" target="_blank">
-                                        <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1546071216l/5907.jpg"
-                                            alt="The Hobbit" width="110" height="150"
-                                            style="position: relative; z-index: 0;">
-                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -316,7 +272,7 @@
                     <div class="box-tec">
                         <div class="box-title">
                             <i class="fas fa-layer-group"></i>
-                            <h3>Stack</h3>
+                            <h3 id="stack-title">Stack</h3>
                         </div>
                         <div class="box-tecnologias">
 

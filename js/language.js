@@ -1,25 +1,132 @@
+const translations = {
+    es: {
+        thirdStudies: "TÉCNICO SUPERIOR EN DESARROLLO DE APLICACIONES WEB",
+        secondStudies: "TÉCNICO SUPERIOR EN DESARROLLO DE APLICACIONES WEB",
+        firstStudies: "TÉCNICO SUPERIOR EN DESARROLLO DE APLICACIONES WEB",
+        thirdExperience: "TÉCNICO SUPERIOR EN DESARROLLO DE APLICACIONES WEB",
+        secondExperience: "TÉCNICO SUPERIOR EN ADMINISTRACIÓN DE SISTEMAS INFORMÁTICOS EN RED",
+        firstExperience: "TÉCNICO SUPERIOR EN ADMINISTRACIÓN DE SISTEMAS INFORMÁTICOS EN RED",
+        pageTitle: "Éric Perez",
+        menuHome: "Inicio",
+        menuAbout: "Sobre mí",
+        menuProjects: "Proyectos",
+        menuStudies: "Estudios",
+        menuExperience: "Experiencia",
+        menuStack: "Stack",
+        mainTitle: "Éric Pérez",
+        mainDescription: "Desarrollador web y frontend en formación con títulos en DAW y ASIX.",
+        btnCV: "Curriculum",
+        btnAvailable: "Disponible",
+        experienceTitle: "Experiencia",
+        studiesTitle: "Estudios",
+        projectsTitle: "Proyectos",
+        stackTitle: "Stack"
+    },
+    en: {
+        thirdStudies: "WEB APPLICATIONS DEVELOPMENT TECHNICIAN",
+        secondStudies: "WEB APPLICATIONS DEVELOPMENT TECHNICIAN",
+        firstStudies: "WEB APPLICATIONS DEVELOPMENT TECHNICIAN",
+        thirdExperience: "WEB APPLICATIONS DEVELOPMENT TECHNICIAN",
+        secondExperience: "COMPUTER SYSTEMS ADMINISTRATION TECHNICIAN",
+        firstExperience: "COMPUTER SYSTEMS ADMINISTRATION TECHNICIAN",
+        pageTitle: "Eric Perez",
+        menuHome: "Home",
+        menuAbout: "About Me",
+        menuProjects: "Projects",
+        menuStudies: "Studies",
+        menuExperience: "Experience",
+        menuStack: "Stack",
+        mainTitle: "Eric Perez",
+        mainDescription: "Web developer and frontend in training with DAW and ASIX degrees.",
+        btnCV: "Resume",
+        btnAvailable: "Available",
+        experienceTitle: "Experience",
+        studiesTitle: "Studies",
+        projectsTitle: "Projects",
+        stackTitle: "Stack"
+    },
+    ca: {
+        thirdStudies: "TÈCNIC SUPERIOR EN DESENVOLUPAMENT D'APLICACIONS WEB",
+        secondStudies: "TÈCNIC SUPERIOR EN DESENVOLUPAMENT D'APLICACIONS WEB",
+        firstStudies: "TÈCNIC SUPERIOR EN DESENVOLUPAMENT D'APLICACIONS WEB",
+        thirdExperience: "TÈCNIC SUPERIOR EN DESENVOLUPAMENT D'APLICACIONS WEB",
+        secondExperience: "TÈCNIC SUPERIOR EN ADMINISTRACIÓ DE SISTEMES INFORMÀTICS EN XARXA",
+        firstExperience: "TÈCNIC SUPERIOR EN ADMINISTRACIÓ DE SISTEMES INFORMÀTICS EN XARXA",
+        pageTitle: "Éric Pérez",
+        menuHome: "Inici",
+        menuAbout: "Sobre mi",
+        menuProjects: "Projectes",
+        menuStudies: "Estudis",
+        menuExperience: "Experiència",
+        menuStack: "Stack",
+        mainTitle: "Éric Pérez",
+        mainDescription: "Desenvolupador web i frontend en formació amb títols en DAW i ASIX.",
+        btnCV: "Currículum",
+        btnAvailable: "Disponible",
+        experienceTitle: "Experiència",
+        studiesTitle: "Estudis",
+        projectsTitle: "Projectes",
+        stackTitle: "Stack"
+    }
+};
+
+// Función para cambiar el idioma
+function changeLanguage(language) {
+    document.getElementById("page-title").textContent = translations[language].pageTitle;
+    document.getElementById("menu-home").textContent = translations[language].menuHome;
+    document.getElementById("menu-about").textContent = translations[language].menuAbout;
+    document.getElementById("menu-projects").textContent = translations[language].menuProjects;
+    document.getElementById("menu-studies").textContent = translations[language].menuStudies;
+    document.getElementById("menu-experience").textContent = translations[language].menuExperience;
+    document.getElementById("menu-stack").textContent = translations[language].menuStack;
+    document.getElementById("main-title").textContent = translations[language].mainTitle;
+    document.getElementById("main-description").textContent = translations[language].mainDescription;
+    document.getElementById("btn-cv").textContent = translations[language].btnCV;
+    document.getElementById("btn-available").textContent = translations[language].btnAvailable;
+    document.getElementById("experience-title").textContent = translations[language].experienceTitle;
+    document.getElementById("studies-title").textContent = translations[language].studiesTitle;
+    document.getElementById("projects-title").textContent = translations[language].projectsTitle;
+    document.getElementById("stack-title").textContent = translations[language].stackTitle;
+    document.getElementById("firstStudies").textContent = translations[language].firstStudies;
+    document.getElementById("secondStudies").textContent = translations[language].secondStudies;
+    document.getElementById("thirdStudies").textContent = translations[language].thirdStudies;
+    document.getElementById("firstExperience").textContent = translations[language].firstExperience;
+    document.getElementById("secondExperience").textContent = translations[language].secondExperience;
+    document.getElementById("thirdExperience").textContent = translations[language].thirdExperience;
+
+    localStorage.setItem('selectedLanguage', language);
+}
+
+// Cargar idioma guardado al iniciar
+document.addEventListener('DOMContentLoaded', () => {
+    const savedLanguage = localStorage.getItem('selectedLanguage') || 'es';
+    changeLanguage(savedLanguage);
+
+    const savedFlagSrc = document.querySelector(`div[data-lang="${savedLanguage}"] img`).src;
+    document.getElementById('selectedLanguage').innerHTML = `<img src="${savedFlagSrc}" alt="Bandera">`;
+});
 
 const languageSelector = document.getElementById('languageSelector');
-    const selectedLanguage = document.getElementById('selectedLanguage');
-    const languageOptions = document.querySelector('.language-options');
+const languageOptions = document.querySelector('.language-options');
 
-    languageSelector.addEventListener('click', function() {
-        languageSelector.classList.toggle('show-options');
-    });
+languageSelector.addEventListener('click', function () {
+    languageSelector.classList.toggle('show-options');
+});
 
-    languageOptions.addEventListener('click', function(e) {
-        if (e.target.closest('div[data-lang]')) {
-            const selectedOption = e.target.closest('div[data-lang]');
-            const imgSrc = selectedOption.querySelector('img').src;
+languageOptions.addEventListener('click', function (e) {
+    if (e.target.closest('div[data-lang]')) {
+        const selectedOption = e.target.closest('div[data-lang]');
+        const language = selectedOption.getAttribute('data-lang');
+        const imgSrc = selectedOption.querySelector('img').src;
 
-            selectedLanguage.innerHTML = `<img src="${imgSrc}" alt="Bandera">`;
-            languageSelector.classList.remove('show-options');
-        }
-    });
+        document.getElementById('selectedLanguage').innerHTML = `<img src="${imgSrc}" alt="Bandera">`;
+        languageSelector.classList.remove('show-options');
+        changeLanguage(language);
+    }
+});
 
-    // Cerrar el selector si se hace clic fuera de él
-    window.addEventListener('click', function(e) {
-        if (!languageSelector.contains(e.target)) {
-            languageSelector.classList.remove('show-options');
-        }
-    });
+window.addEventListener('click', function (e) {
+    if (!languageSelector.contains(e.target)) {
+        languageSelector.classList.remove('show-options');
+    }
+});
