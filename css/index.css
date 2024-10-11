@@ -209,12 +209,14 @@ body {
 .top-bar .icon-wrapper {
     backdrop-filter: blur(10px);
     background-color: rgba(0, 0, 0, 0.5);
-    padding: 10px 20px;
-    border-radius: 15px;
+    /* padding: 0px; */
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
 }
 
 .top-bar .icon-wrapper i {
-    font-size: 30px;
+    font-size: 40px;
 }
 
 /* Contenido principal */
@@ -239,6 +241,12 @@ body {
     width: 400px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-mode {
+    background: none;
+    border: none;
+    color: white;
 }
 
 .btn p {
@@ -626,9 +634,9 @@ height: 100%;
 
 .selected-language {
     padding: 10px;
-    background-color: #f0f0f0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    /* background-color: #f0f0f0; */
+    /* border: 1px solid #ccc; */
+    /* border-radius: 5px; */
     width: 40px;
     text-align: center;
     display: flex;
@@ -636,7 +644,7 @@ height: 100%;
 }
 
 .selected-language img {
-    width: 30px;
+    width: 50px;
 }
 
 .language-options {
