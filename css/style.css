@@ -573,6 +573,7 @@ main {
   /* width: calc(100% - 80px); */
   padding: 100px 50px 30px 50px;
   gap: 10px;
+  margin-bottom: 100px;
 }
 
 .animate-title {
@@ -615,10 +616,13 @@ main {
   color: var(--text-primary);
 }
 
-.box-experience,
-.box-education {
-  overflow-y: scroll;
+.box-experience,.box-education{
+    overflow: hidden;
 }
+.box-experience-items, .box-education-items{
+    overflow-y: scroll;
+}
+
 
 .box-experience,
 .box-education,
