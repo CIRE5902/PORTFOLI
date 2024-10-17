@@ -617,11 +617,11 @@ main {
 }
 
 .box-experience,.box-education{
-    overflow: hidden;
+  overflow-y: scroll;
 }
-.box-experience-items, .box-education-items{
+/* .box-experience-items, .box-education-items{
     overflow-y: scroll;
-}
+} */
 
 
 .box-experience,
