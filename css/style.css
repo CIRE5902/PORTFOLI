@@ -1,0 +1,905 @@
+/* ========== 1. Variables Globales ========== */
+:root {
+  font-size: 16px;
+  font-family: 'Open Sans';
+
+  --text-primary: #333333;
+  --text-secondary: #666666;
+  --bg-primary: #F9F9F9;
+  --bg-secondary: #FFFFFF;
+  --cards: #FFFFFF;
+
+  --transition-speed: 600ms;
+}
+
+/* ========== 2. Estilos Globales (body, elementos básicos) ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lexend', sans-serif;
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+  margin: 0;
+  padding: 0;
+  transition: background-color var(--transition-speed), color var(--transition-speed);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* ========== 3. Estructura Principal ========== */
+main {
+  margin-left: 5rem;
+  padding: 1rem;
+}
+
+/* ========== 3. Idioma ========== */
+
+.top-bar {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  gap: 20px;
+  z-index: 1;
+}
+
+.top-bar .icon-wrapper {
+  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  width: 60px;
+  height: 60px;
+  border-radius: 50px;
+}
+
+.top-bar .icon-wrapper img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.language-options {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 50px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.language-options div {
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.language-options div:hover {
+  background-color: #e0e0e0;
+}
+
+.language-options img {
+  width: 30px;
+}
+
+.show-options .language-options {
+  display: block;
+}
+
+/* ========== 4. Barra de Navegación (navbar) ========== */
+.navbar {
+  position: fixed;
+  background-color: var(--bg-secondary);
+  transition: width 600ms ease;
+  z-index: 1;
+  /* width: 65px; */
+  /* border-color: var(--bg-primary); */
+  /* border-right: solid 3px; */
+}
+
+.navbar-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.nav-item {
+  width: 100%;
+  justify-content: left;
+  /* padding-left: 15px; */
+  display: flex;
+}
+
+.nav-item:last-child {
+  margin-top: auto;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  height: 5rem;
+  color: var(--text-primary);
+  text-decoration: none;
+  filter: grayscale(100%) opacity(0.7);
+  transition: var(--transition-speed);
+  justify-content: center;
+  padding-left: 15px;
+}
+
+.nav-link:hover {
+  filter: grayscale(0%) opacity(1);
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+}
+
+.link-text {
+  display: none;
+  margin-left: 1rem;
+}
+
+.nav-link svg {
+  width: 2rem;
+  height: 2rem;
+  /* margin: 0 1.5rem; */
+}
+
+.fa-primary,
+.fa-secondary {
+  transition: var(--transition-speed);
+}
+
+/* Logo en la barra de navegación */
+.logo {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: var(--text-secondary);
+  background: var(--bg-secondary);
+  font-size: 1.5rem;
+  letter-spacing: 0.3ch;
+  width: 100%;
+}
+
+.logo svg {
+  transform: rotate(0deg);
+  transition: var(--transition-speed);
+}
+
+.logo-text {
+  display: inline;
+  position: absolute;
+  left: -999px;
+  transition: var(--transition-speed);
+}
+
+.navbar:hover .logo svg {
+  transform: rotate(-180deg);
+}
+
+.navbar:hover .link-text {
+  display: inline;
+}
+
+.navbar:hover .logo-text {
+  left: 0px;
+}
+
+/* ========== 5. Estilos Responsivos (Media Queries) ========== */
+@media only screen and (max-width: 600px) {
+  .navbar {
+    bottom: 0;
+    width: 100vw;
+    height: 5rem;
+    border: none;
+  }
+
+  .link-text {
+    display: none !important;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .navbar-nav {
+    flex-direction: row;
+  }
+
+  .nav-link {
+    justify-content: center;
+  }
+
+  main {
+    margin: 0;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .navbar {
+    top: 0;
+    width: 65px;
+    height: 100vh;
+  }
+
+  .navbar:hover {
+    width: 16rem;
+  }
+
+  .navbar:hover .logo svg {
+    margin-left: 11rem;
+  }
+}
+
+/* ========== 6. Temas (dark, light, eric) ========== */
+.dark {
+  --text-primary: #EEEEEE;
+  --text-secondary: #BBBBBB;
+  --bg-primary: #1e1e1e;
+  --bg-secondary: #1e1e1e;
+  --cards: #232323;
+}
+
+.light {
+  --text-primary: #2C2F33;
+  --text-secondary: #4F545C;
+  --bg-primary: #f8f9fa;
+  --bg-secondary: #f8f9fa;
+}
+
+.eric {
+  --text-primary: #2C2F33;
+  --text-secondary: #4F545C;
+  animation: ericBackgroundAnimation 10s ease infinite;
+  background-size: 400% 400%;
+}
+
+.theme-icon {
+  display: none;
+}
+
+.dark #darkIcon {
+  display: block;
+}
+
+.light #lightIcon {
+  display: block;
+}
+
+.eric #ericIcon {
+  display: block;
+}
+
+/* ========== 7. Animaciones ========== */
+
+@keyframes ericBackgroundAnimation {
+  0% {
+    background: linear-gradient(137deg, #e0f7fa, #ffecb3, #f3e5f5);
+    /* Azul suave, beige claro, lavanda */
+  }
+
+  25% {
+    background: linear-gradient(137deg, #ffe0b2, #ffccbc, #d1c4e9);
+    /* Tonos de beige y púrpura claro */
+  }
+
+  50% {
+    background: linear-gradient(137deg, #b2ebf2, #c8e6c9, #f8bbd0);
+    /* Azul claro, verde suave, rosa pastel */
+  }
+
+  75% {
+    background: linear-gradient(137deg, #fff9c4, #f0f4c3, #e1bee7);
+    /* Amarillo claro, verde suave, púrpura suave */
+  }
+
+  100% {
+    background: linear-gradient(137deg, #e0f7fa, #ffecb3, #f3e5f5);
+    /* Regresa a azul claro, beige, lavanda */
+  }
+}
+
+@keyframes animate {
+
+  0%,
+  18%,
+  20%,
+  50.1%,
+  60%,
+  65.1%,
+  80%,
+  90.1%,
+  92% {
+    color: #a285d1;
+    /* Un tono lila que combina con la imagen */
+    text-shadow: none;
+  }
+
+  18.1%,
+  20.1%,
+  30%,
+  50%,
+  60.1%,
+  65%,
+  80.1%,
+  90%,
+  92.1%,
+  100% {
+    color: #fff;
+    text-shadow: 0 0 10px #a285d1,
+      0 0 20px #a285d1,
+      0 0 40px #a285d1,
+      0 0 80px #a285d1,
+      0 0 160px #a285d1;
+  }
+}
+
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes scroll-right {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* ========== 8. Iconos y Botones ========== */
+.nav-icon,
+.theme-icon {
+  width: 30px;
+  height: 30px;
+}
+
+.sidebar-icon {
+  width: 60px;
+  height: 60px;
+  display: inline-block;
+  object-fit: cover;
+  margin-right: 15px;
+  font-size: 50px;
+  color: whitesmoke;
+}
+
+.main-avatar {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+}
+
+.social-icon {
+  width: 50px;
+  height: 50px;
+  transition: transform 0.3s ease;
+  fill: var(--text-primary);
+}
+
+.btn-icon {
+  width: 30px;
+  height: 30px;
+}
+
+.box-icon {
+  height: 30px;
+  width: 30px;
+  border-radius: 15px;
+}
+
+/* Hover de íconos sociales
+.linkedin:hover {
+  background: linear-gradient(45deg, #0077b5, #00a0dc);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.mail:hover {
+  background: linear-gradient(45deg, #d44638, #ff5722);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.github:hover {
+  background: linear-gradient(45deg, #333, #6e5494);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.figma:hover {
+  background: linear-gradient(45deg, #0acf83, #a259ff);
+  -webkit-background-clip: text;
+  color: transparent;
+} */
+
+/* ========== 9. Botones ========== */
+.btn {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 400px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-mode {
+  background: none;
+  border: none;
+  color: white;
+}
+
+.btn p {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.btn-icon {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease;
+}
+
+.btn:hover .btn-icon {
+  transform: rotate(15deg);
+}
+
+/* Botón de resume */
+.btn-resume {
+  /* background-color: #a285d1; */
+  text-decoration: none;
+  transition: 0.4s ease;
+  border: 2px solid #a285d1;
+  color: #a285d1;
+
+}
+
+.btn-resume:hover {
+  background-color: #a285d1;
+  color: #ffffff;
+  fill: #ffffff;
+  box-shadow: 0 0 10px #a285d1, 0 0 40px #a285d1, 0 0 80px #a285d1;
+}
+
+.btn-resume:hover::before,
+.btn-resume:hover::after {
+  border-color: transparent;
+}
+
+/* Botón de disponibilidad */
+.btn-available {
+  background-color: #a285d1;
+}
+
+.btn-available:hover {
+  box-shadow: inset 10px 10px 30px #825aaf, inset -10px -10px 30px #c5a5f1;
+  /* Sombras lilas invertidas */
+}
+
+.btn-available:hover {
+  background: transparent;
+  border: 2px #a285d1;
+  /* color: #ffffff;  */
+  box-shadow: 0 0 10px #a285d1, 0 0 40px #a285d1, 0 0 80px #a285d1;
+}
+
+.btn-available:hover::before,
+.btn-available:hover::after {
+  border-color: transparent;
+}
+
+.btn-available svg,
+.btn-resume svg {
+  width: 30px;
+  height: 30px;
+}
+
+.interaction-icon {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.7);
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover .interaction-icon {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+/* ========== 10. Enlaces Sociales ========== */
+.social-links {
+  margin-top: 30px;
+  margin-bottom: 100px;
+  display: flex;
+  gap: 50px;
+}
+
+.social-links a img:hover {
+  transform: scale(1.1);
+}
+
+/* ========== 11. Contenido Principal (boxes, secciones, etc.) ========== */
+.content {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  /* width: calc(100% - 80px); */
+  padding: 100px 50px 30px 50px;
+  gap: 10px;
+}
+
+.animate-title {
+  animation: animate 5s linear infinite;
+}
+
+.animate-description {
+  white-space: nowrap;
+  /* border-right: 4px solid; */
+  width: 13ch;
+  color: #a285d1;
+  /* display: block; */
+
+  /* animation: typing 5s steps(12), blinks .5s infinite step-end alternate; */
+  overflow: hidden;
+}
+
+
+.box-experience-education,
+.box-projects {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 20px;
+}
+
+.box-experience,
+.box-education,
+.box-project,
+.box-tech,
+.box-spotify,
+.box-books {
+  overflow: hidden;
+  padding: 15px;
+  border-radius: 10px;
+  transition: background-color var(--transition-speed);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  border-color: hsla(0, 0%, 100%, .1);
+  outline-color: #1a1a1a;
+  color: var(--text-primary);
+}
+
+.box-experience,
+.box-education {
+  overflow-y: scroll;
+}
+
+.box-experience,
+.box-education,
+.box-project,
+.box-tech,
+.box-media {
+  height: 350px;
+}
+
+.box-image {
+  padding-top: 20px;
+}
+
+.box-image img {
+  width: 100%;
+  height: 100%;
+}
+
+/* Boxes para Spotify y libros */
+.box-media {
+  display: grid;
+  grid-template-rows: 1.2fr 2fr;
+  gap: 10px;
+}
+
+.box-books {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+}
+
+/* ========== 12. Carrusel de Libros ========== */
+.carousel-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  animation: scroll 20s linear infinite;
+  width: max-content;
+}
+
+.carousel-track a {
+  display: inline-block;
+  padding: 0 20px;
+}
+
+.carousel-track img {
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  transform-origin: left center;
+}
+
+.carousel-container:hover .carousel-track {
+  animation-play-state: paused;
+}
+
+.carousel-track img:hover {
+  cursor: pointer;
+  transform: rotateY(-28deg) rotateZ(-2deg) scale(1.05);
+  box-shadow: 1px 3px 2px #eaeaee, 20px 8px 0 rgba(243, 243, 245, 0.7);
+}
+
+/* ========== 13. Secciones de Tecnologías y Stack ========== */
+.box-tech-categories {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  position: relative;
+  padding-top: 20px;
+}
+
+.category {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.frameworks .icon-background {
+  position: absolute;
+  width: 100px;
+  height: 100%;
+  background-image: url('../images/framework.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.1;
+}
+
+.programming-languages .icon-background {
+  position: absolute;
+  width: 100px;
+  height: 100%;
+  background-image: url('../images/language.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.1;
+}
+
+.tools-platforms .icon-background {
+  position: absolute;
+  width: 100px;
+  height: 100%;
+  background-image: url('../images/tool.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.1;
+}
+
+/* ========== 14. Carrusel de Tecnologías ========== */
+.carousel-row {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.card {
+  width: 80px;
+  height: 80px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ddd;
+  transition: transform 0.3s ease;
+}
+
+.card i {
+  font-size: 2rem;
+  color: black;
+}
+
+.odd {
+  animation: scroll-left 10s linear infinite;
+}
+
+.even {
+  animation: scroll-right 10s linear infinite;
+}
+
+/* ========== 15. Elementos Responsivos (Media Queries) ========== */
+@media (max-width: 768px) {
+  .menu-btn {
+    display: block;
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 15px;
+    z-index: 2;
+  }
+
+  .sidebar {
+    width: 220px;
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  .sidebar.show {
+    transform: translateX(0);
+    opacity: 1;
+    height: 100%;
+    padding-top: 50px;
+  }
+
+  .content {
+    padding: 70px 20px 20px 20px;
+  }
+
+  .box-experience,
+  .box-education,
+  .box-project,
+  .box-tech,
+  .box-media {
+    width: calc(100vw - 40px);
+  }
+
+  .icon-wrapper {
+    width: 100%;
+  }
+
+  .icon-title {
+    opacity: 1;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
+
+/* ========== 16. Selector de Idioma ========== */
+.language-selector {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.selected-language {
+  padding: 5px;
+}
+
+.selected-language img {
+  width: 60px;
+}
+
+.language-options {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 50px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.language-options div {
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.language-options div:hover {
+  background-color: #e0e0e0;
+}
+
+.language-options img {
+  width: 30px;
+}
+
+.show-options .language-options {
+  display: block;
+}
+
+/* ========== 17. Elementos de Caja (box-title, box-item) ========== */
+.box-title {
+  border: 2px;
+  border-radius: 20px;
+  padding: 10px 25px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  width: min-content;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.box-title img {
+  height: 25px;
+  width: 25px;
+}
+
+.box-item {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 10fr 3fr;
+  gap: 10px;
+}
+
+.box-item-desc {
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+}
+
+.box-item-image {
+  display: flex;
+  align-items: center;
+}
+
+.box-item .date {
+  display: flex;
+  align-items: end;
+}

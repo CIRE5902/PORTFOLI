@@ -1,327 +1,390 @@
-<!DOCTYPE html>
-<html lang="es">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="images/avatar.png" type="image/png">
-    <title id="page-title">Éric Perez</title>
-    <meta name="description" content="Portfolio de Eric Pérez, desarrollador web y frontend en formación.">
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script defer src="js/theme.js"></script>
+    <script defer src="js/language.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap" rel="stylesheet" />
 </head>
 
-<body class="dark-mode"> <!-- Iniciamos con el modo oscuro por defecto -->
-    <div class="container">
-        <!-- Sidebar -->
-        <aside class="sidebar" id="sidebar">
-            <div class="icon-wrapper" data-tooltip="Inicio">
-                <a href="#">
-                    <img src="images/avatar.png" class="sidebar-icon" alt="Avatar">
-                </a>
-                <span class="icon-title" id="menu-home">Inicio</span>
-            </div>
-
-            <div class="icon-wrapper" data-tooltip="Sobre mí">
-                <a href="#" class="sidebar-icon"><i class="fas fa-user"></i></a>
-                <span class="icon-title" id="menu-about">Sobre mí</span>
-            </div>
-
-            <div class="icon-wrapper" data-tooltip="Proyectos">
-                <a href="#" class="sidebar-icon"><i class="fas fa-code"></i></a>
-                <span class="icon-title" id="menu-projects">Proyectos</span>
-            </div>
-
-            <div class="icon-wrapper" data-tooltip="Estudios">
-                <a href="#" class="sidebar-icon"><i class="fas fa-graduation-cap"></i></a>
-                <span class="icon-title" id="menu-studies">Estudios</span>
-            </div>
-
-            <div class="icon-wrapper" data-tooltip="Experiencia">
-                <a href="#" class="sidebar-icon"><i class="fas fa-briefcase"></i></a>
-                <span class="icon-title" id="menu-experience">Experiencia</span>
-            </div>
-
-            <div class="icon-wrapper" data-tooltip="Tecnologías">
-                <a href="#" class="sidebar-icon"> <i class="fas fa-layer-group"></i></a>
-                <span class="icon-title" id="menu-stack">Stack</span>
-            </div>
-
-        </aside>
-
-        <!-- Botón de menú móvil (hamburguesa) -->
-        <button class="menu-btn" id="menu-btn" aria-label="Abrir menú">
-            &#9776;
-        </button>
-
-        <!-- Barra superior fija a la derecha (Idioma y Modo Oscuro) -->
-        <header class="top-bar">
-            <!-- Idioma -->
-            <div class="icon-wrapper" data-tooltip="Idioma">
-                <div class="language-selector" id="languageSelector">
-                    <div class="selected-language" id="selectedLanguage">
+<body>
+    <!-- Idioma -->
+    <header class="top-bar">
+        <div class="icon-wrapper" data-tooltip="Idioma">
+            <div class="language-selector" id="languageSelector">
+                <div class="selected-language" id="selectedLanguage">
+                    <img src="images/ingles.png" alt="Bandera de Español">
+                </div>
+                <div class="language-options">
+                    <div data-lang="en">
+                        <img src="images/ingles.png" alt="Bandera de Inglés">
+                    </div>
+                    <div data-lang="es">
                         <img src="images/espana.png" alt="Bandera de Español">
                     </div>
-                    <div class="language-options">
-                        <div data-lang="es">
-                            <img src="images/espana.png" alt="Bandera de Español">
-                        </div>
-                        <div data-lang="ca">
-                            <img src="images/catala.png" alt="Bandera de Catalán">
-                        </div>
-                        <div data-lang="en">
-                            <img src="images/ingles.png" alt="Bandera de Inglés">
-                        </div>
+                    <div data-lang="ca">
+                        <img src="images/catala.png" alt="Bandera de Catalán">
                     </div>
                 </div>
             </div>
+        </div>
+    </header>
+    <nav class="navbar">
+        <ul class="navbar-nav">
+            <li class="logo">
+                <a href="#" class="nav-link">
+                    <span class="link-text logo-text">Main</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="nav-icon">
+                        <path
+                            d="M12.293 7.293a1 1 0 011.414 0L18 11.586l-4.293 4.293a1 1 0 11-1.414-1.414L15.586 12l-3.293-3.293a1 1 0 010-1.414z" />
+                        <path
+                            d="M6.293 7.293a1 1 0 011.414 0L12 11.586l-4.293 4.293a1 1 0 01-1.414-1.414L9.586 12l-3.293-3.293a1 1 0 010-1.414z" />
+                    </svg>
+                </a>
+            </li>
 
-            <!-- Modo Claro/Oscuro -->
-            <div class="icon-wrapper" id="theme-toggle" data-tooltip="Modo Oscuro">
-                <button class="btn-mode" aria-label="Alternar modo">
-                    <i class="fa-solid fa-moon"></i>
-                </button>
-            </div>
-        </header>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <img src="images/avatar.png" alt="Inicio Icon" class="nav-icon">
+                    <span class="link-text" id="menu-home">Home</span>
+                </a>
+            </li>
 
-        <!-- Contenido principal centrado -->
-        <main class="content">
-            <img src="images/avatar.png" class="main-avatar" alt="Avatar">
-            <h1 id="main-title">Éric Pérez</h1>
-            <h2 id="main-description">Desarrollador web y frontend en formación con títulos en DAW y ASIX.</h2>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24px"
+                        height="24px">
+                        <circle cx="12" cy="8" r="4" />
+                        <path d="M12 12c-3.31 0-6 2.69-6 6v2h12v-2c0-3.31-2.69-6-6-6z" />
+                    </svg>
+                    <span class="link-text" id="menu-about">About</span>
+                </a>
+            </li>
 
-            <a class="btn btn-curriculum" href="otros/CV_ERIC_PEREZ_VERA.pdf" target="_blank" download>
-                <img class="btn-icon" src="images/curriculum.png" alt="Curriculum">
-                <p id="btn-cv">Curriculum</p>
-                <i class="fa fa-hand-pointer interaction-icon"></i>
+
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24px"
+                        height="24px">
+                        <path
+                            d="M8.59 16.34L3.25 12l5.34-4.34L7.16 6 0 12l7.16 6 1.43-1.66zm7.82-8.68L20.75 12l-5.34 4.34 1.43 1.66L24 12l-7.16-6-1.43 1.66zm-6.69 14.12L11.93 2h-1.95l-2.19 19.78h1.95z" />
+                    </svg>
+                    <span class="link-text" id="menu-projects">Projects</span>
+                </a>
+            </li>
+
+
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24px"
+                        height="24px">
+                        <path
+                            d="M12 2L1 9l11 7 9.84-6.27c.09-.16.16-.34.16-.53s-.07-.37-.16-.53L12 2zm7.75 7.43L12 13.76 4.25 9.43 12 5.24l7.75 4.19zM19 10.92v3.66c0 1.44-2.89 2.61-7 2.61-4.11 0-7-1.17-7-2.61v-3.66L2 11v3.66C2 17.54 6.48 19 12 19s10-1.46 10-4.34V11l-3 1.92z" />
+                    </svg>
+                    <span class="link-text" id="menu-studies">Education</span>
+                </a>
+            </li>
+
+
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24px"
+                        height="24px">
+                        <path
+                            d="M20 6h-4V4c0-1.1-.9-2-2-2h-4c-1.1 0-2 .9-2 2v2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-6 0h-4V4h4v2zm6 14H4V8h16v12zm-4-9H8v2h8v-2z" />
+                    </svg>
+                    <span class="link-text" id="menu-experience">Experience</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24px"
+                        height="24px">
+                        <path
+                            d="M12 2L2 7l10 5 10-5-10-5zm0 18v-6l-8-4v4l8 4zm8-4v-4l-8 4v6l8-4zm-16-.35l8 4.36 8-4.36v.84l-8 4.36-8-4.36v-.84z" />
+                    </svg>
+                    <span class="link-text" id="menu-stack">Stack</span>
+                </a>
+            </li>
+
+
+            <li class="nav-item" id="themeButton">
+                <a href="#" class="nav-link">
+                    <img src="images/moon.png" alt="Moon Stars Icon" class="theme-icon" id="darkIcon">
+                    <img src="images/sun.svg" alt="Sun Icon" class="theme-icon" id="lightIcon">
+                    <img src="images/gem.svg" alt="Gem Icon" class="theme-icon" id="ericIcon">
+                    <span class="link-text">Theme</span>
+                </a>
+            </li>
+
+        </ul>
+    </nav>
+
+    <main class="content">
+        <img src="images/avatar.png" class="main-avatar" alt="Avatar">
+        <h1 id="main-title">Hi, its <span class="animate-title">Éric</span></h1>
+        <h2 id="main-description">I'm a <span class="animate-description">Web Developer</span></h2>
+
+        <a class="btn btn-resume" href="otros/CV_ERIC_PEREZ_VERA.pdf" target="_blank" download>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-file-earmark-text"
+                viewBox="0 0 16 16">
+                <path d="M14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5L14 4.5z" />
+                <path
+                    d="M12 4.5L8.5 1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5zM6 9.5h4a.5.5 0 0 1 0 1H6a.5.5 0 0 1 0-1zm0-3h4a.5.5 0 0 1 0 1H6a.5.5 0 0 1 0-1zm0 6h2a.5.5 0 0 1 0 1H6a.5.5 0 0 1 0-1z" />
+            </svg>
+            <p id="btn-cv">Resume</p>
+            <i class="fa fa-hand-pointer interaction-icon"></i>
+        </a>
+
+        <div class="btn btn-available">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+            </svg>
+            <p id="btn-available">Available</p>
+            <i class="fa fa-hand-pointer interaction-icon"></i>
+        </div>
+
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/ericperezvera" target="_blank" aria-label="LinkedIn">
+                <!-- <i class="social-icon fab fa-linkedin"></i> -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="social-icon linkedin" class="bi bi-linkedin"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
+                </svg>
             </a>
+            <a href="mailto:ericperezvera02@gmail.com" target="_blank" aria-label="Email">
+                <!-- <i class="social-icon fas fa-envelope"></i> -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="social-icon mail" viewBox="0 0 24 24">
+                    <path
+                        d="M12 13.293l-11-7.293h22l-11 7.293zm11-8.293h-22v14h22v-14zm-11 8.707l-11-7.707v9.707h22v-9.707l-11 7.707z" />
+                </svg>
 
-            <div class="btn btn-work">
-                <img class="btn-icon" src="images/work.png" alt="Disponible">
-                <p id="btn-available">Disponible</p>
-                <i class="fa fa-hand-pointer interaction-icon"></i>
-            </div>
+            </a>
+            <a href="https://github.com/CIRE5902" target="_blank" aria-label="GitHub">
+                <!-- <i class="social-icon fab fa-github"></i> -->
+                <svg class="social-icon github" viewBox="0 0 256 250" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid">
+                    <path
+                        d="M128.00106,0 C57.3172926,0 0,57.3066942 0,128.00106 C0,184.555281 36.6761997,232.535542 87.534937,249.460899 C93.9320223,250.645779 96.280588,246.684165 96.280588,243.303333 C96.280588,240.251045 96.1618878,230.167899 96.106777,219.472176 C60.4967585,227.215235 52.9826207,204.369712 52.9826207,204.369712 C47.1599584,189.574598 38.770408,185.640538 38.770408,185.640538 C27.1568785,177.696113 39.6458206,177.859325 39.6458206,177.859325 C52.4993419,178.762293 59.267365,191.04987 59.267365,191.04987 C70.6837675,210.618423 89.2115753,204.961093 96.5158685,201.690482 C97.6647155,193.417512 100.981959,187.77078 104.642583,184.574357 C76.211799,181.33766 46.324819,170.362144 46.324819,121.315702 C46.324819,107.340889 51.3250588,95.9223682 59.5132437,86.9583937 C58.1842268,83.7344152 53.8029229,70.715562 60.7532354,53.0843636 C60.7532354,53.0843636 71.5019501,49.6441813 95.9626412,66.2049595 C106.172967,63.368876 117.123047,61.9465949 128.00106,61.8978432 C138.879073,61.9465949 149.837632,63.368876 160.067033,66.2049595 C184.49805,49.6441813 195.231926,53.0843636 195.231926,53.0843636 C202.199197,70.715562 197.815773,83.7344152 196.486756,86.9583937 C204.694018,95.9223682 209.660343,107.340889 209.660343,121.315702 C209.660343,170.478725 179.716133,181.303747 151.213281,184.472614 C155.80443,188.444828 159.895342,196.234518 159.895342,208.176593 C159.895342,225.303317 159.746968,239.087361 159.746968,243.303333 C159.746968,246.709601 162.05102,250.70089 168.53925,249.443941 C219.370432,232.499507 256,184.536204 256,128.00106 C256,57.3066942 198.691187,0 128.00106,0 Z M47.9405593,182.340212 C47.6586465,182.976105 46.6581745,183.166873 45.7467277,182.730227 C44.8183235,182.312656 44.2968914,181.445722 44.5978808,180.80771 C44.8734344,180.152739 45.876026,179.97045 46.8023103,180.409216 C47.7328342,180.826786 48.2627451,181.702199 47.9405593,182.340212 Z M54.2367892,187.958254 C53.6263318,188.524199 52.4329723,188.261363 51.6232682,187.366874 C50.7860088,186.474504 50.6291553,185.281144 51.2480912,184.70672 C51.8776254,184.140775 53.0349512,184.405731 53.8743302,185.298101 C54.7115892,186.201069 54.8748019,187.38595 54.2367892,187.958254 Z M58.5562413,195.146347 C57.7719732,195.691096 56.4895886,195.180261 55.6968417,194.042013 C54.9125733,192.903764 54.9125733,191.538713 55.713799,190.991845 C56.5086651,190.444977 57.7719732,190.936735 58.5753181,192.066505 C59.3574669,193.22383 59.3574669,194.58888 58.5562413,195.146347 Z M65.8613592,203.471174 C65.1597571,204.244846 63.6654083,204.03712 62.5716717,202.981538 C61.4524999,201.94927 61.1409122,200.484596 61.8446341,199.710926 C62.5547146,198.935137 64.0575422,199.15346 65.1597571,200.200564 C66.2704506,201.230712 66.6095936,202.705984 65.8613592,203.471174 Z M75.3025151,206.281542 C74.9930474,207.284134 73.553809,207.739857 72.1039724,207.313809 C70.6562556,206.875043 69.7087748,205.700761 70.0012857,204.687571 C70.302275,203.678621 71.7478721,203.20382 73.2083069,203.659543 C74.6539041,204.09619 75.6035048,205.261994 75.3025151,206.281542 Z M86.046947,207.473627 C86.0829806,208.529209 84.8535871,209.404622 83.3316829,209.4237 C81.8013,209.457614 80.563428,208.603398 80.5464708,207.564772 C80.5464708,206.498591 81.7483088,205.631657 83.2786917,205.606221 C84.8005962,205.576546 86.046947,206.424403 86.046947,207.473627 Z M96.6021471,207.069023 C96.7844366,208.099171 95.7267341,209.156872 94.215428,209.438785 C92.7295577,209.710099 91.3539086,209.074206 91.1652603,208.052538 C90.9808515,206.996955 92.0576306,205.939253 93.5413813,205.66582 C95.054807,205.402984 96.4092596,206.021919 96.6021471,207.069023 Z">
+                    </path>
+                </svg>
+            </a>
+            <a href="https://www.figma.com/@d5318559_4aaa_4" target="_blank" aria-label="Figma">
+                <!-- <i class="social-icon fa-brands fa-figma"></i> -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="social-icon figma" viewBox="0 0 16 16">
+                    <path
+                        d="M12.466 6.2c-.066-.066-.2-.133-.266-.2.067-.066.2-.133.267-.2.266-.266.466-.6.666-1 .134-.333.2-.733.2-1.133s-.066-.8-.2-1.133c-.133-.334-.4-.667-.666-1-.267-.267-.6-.467-1-.667a3.114 3.114 0 0 0-1.134-.2H5.667c-.8 0-1.534.333-2.134.867-.533.6-.866 1.333-.866 2.133S3 5.2 3.533 5.8c.067.067.2.134.267.2-.067.067-.2.134-.267.2-.533.6-.866 1.334-.866 2.134 0 .8.333 1.533.866 2.133.067.067.2.133.267.2-.067.067-.2.133-.267.2-.6.533-.866 1.333-.866 2.133s.333 1.534.866 2.134c.6.6 1.334.866 2.134.866.8 0 1.533-.333 2.133-.866.6-.534.866-1.334.866-2.134v-2.2c.134.134.334.2.534.267.333.133.733.2 1.133.2s.8-.067 1.133-.2c.334-.133.667-.4 1-.667.334-.266.467-.6.667-1 .134-.333.2-.733.2-1.133s-.066-.8-.2-1.133c-.2-.334-.4-.667-.666-.934ZM11 2.134c.2.066.4.2.533.333s.267.333.334.533c.066.2.133.4.133.667s-.067.467-.133.667c-.067.2-.2.4-.334.533A1.452 1.452 0 0 1 11 5.2c-.2.067-.4.134-.667.134H8.666V2h1.667c.2 0 .467.067.667.134ZM4.466 4.867C4.2 4.534 4 4.134 4 3.667c0-.467.2-.867.466-1.2C4.8 2.2 5.2 2 5.667 2h1.667v3.334H5.666c-.466 0-.866-.2-1.2-.467Zm0 4.667C4.2 9.2 4 8.8 4 8.334c0-.467.2-.867.466-1.2.334-.267.734-.467 1.2-.467h1.667V10H5.666c-.466 0-.866-.2-1.2-.466ZM7.333 13c0 .467-.2.867-.466 1.2-.6.6-1.734.6-2.334 0C4.2 13.867 4 13.467 4 13c0-.466.2-.866.466-1.2.334-.266.734-.466 1.2-.466h1.667V13Zm4.534-4c-.067.2-.2.4-.334.534a1.452 1.452 0 0 1-.533.333c-.4.2-.867.2-1.267 0-.2-.067-.4-.2-.533-.333A1.452 1.452 0 0 1 8.867 9c-.067-.2-.134-.4-.134-.666 0-.267.067-.467.133-.667.067-.2.2-.4.334-.533.133-.134.333-.267.533-.334.2-.066.4-.133.667-.133.266 0 .466.067.666.133.2.067.4.2.534.334.133.133.267.333.333.533.067.2.133.4.133.667 0 .266-.133.466-.2.666Z" />
+                </svg>
+            </a>
+        </div>
 
-            <div class="social-networks">
-                <a href="https://www.linkedin.com/in/ericperezvera" target="_blank" aria-label="LinkedIn">
-                    <i class="social-icon fab fa-linkedin"></i>
-                </a>
-                <a href="mailto:ericperezvera02@gmail.com" target="_blank" aria-label="Correo">
-                    <i class="social-icon fas fa-envelope"></i> 
-                </a>
-                <a href="https://github.com/CIRE5902" target="_blank" aria-label="GitHub">
-                    <i class="social-icon fab fa-github"></i>
-                </a>
-                <a href="https://www.figma.com/@d5318559_4aaa_4" target="_blank" aria-label="Figma">
-                    <i class="social-icon fa-brands fa-figma"></i>
-                </a>
-            </div>
-
-            <div>
-                <div class="box-expstu">
-                    <section class="box-exp">
-                        <!-- Contenido de Experiencia -->
-                        <div class="box-title">
-                            <i class="profile-details-icon fas fa-briefcase"></i>
-                            <h3 id="experience-title">Experiencia</h3>
+        <div>
+            <div class="box-experience-education">
+                <section class="box-experience">
+                    <div class="box-title">
+                        <!-- <i class="profile-details-icon fas fa-briefcase"></i> -->
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24px"
+                            height="24px">
+                            <path
+                                d="M20 6h-4V4c0-1.1-.9-2-2-2h-4c-1.1 0-2 .9-2 2v2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-6 0h-4V4h4v2zm6 14H4V8h16v12zm-4-9H8v2h8v-2z" />
+                        </svg>
+                        <h3 id="experience-title">Experience</h3>
+                    </div>
+                    <div class="box-experience-items">
+                        <div class="box-item">
+                            <div class="box-item-image">
+                                <img class="box-icon" src="images/softgam.png" alt="Softgam">
+                            </div>
+                            <div class="box-item-desc">
+                                <h3>Softgam</h3>
+                                <p id="thirdExperience">WEB APPLICATION DEVELOPMENT TECHNICIAN</p>
+                            </div>
+                            <p class="date">02/2024 - 08/2024</p>
                         </div>
-                        <div class="box-experiences">
-                            <div class="box-info">
-                                <div class="box-info-image">
-                                    <img class="box-icon" src="images/softgam.png" alt="Softgam">
-                                </div>
-                                <div class="box-info-desc">
-                                    <h3>Softgam</h3>
-                                    <p id="thirdExperience">TÉCNICO SUPERIOR EN DESARROLLO DE
-                                        APLICACIONES WEB</p>
-                                </div>
-                                <p class="date">02/2024 - 08/2024</p>
+                        <div class="box-item">
+                            <div class="box-item-image">
+                                <img class="box-icon" src="images/canroca.png" alt="CanRoca">
                             </div>
-                            <div class="box-info">
-                                <div class="box-info-image">
-                                    <img class="box-icon" src="images/canroca.png" alt="CanRoca">
-                                </div>
-                                <div class="box-info-desc">
-                                    <h3>Ins CanRoca</h3>
-                                    <p id="secondExperience">TÉCNICO SUPERIOR EN ADMINISTRACIÓN DE
-                                        SISTEMAS INFORMÁTICOS EN RED</p>
-                                </div>
-                                <p class="date">09/2022 - 02/2023</p>
+                            <div class="box-item-desc">
+                                <h3>Ins CanRoca</h3>
+                                <p id="secondExperience">NETWORK SYSTEM ADMINISTRATION TECHNICIAN</p>
                             </div>
-                            <div class="box-info">
-                                <div class="box-info-image">
-                                    <img class="box-icon" src="images/quibac.jpeg" alt="Quibac S.L">
-                                </div>
-                                <div class="box-info-desc">
-                                    <h3>Quibac S.L</h3>
-                                    <p id="firstExperience">TÉCNICO SUPERIOR EN ADMINISTRACIÓN DE
-                                        SISTEMAS INFORMÁTICOS EN RED</p>
-                                </div>
-                                <p class="date">06/2022 - 07/2022</p>
-                            </div>
+                            <p class="date">09/2022 - 02/2023</p>
                         </div>
-                    </section>
-
-                    <section class="box-stu">
-                        <div class="box-title">
-                            <i class="fa-solid fa-graduation-cap"></i>
-                            <h3 id="studies-title">Estudios</h3>
-                        </div>
-                        <div class="box-studys">
-                            <div class="box-info">
-                                <div class="box-info-image">
-                                    <img class="box-icon" src="images/copernic.png" alt="Copernic">
-                                </div>
-                                <div class="box-info-desc">
-                                    <h3>INS Nicolau Copèrnic</h3>
-                                    <p id="thirdStudies">Desarrollo de Aplicaciones Web (DAW)</p>
-                                </div>
-                                <p class="date">09/2023 - 06/2024</p>
+                        <div class="box-item">
+                            <div class="box-item-image">
+                                <img class="box-icon" src="images/quibac.jpeg" alt="Quibac S.L">
                             </div>
-
-                            <div class="box-info">
-                                <div class="box-info-image">
-                                    <img class="box-icon" src="images/copernic.png" alt="Copernic">
-                                </div>
-                                <div class="box-info-desc">
-                                    <h3>INS Nicolau Copèrnic</h3>
-                                    <p id="secondStudies">Administración de Sistemas Informáticos en Red (ASIR)</p>
-                                </div>
-                                <p class="date">09/2021 - 06/2023</p>
+                            <div class="box-item-desc">
+                                <h3>Quibac S.L</h3>
+                                <p id="firstExperience">NETWORK SYSTEM ADMINISTRATION TECHNICIAN</p>
                             </div>
-
-                            <div class="box-info">
-                                <div class="box-info-image">
-                                    <img class="box-icon" src="images/copernic.png" alt="Copernic">
-                                </div>
-                                <div class="box-info-desc">
-                                    <h3>INS Nicolau Copèrnic</h3>
-                                    <p id="firstStudies">Sistemas Microinformáticos y Redes (SMIX)</p>
-                                </div>
-                                <p class="date">09/2018 - 06/2021</p>
-                            </div>
-                        </div>
-                    </section>
-                </div> <!-- Cerramos el contenedor .box-expstu -->
-
-                <div class="box-protec">
-                    <div class="box-pro">
-                        <div class="box-title">
-                            <i class="fas fa-laptop-code"></i>
-                            <h3 id="projects-title">Proyectos</h3>
-                        </div>
-                        <div class="box-imagen">
-                            <img src="images/comingsoon.png" alt="Proyectos">
+                            <p class="date">06/2022 - 07/2022</p>
                         </div>
                     </div>
+                </section>
 
-                    <div class="box-spocon">
-                        <div class="box-spotify">
-                            <iframe style="border-radius:12px"
-                                src="https://open.spotify.com/embed/track/0RIxcgcVWvMqUN27uHk05T?utm_source=generator&theme=0"
-                                width="100%" height="80" frameborder="0"
-                                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                                loading="lazy"></iframe>
-                        </div>
-
-                        <div class="box-book">
-                            <div class="carousel-container">
-                                <div class="carousel-track">
-                                    <a href="https://www.goodreads.com/book/show/724659.The_Iron_Giant?from_search=true&from_srp=true&qid=fko4cHdxRp&rank=2"
-                                        target="_blank">
-                                        <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1333577862i/724659.jpg"
-                                            alt="The Iron Giant" width="110" height="150"
-                                            style="position: relative; z-index: 0;">
-                                    </a>
-                                    <a href="https://www.goodreads.com/book/show/25034555-hachiko-el-perro-que-esperaba?from_search=true&from_srp=true&qid=4OZAgqzCPe&rank=4"
-                                        target="_blank">
-                                        <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1425065572i/25034555.jpg"
-                                            alt="Hachiko: The True Story of a Loyal Dog" width="110" height="150"
-                                            style="position: relative; z-index: 0;">
-                                    </a>
-                                    <a href="https://www.goodreads.com/book/show/3735293-clean-code" target="_blank">
-                                        <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1436202607l/3735293.jpg"
-                                            alt="Clean Code" width="110" height="150"
-                                            style="position: relative; z-index: 0;">
-                                    </a>
-                                    <a href="https://www.goodreads.com/book/show/40121378-atomic-habits"
-                                        target="_blank">
-                                        <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1535115320l/40121378.jpg"
-                                            alt="Atomic Habits" width="110" height="150"
-                                            style="position: relative; z-index: 0;">
-                                    </a>
-                                    <a href="https://www.goodreads.com/book/show/33.The_Lord_of_the_Rings"
-                                        target="_blank">
-                                        <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1566425108l/33.jpg"
-                                            alt="The Lord of the Rings" width="110" height="150"
-                                            style="position: relative; z-index: 0;">
-                                    </a>
-                                    <a href="https://www.goodreads.com/book/show/5907.The_Hobbit" target="_blank">
-                                        <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1546071216l/5907.jpg"
-                                            alt="The Hobbit" width="110" height="150"
-                                            style="position: relative; z-index: 0;">
-                                    </a>
-                                </div>
+                <section class="box-education">
+                    <div class="box-title">
+                        <!-- <i class="fa-solid fa-graduation-cap"></i> -->
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24px"
+                            height="24px">
+                            <path
+                                d="M12 2L1 9l11 7 9.84-6.27c.09-.16.16-.34.16-.53s-.07-.37-.16-.53L12 2zm7.75 7.43L12 13.76 4.25 9.43 12 5.24l7.75 4.19zM19 10.92v3.66c0 1.44-2.89 2.61-7 2.61-4.11 0-7-1.17-7-2.61v-3.66L2 11v3.66C2 17.54 6.48 19 12 19s10-1.46 10-4.34V11l-3 1.92z" />
+                        </svg>
+                        <h3 id="studies-title">Education</h3>
+                    </div>
+                    <div class="box-education-items">
+                        <div class="box-item">
+                            <div class="box-item-image">
+                                <img class="box-icon" src="images/copernic.png" alt="Copernic">
                             </div>
+                            <div class="box-item-desc">
+                                <h3>INS Nicolau Copèrnic</h3>
+                                <p id="thirdStudies">Web Application Development (DAW)</p>
+                            </div>
+                            <p class="date">09/2023 - 06/2024</p>
                         </div>
 
+                        <div class="box-item">
+                            <div class="box-item-image">
+                                <img class="box-icon" src="images/copernic.png" alt="Copernic">
+                            </div>
+                            <div class="box-item-desc">
+                                <h3>INS Nicolau Copèrnic</h3>
+                                <p id="secondStudies">Network System Administration (ASIR)</p>
+                            </div>
+                            <p class="date">09/2021 - 06/2023</p>
+                        </div>
+
+                        <div class="box-item">
+                            <div class="box-item-image">
+                                <img class="box-icon" src="images/copernic.png" alt="Copernic">
+                            </div>
+                            <div class="box-item-desc">
+                                <h3>INS Nicolau Copèrnic</h3>
+                                <p id="firstStudies">Microcomputer Systems and Networks (SMIX)</p>
+                            </div>
+                            <p class="date">09/2018 - 06/2021</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="box-projects">
+                <div class="box-project">
+                    <div class="box-title">
+                        <!-- <i class="fas fa-laptop-code"></i> -->
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24px"
+                            height="24px">
+                            <path
+                                d="M8.59 16.34L3.25 12l5.34-4.34L7.16 6 0 12l7.16 6 1.43-1.66zm7.82-8.68L20.75 12l-5.34 4.34 1.43 1.66L24 12l-7.16-6-1.43 1.66zm-6.69 14.12L11.93 2h-1.95l-2.19 19.78h1.95z" />
+                        </svg>
+                        <h3 id="projects-title">Projects</h3>
+                    </div>
+                    <div class="box-image">
+                        <img src="images/comingsoon.png" alt="Projects">
+                    </div>
+                </div>
+
+                <div class="box-media">
+                    <div class="box-spotify">
+                        <iframe style="border-radius:12px"
+                            src="https://open.spotify.com/embed/track/0RIxcgcVWvMqUN27uHk05T?utm_source=generator&theme=0"
+                            width="100%" height="80" frameborder="0"
+                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                            loading="lazy"></iframe>
                     </div>
 
-                    <div class="box-tec">
-                        <div class="box-title">
-                            <i class="fas fa-layer-group"></i>
-                            <h3 id="stack-title">Stack</h3>
-                        </div>
-                        <div class="box-tecnologias">
-
-                            <!-- Lenguajes de Programación -->
-                            <div class="categoria lenguajes">
-                                <div class="icono-fondo"></div>
-                                <div class="fila-carousel impar">
-                                    <div class="carta"><i class="fab fa-js"></i></div>
-                                    <div class="carta"><i class="fab fa-css3-alt"></i></div>
-                                    <div class="carta"><i class="fab fa-html5"></i></div>
-                                    <div class="carta"><i class="fab fa-php"></i></div>
-                                    <div class="carta"><i class="fab fa-java"></i></div>
-                                </div>
-                            </div>
-
-                            <!-- Frameworks y Librerías -->
-                            <div class="categoria frameworks">
-                                <div class="icono-fondo"></div>
-                                <div class="fila-carousel par">
-                                    <div class="carta"><i class="fab fa-vuejs"></i></div>
-                                    <div class="carta"><i class="fab fa-laravel"></i></div>
-                                    <div class="carta"><i class="fas fa-calendar-alt"></i></div>
-                                    <div class="carta"><i class="fab fa-sass"></i></div>
-                                    <div class="carta"><i class="fab fa-bootstrap"></i></div>
-                                </div>
-                            </div>
-
-                            <!-- Herramientas y Plataformas -->
-                            <div class="categoria herramientas">
-                                <div class="icono-fondo"></div>
-                                <div class="fila-carousel impar">
-                                    <div class="carta"><i class="fab fa-docker"></i></div>
-                                    <div class="carta"><i class="fab fa-git"></i></div>
-                                    <div class="carta"><i class="fab fa-github"></i></div>
-                                    <div class="carta"><i class="fab fa-aws"></i></div>
-                                    <div class="carta"><i class="fab fa-npm"></i></div>
-                                </div>
+                    <div class="box-books">
+                        <div class="carousel-container">
+                            <div class="carousel-track">
+                                <a href="https://www.goodreads.com/book/show/17281807-mazinger-z-1-de-3?from_search=true&from_srp=true&qid=w7Ozo9QPF4&rank=1"
+                                    target="_blank">
+                                    <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1358996611i/17281807.jpg"
+                                        alt="Mazinger Z" width="110" height="150">
+                                </a>
+                                <a href="https://www.goodreads.com/book/show/724659.The_Iron_Giant?from_search=true&from_srp=true&qid=fko4cHdxRp&rank=2"
+                                    target="_blank">
+                                    <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1333577862i/724659.jpg"
+                                        alt="The Iron Giant" width="110" height="150">
+                                </a>
+                                <a href="https://www.goodreads.com/book/show/25034555-hachiko-el-perro-que-esperaba?from_search=true&from_srp=true&qid=4OZAgqzCPe&rank=4"
+                                    target="_blank">
+                                    <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1425065572i/25034555.jpg"
+                                        alt="Hachiko: The True Story of a Loyal Dog" width="110" height="150">
+                                </a>
+                                <a href="https://www.goodreads.com/book/show/3735293-clean-code" target="_blank">
+                                    <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1436202607l/3735293.jpg"
+                                        alt="Clean Code" width="110" height="150">
+                                </a>
+                                <a href="https://www.goodreads.com/book/show/40121378-atomic-habits" target="_blank">
+                                    <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1535115320l/40121378.jpg"
+                                        alt="Atomic Habits" width="110" height="150">
+                                </a>
+                                <a href="https://www.goodreads.com/book/show/33.The_Lord_of_the_Rings" target="_blank">
+                                    <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1566425108l/33.jpg"
+                                        alt="The Lord of the Rings" width="110" height="150">
+                                </a>
+                                <a href="https://www.goodreads.com/book/show/5907.The_Hobbit" target="_blank">
+                                    <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1546071216l/5907.jpg"
+                                        alt="The Hobbit" width="110" height="150">
+                                </a>
                             </div>
                         </div>
+                    </div>
+                </div>
 
-                    </div> <!-- Cerramos el contenedor .box-protec -->
+                <div class="box-tech">
+                    <div class="box-title">
+                        <!-- <i class="fas fa-layer-group"></i> -->
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24px"
+                            height="24px">
+                            <path
+                                d="M12 2L2 7l10 5 10-5-10-5zm0 18v-6l-8-4v4l8 4zm8-4v-4l-8 4v6l8-4zm-16-.35l8 4.36 8-4.36v.84l-8 4.36-8-4.36v-.84z" />
+                        </svg>
+                        <h3 id="stack-title">Stack</h3>
+                    </div>
+                    <div class="box-tech-categories">
+
+                        <div class="category programming-languages">
+                            <div class="icon-background"></div>
+                            <div class="carousel-row odd">
+                                <div class="card"><i class="fab fa-js"></i></div>
+                                <div class="card"><i class="fab fa-css3-alt"></i></div>
+                                <div class="card"><i class="fab fa-html5"></i></div>
+                                <div class="card"><i class="fab fa-php"></i></div>
+                                <div class="card"><i class="fab fa-java"></i></div>
+                            </div>
+                        </div>
+
+                        <div class="category frameworks">
+                            <div class="icon-background"></div>
+                            <div class="carousel-row even">
+                                <div class="card"><i class="fab fa-vuejs"></i></div>
+                                <div class="card"><i class="fab fa-laravel"></i></div>
+                                <div class="card"><i class="fas fa-calendar-alt"></i></div>
+                                <div class="card"><i class="fab fa-sass"></i></div>
+                                <div class="card"><i class="fab fa-bootstrap"></i></div>
+                            </div>
+                        </div>
+
+                        <div class="category tools-platforms">
+                            <div class="icon-background"></div>
+                            <div class="carousel-row odd">
+                                <div class="card"><i class="fab fa-docker"></i></div>
+                                <div class="card"><i class="fab fa-git"></i></div>
+                                <div class="card"><i class="fab fa-github"></i></div>
+                                <div class="card"><i class="fab fa-aws"></i></div>
+                                <div class="card"><i class="fab fa-npm"></i></div>
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
-        </main>
-    </div>
+            </div>
+    </main>
 
-    <!-- Enlazamos el archivo JS externo -->
-    <script src="js/index.js"></script>
-    <script src="js/language.js"></script>
 </body>
-
-</html>

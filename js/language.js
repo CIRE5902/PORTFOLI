@@ -6,9 +6,8 @@ const translations = {
         thirdExperience: "TÉCNICO SUPERIOR EN DESARROLLO DE APLICACIONES WEB",
         secondExperience: "TÉCNICO SUPERIOR EN ADMINISTRACIÓN DE SISTEMAS INFORMÁTICOS EN RED",
         firstExperience: "TÉCNICO SUPERIOR EN ADMINISTRACIÓN DE SISTEMAS INFORMÁTICOS EN RED",
-        pageTitle: "Éric Perez",
         menuHome: "Inicio",
-        menuAbout: "Sobre mí",
+        menuAbout: "Sobre",
         menuProjects: "Proyectos",
         menuStudies: "Estudios",
         menuExperience: "Experiencia",
@@ -29,9 +28,8 @@ const translations = {
         thirdExperience: "WEB APPLICATIONS DEVELOPMENT TECHNICIAN",
         secondExperience: "COMPUTER SYSTEMS ADMINISTRATION TECHNICIAN",
         firstExperience: "COMPUTER SYSTEMS ADMINISTRATION TECHNICIAN",
-        pageTitle: "Eric Perez",
         menuHome: "Home",
-        menuAbout: "About Me",
+        menuAbout: "About",
         menuProjects: "Projects",
         menuStudies: "Studies",
         menuExperience: "Experience",
@@ -52,9 +50,8 @@ const translations = {
         thirdExperience: "TÈCNIC SUPERIOR EN DESENVOLUPAMENT D'APLICACIONS WEB",
         secondExperience: "TÈCNIC SUPERIOR EN ADMINISTRACIÓ DE SISTEMES INFORMÀTICS EN XARXA",
         firstExperience: "TÈCNIC SUPERIOR EN ADMINISTRACIÓ DE SISTEMES INFORMÀTICS EN XARXA",
-        pageTitle: "Éric Pérez",
         menuHome: "Inici",
-        menuAbout: "Sobre mi",
+        menuAbout: "Sobre",
         menuProjects: "Projectes",
         menuStudies: "Estudis",
         menuExperience: "Experiència",
@@ -72,7 +69,6 @@ const translations = {
 
 // Función para cambiar el idioma
 function changeLanguage(language) {
-    document.getElementById("page-title").textContent = translations[language].pageTitle;
     document.getElementById("menu-home").textContent = translations[language].menuHome;
     document.getElementById("menu-about").textContent = translations[language].menuAbout;
     document.getElementById("menu-projects").textContent = translations[language].menuProjects;
