@@ -225,7 +225,7 @@ main {
     margin: 0;
   }
 
-  .content{
+  .content {
     margin-bottom: 100px;
   }
 }
@@ -619,9 +619,11 @@ main {
   color: var(--text-primary);
 }
 
-.box-experience,.box-education{
+.box-experience,
+.box-education {
   overflow-y: scroll;
 }
+
 /* .box-experience-items, .box-education-items{
     overflow-y: scroll;
 } */

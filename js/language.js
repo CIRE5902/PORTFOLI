@@ -12,8 +12,8 @@ const translations = {
         menuStudies: "Estudios",
         menuExperience: "Experiencia",
         menuStack: "Stack",
-        mainTitle: "Éric Pérez",
-        mainDescription: "Desarrollador web y frontend en formación con títulos en DAW y ASIX.",
+        mainTitle: 'Hola, soy <span class="animate-title">Éric</span>',
+        mainDescription: 'Soy <span class="animate-description">Desarrollador Web</span>',
         btnCV: "Curriculum",
         btnAvailable: "Disponible",
         experienceTitle: "Experiencia",
@@ -34,8 +34,8 @@ const translations = {
         menuStudies: "Studies",
         menuExperience: "Experience",
         menuStack: "Stack",
-        mainTitle: "Eric Perez",
-        mainDescription: "Web developer and frontend in training with DAW and ASIX degrees.",
+        mainTitle: 'Hi, it\'s <span class="animate-title">Éric</span>',
+        mainDescription: 'I\'m a <span class="animate-description">Web Developer</span>',
         btnCV: "Resume",
         btnAvailable: "Available",
         experienceTitle: "Experience",
@@ -56,8 +56,8 @@ const translations = {
         menuStudies: "Estudis",
         menuExperience: "Experiència",
         menuStack: "Stack",
-        mainTitle: "Éric Pérez",
-        mainDescription: "Desenvolupador web i frontend en formació amb títols en DAW i ASIX.",
+        mainTitle: 'Hola, sóc <span class="animate-title">Éric</span>',
+        mainDescription: 'Sóc <span class="animate-description">Desenvolupador Web</span>',
         btnCV: "Currículum",
         btnAvailable: "Disponible",
         experienceTitle: "Experiència",
@@ -75,8 +75,8 @@ function changeLanguage(language) {
     document.getElementById("menu-studies").textContent = translations[language].menuStudies;
     document.getElementById("menu-experience").textContent = translations[language].menuExperience;
     document.getElementById("menu-stack").textContent = translations[language].menuStack;
-    document.getElementById("main-title").textContent = translations[language].mainTitle;
-    document.getElementById("main-description").textContent = translations[language].mainDescription;
+    document.getElementById("main-title").innerHTML = translations[language].mainTitle;
+    document.getElementById("main-description").innerHTML = translations[language].mainDescription;    
     document.getElementById("btn-cv").textContent = translations[language].btnCV;
     document.getElementById("btn-available").textContent = translations[language].btnAvailable;
     document.getElementById("experience-title").textContent = translations[language].experienceTitle;
