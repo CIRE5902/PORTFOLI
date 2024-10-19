@@ -2,13 +2,11 @@
 :root {
   font-size: 16px;
   font-family: 'Open Sans';
-
   --text-primary: #333333;
   --text-secondary: #666666;
   --bg-primary: #F9F9F9;
   --bg-secondary: #FFFFFF;
   --cards: #FFFFFF;
-
   --transition-speed: 600ms;
 }
 
@@ -99,9 +97,6 @@ main {
   background-color: var(--bg-secondary);
   transition: width 600ms ease;
   z-index: 1;
-  /* width: 65px; */
-  /* border-color: var(--bg-primary); */
-  /* border-right: solid 3px; */
 }
 
 .navbar-nav {
@@ -117,7 +112,6 @@ main {
 .nav-item {
   width: 100%;
   justify-content: left;
-  /* padding-left: 15px; */
   display: flex;
 }
 
@@ -151,7 +145,6 @@ main {
 .nav-link svg {
   width: 2rem;
   height: 2rem;
-  /* margin: 0 1.5rem; */
 }
 
 .fa-primary,
@@ -290,32 +283,26 @@ main {
 @keyframes ericBackgroundAnimation {
   0% {
     background: linear-gradient(137deg, #e0f7fa, #ffecb3, #f3e5f5);
-    /* Azul suave, beige claro, lavanda */
   }
 
   25% {
     background: linear-gradient(137deg, #ffe0b2, #ffccbc, #d1c4e9);
-    /* Tonos de beige y púrpura claro */
   }
 
   50% {
     background: linear-gradient(137deg, #b2ebf2, #c8e6c9, #f8bbd0);
-    /* Azul claro, verde suave, rosa pastel */
   }
 
   75% {
     background: linear-gradient(137deg, #fff9c4, #f0f4c3, #e1bee7);
-    /* Amarillo claro, verde suave, púrpura suave */
   }
 
   100% {
     background: linear-gradient(137deg, #e0f7fa, #ffecb3, #f3e5f5);
-    /* Regresa a azul claro, beige, lavanda */
   }
 }
 
 @keyframes animate {
-
   0%,
   18%,
   20%,
@@ -326,7 +313,6 @@ main {
   90.1%,
   92% {
     color: #a285d1;
-    /* Un tono lila que combina con la imagen */
     text-shadow: none;
   }
 
@@ -348,7 +334,6 @@ main {
       0 0 160px #a285d1;
   }
 }
-
 
 @keyframes typing {
   from {
@@ -429,7 +414,6 @@ main {
 }
 
 /* dog */
-
 .dog-cloud {
   display: flex;
   flex-direction: column;
@@ -463,31 +447,6 @@ main {
   width: 30px;
   border-radius: 15px;
 }
-
-/* Hover de íconos sociales
-.linkedin:hover {
-  background: linear-gradient(45deg, #0077b5, #00a0dc);
-  -webkit-background-clip: text;
-  color: transparent;
-}
-
-.mail:hover {
-  background: linear-gradient(45deg, #d44638, #ff5722);
-  -webkit-background-clip: text;
-  color: transparent;
-}
-
-.github:hover {
-  background: linear-gradient(45deg, #333, #6e5494);
-  -webkit-background-clip: text;
-  color: transparent;
-}
-
-.figma:hover {
-  background: linear-gradient(45deg, #0acf83, #a259ff);
-  -webkit-background-clip: text;
-  color: transparent;
-} */
 
 /* ========== 9. Botones ========== */
 .btn {
@@ -523,14 +482,11 @@ main {
   transform: rotate(15deg);
 }
 
-/* Botón de resume */
 .btn-resume {
-  /* background-color: #a285d1; */
   text-decoration: none;
   transition: 0.4s ease;
   border: 2px solid #a285d1;
   color: #a285d1;
-
 }
 
 .btn-resume:hover {
@@ -540,31 +496,12 @@ main {
   box-shadow: 0 0 10px #a285d1, 0 0 40px #a285d1, 0 0 80px #a285d1;
 }
 
-.btn-resume:hover::before,
-.btn-resume:hover::after {
-  border-color: transparent;
-}
-
-/* Botón de disponibilidad */
 .btn-available {
   background-color: #a285d1;
 }
 
 .btn-available:hover {
   box-shadow: inset 10px 10px 30px #825aaf, inset -10px -10px 30px #c5a5f1;
-  /* Sombras lilas invertidas */
-}
-
-.btn-available:hover {
-  background: transparent;
-  border: 2px #a285d1;
-  /* color: #ffffff;  */
-  box-shadow: 0 0 10px #a285d1, 0 0 40px #a285d1, 0 0 80px #a285d1;
-}
-
-.btn-available:hover::before,
-.btn-available:hover::after {
-  border-color: transparent;
 }
 
 .btn-available svg,
@@ -605,7 +542,6 @@ main {
   display: flex;
   flex-direction: column;
   text-align: left;
-  /* width: calc(100% - 80px); */
   padding: 100px 50px 30px 50px;
   gap: 10px;
 }
@@ -620,7 +556,6 @@ main {
   flex-direction: column;
   gap: 10px;
 }
-
 
 /* Riddle*/
 .content-riddle {
@@ -649,12 +584,9 @@ main {
 
 #lamp {
   top: 0px;
-  /* Cambié esto para que el cable parezca colgar desde el techo */
   left: 50%;
-  /* margin-left: -65px; */
   width: 130px;
   transform-origin: 50% 0;
-  /* Cambié el origen de la rotación para que sea desde el techo */
   transform: rotate(0deg);
 }
 
@@ -711,9 +643,7 @@ main {
 }
 
 #arrows {
-  /* top: 205px; */
   width: 50%;
-  /* margin-left: -215px; */
   opacity: 0.6;
 }
 
@@ -740,15 +670,10 @@ main {
 
 .animate-description {
   white-space: nowrap;
-  /* border-right: 4px solid; */
   width: 13ch;
   color: #a285d1;
-  /* display: block; */
-
-  /* animation: typing 5s steps(12), blinks .5s infinite step-end alternate; */
   overflow: hidden;
 }
-
 
 .box-experience-education,
 .box-projects {
@@ -779,11 +704,6 @@ main {
   overflow-y: scroll;
 }
 
-/* .box-experience-items, .box-education-items{
-    overflow-y: scroll;
-} */
-
-
 .box-experience,
 .box-education,
 .box-project,
@@ -801,7 +721,6 @@ main {
   height: 100%;
 }
 
-/* Boxes para Spotify y libros */
 .box-media {
   display: grid;
   grid-template-rows: 1.2fr 2fr;
@@ -1104,15 +1023,11 @@ main {
 
 #lamp.off .bulb_wrapper .bulb {
   background: #6B4DDB;
-  /* Cambia el color para simular infrarrojo */
-  box-shadow: none;
 }
 
 #lamp .bulb_wrapper .bulb {
   background: #a285d1;
-  /* Color de la luz activa */
   box-shadow: 0px 0px 200px 20px #a285d1;
-  /* Simula el brillo de la luz */
 }
 
 .magic-door {
@@ -1166,7 +1081,6 @@ main {
 .curtains__trigger:checked~.curtains__prize::after {
   transform: translateX(100%);
 }
-
 
 .cloud-message {
   display: none;
