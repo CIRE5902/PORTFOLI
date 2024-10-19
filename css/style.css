@@ -409,10 +409,28 @@ main {
   color: whitesmoke;
 }
 
-.main-avatar {
-  height: 150px;
+.main-images {
+  display: inline-block;
   width: 150px;
+  height: 175px;
+  position: relative;
+}
+
+.main-avatar {
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
+}
+
+.avatar-cat{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+/* cat */
+.main-cat {
+  width: 100px; 
+  height: 50px;
 }
 
 .social-icon {
@@ -617,11 +635,13 @@ main {
 }
 
 #lamp {
-  top: 0px; /* Cambié esto para que el cable parezca colgar desde el techo */
+  top: 0px;
+  /* Cambié esto para que el cable parezca colgar desde el techo */
   left: 50%;
   /* margin-left: -65px; */
   width: 130px;
-  transform-origin: 50% 0; /* Cambié el origen de la rotación para que sea desde el techo */
+  transform-origin: 50% 0;
+  /* Cambié el origen de la rotación para que sea desde el techo */
   transform: rotate(0deg);
 }
 
@@ -631,7 +651,7 @@ main {
 
 #lamp .cable {
   width: 6px;
-  height: 180px;
+  height: 150px;
   margin: auto;
   background: #2e2e2e;
 }
@@ -1033,4 +1053,14 @@ main {
 .box-item .date {
   display: flex;
   align-items: end;
+}
+
+/*riddle info*/
+#secret-info {
+  opacity: 0; /* Oculto por defecto */
+  transition: opacity 0.5s ease; /* Suavizar la transición de opacidad */
+}
+
+#secret-info.revealed {
+  opacity: 1; /* Visible cuando se aplica la clase */
 }

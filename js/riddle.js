@@ -92,3 +92,29 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
   
+
+  const lamp = document.querySelector('#lamp');
+  const info = document.querySelector('#secret-info');
+  
+  function checkLampPosition() {
+    // Obtener las coordenadas de la lámpara
+    const lampRect = lamp.getBoundingClientRect();
+    const infoRect = info.getBoundingClientRect();
+  
+    // Verificar si la lámpara está sobre el texto
+    const isOverlapping = !(lampRect.right < infoRect.left || 
+                            lampRect.left > infoRect.right || 
+                            lampRect.bottom < infoRect.top || 
+                            lampRect.top > infoRect.bottom);
+  
+    // Si se superpone, revelar el texto
+    if (isOverlapping) {
+      info.classList.add('revealed');
+    } else {
+      info.classList.remove('revealed');
+    }
+  }
+  
+  // Llamar a la función cuando la lámpara se mueva
+  document.addEventListener('mousemove', checkLampPosition);
+  
