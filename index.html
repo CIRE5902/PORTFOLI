@@ -4,6 +4,7 @@
     <script defer src="js/language.js"></script>
     <script defer src="js/riddle.js"></script>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/room.css" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap" rel="stylesheet" />
 </head>
 
@@ -124,49 +125,7 @@
     <main class="content">
         <div class="content-profile-riddle">
             <div class="content-profile">
-                <div class="avatar-dog">
-                    <img src="images/avatar.png" class="main-avatar" alt="Avatar">
-                    <div class="dog-cloud">
-                        <svg class="main-cloud cloud-message" id="message-cloud" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 150"
-                            class="cloud-message" width="200" height="120">
-                            <!-- Main cloud -->
-                            <path
-                                d="M50,60 Q35,35 60,40 Q70,20 95,35 Q120,10 145,35 Q170,20 185,45 Q210,35 225,60 Q235,85 210,90 Q220,110 190,115 Q165,125 145,110 Q120,130 100,115 Q70,135 60,110 Q40,115 50,90 Q20,85 50,60 Z"
-                                fill="white" stroke="black" stroke-width="2" />
-
-                            <!-- Thought bubbles (smaller circles) -->
-                            <circle cx="40" cy="130" r="10" fill="white" stroke="black" stroke-width="2" />
-                            <circle cx="25" cy="140" r="7" fill="white" stroke="black" stroke-width="2" />
-                            <circle cx="15" cy="145" r="5" fill="white" stroke="black" stroke-width="2" />
-
-                            <!-- Text inside the cloud -->
-                            <text x="50%" y="80" font-size="14" fill="black" text-anchor="middle" font-family="Arial"
-                                font-weight="bold">¡Puerta secreta abierta!</text>
-                        </svg>
-                        <svg class="main-dog" fill="#000000" version="1.1" id="Capa_1"
-                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                            viewBox="0 0 95.798 95.797" xml:space="preserve">
-                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                            <g id="SVGRepo_iconCarrier">
-                                <g>
-                                    <g>
-                                        <path
-                                            d="M66.244,78.866h-9.882L33.236,44.91L10.93,40.53L3.095,79.248c-0.516,2.477,1.074,4.899,3.551,5.417 c0.313,0.064,0.628,0.097,0.937,0.097c2.125,0,4.03-1.484,4.48-3.647l4.419-21.22l7.885,15.697l-4.12-0.005c0,0-0.002,0-0.004,0 c-2.527,0-4.578,2.047-4.581,4.575c-0.001,2.528,2.049,4.632,4.575,4.637l46.007,0.035c1.65,0,2.984-1.335,2.984-2.986 C69.229,80.2,67.895,78.866,66.244,78.866z">
-                                        </path>
-                                        <path
-                                            d="M10.563,31.167c0.522,0.177,0.504,5.492,0.504,5.492l20.869,3.896l3.432-19.46c0.335-1.249,0.851-2.467,1.458-3.613 c2.791-5.271-0.914-6.388-1.785-6.483c-2.167-0.238-3.978,0.798-5.331,2.526c-0.757,0.965-1.49,1.945-2.225,2.931 c-0.213,0.288-0.438,0.372-0.806,0.287c-0.611-0.143-1.248-0.223-1.875-0.301c-3.596-0.452-6.206,1.083-9.819,1.129 c-1.222,0.014-10.898-4.451-13.482-1.146c-2.822,3.603-1.273,7.772,1.377,10.51c1.556,1.611,3.408,2.751,5.519,3.483 C9.118,30.664,9.841,30.919,10.563,31.167z">
-                                        </path>
-                                        <path
-                                            d="M88.502,38.677h-10.09c-0.734-4.04-4.271-7.115-8.519-7.115h-8.939c-4.248,0-7.784,3.075-8.519,7.115H42.345 c-3.069,0-5.691,1.898-6.77,4.582L57.94,76.097h8.56c3.024,0,5.484,2.459,5.484,5.48c0,1.22-0.404,2.343-1.079,3.255h17.596 c4.029,0,7.297-3.269,7.297-7.297V45.975C95.798,41.945,92.531,38.677,88.502,38.677z M60.954,35.211h8.939 c2.225,0,4.113,1.457,4.77,3.466H56.185C56.839,36.669,58.729,35.211,60.954,35.211z M78.559,66.043h-8.758v8.755h-8.756v-8.756 h-8.756v-8.759h8.757v-8.756h8.756v8.758h8.758L78.559,66.043L78.559,66.043z">
-                                        </path>
-                                    </g>
-                                </g>
-                            </g>
-                        </svg>
-                    </div>
-                </div>
-
+                <img src="images/avatar.png" class="main-avatar" alt="Avatar">
                 <h1 id="main-title">Hi, its <span class="animate-title">Éric</span></h1>
                 <h2 id="main-description">I'm a <span class="animate-description">Web Developer</span></h2>
 
@@ -227,6 +186,26 @@
                 </div>
             </div>
             <div class="content-riddle">
+                <div class="room">
+                    <div class="wall left-wall"></div>
+                    <div class="wall front-wall"></div>
+                    <div class="wall right-wall"></div>
+                    <div class="floor">
+                        <!-- Contenedor de la televisión -->
+                        <!-- <div class="tv-container">
+                            <div class="antenna"></div>
+                            <div class="legs"></div>
+                            <div class="knobs"></div>
+                            <div class="tv">
+                                <div class="buttons">
+                                    <div class="button button-1"></div>
+                                    <div class="button button-2"></div>
+                                    <div class="button button-3"></div>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
                 <div id="lamp">
                     <div class="cable"></div>
                     <div class="block dragable"></div>
@@ -235,28 +214,8 @@
                         <div class="bulb dragable"></div>
                     </div>
                 </div>
-                <div id="arrows">
-                    <div class="arrow left">←</div>
-                    <div class="arrow right">→</div>
-                </div>
-                <div class="secret">
-                    <div class="info" id="secret-info">
-                        <span>Siempre feliz de verte, con un ladrido te protejo. ¿Dónde estoy</span>
-                    </div>
-                    <div class="info" id="secret-track-right">
-                        <span>Por aqui!🐾</span>
-                    </div>
-                    <div class="info" id="secret-track-left">
-                        <span>Snack!🦴</span>
-                    </div>
-                </div>
-                <div class="magic-door">
-                    <input class="curtains__trigger" id="curtainsTrigger" type="checkbox">
-                    <div class="curtains__prize">
-                    </div>
-                </div>
-
             </div>
+            
         </div>
         <div>
             <div class="box-experience-education">

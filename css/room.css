@@ -1,0 +1,294 @@
+/* Riddle*/
+.content-riddle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    /* top: -100px; */
+    gap: 50px;
+    overflow: hidden;
+  }
+  
+  .dragable {
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+    cursor: grab;
+  }
+  
+  .dragging {
+    cursor: -moz-grabbing;
+    cursor: -webkit-grabbing;
+    cursor: grabbing;
+  }
+  
+  #lamp {
+    top: 0px; /* Cambié esto para que el cable parezca colgar desde el techo */
+    left: 50%;
+    /* margin-left: -65px; */
+    width: 130px;
+    transform-origin: 50% 0; /* Cambié el origen de la rotación para que sea desde el techo */
+    transform: rotate(0deg);
+  }
+  
+  #lamp.swinging {
+    transition: all 0.6s ease-in-out;
+  }
+  
+  #lamp .cable {
+    width: 6px;
+    height: 70px;
+    margin: auto;
+    background: #2e2e2e;
+  }
+  
+  #lamp .block {
+    width: 40px;
+    height: 40px;
+    margin: auto;
+    margin-bottom: -10px;
+    background: #333;
+  }
+  
+  #lamp .shade {
+    width: 130px;
+    height: 65px;
+    background: #333;
+    border-top-right-radius: 65px;
+    border-top-left-radius: 65px;
+  }
+  
+  #lamp .bulb_wrapper {
+    position: absolute;
+    width: 500px;
+    height: 250px;
+    overflow: hidden;
+    margin-left: -185px;
+    z-index: -1;
+  }
+  
+  #lamp .bulb_wrapper .bulb {
+    z-index: -1;
+    width: 44px;
+    height: 22px;
+    margin-left: 228px;
+    background: #a285d1;
+    border-bottom-right-radius: 22px;
+    border-bottom-left-radius: 22px;
+    box-shadow: 0px 0px 200px 20px #a285d1;
+  }
+  
+  #lamp.off .bulb_wrapper .bulb {
+    background: #6B4DDB;
+    box-shadow: none;
+  }
+  
+  #arrows {
+    /* top: 205px; */
+    width: 50%;
+    /* margin-left: -215px; */
+    opacity: 0.6;
+  }
+  
+  #arrows .arrow.left {
+    float: left;
+  }
+  
+  #arrows .arrow.right {
+    float: right;
+  }
+  
+  #info {
+    left: 0px;
+    bottom: 20%;
+    width: 100%;
+    text-align: center;
+    font-family: 'Roboto';
+    font-size: 22px;
+  }
+
+.room {
+    width: 90%;
+    height: 90%;
+    perspective: 1000px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Pared izquierda */
+.wall.left-wall {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150%; /* Aumentar aún más el ancho de la pared lateral */
+    height: 100%;
+    background: linear-gradient(90deg, #241937 20%, #2f224a 20%, #2f224a 40%, #241937 40%, #241937 60%, #2f224a 60%, #2f224a 80%, #241937 80%);
+    background-size: 50px 100%;
+    transform-origin: left center; /* Cambiar el origen de la transformación */
+    transform: rotateY(-90deg) translateX(-70vw); /* Rotar y alejar más la pared lateral */
+}
+
+/* Pared enfrente */
+.wall.front-wall {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* La pared frontal cubre todo el ancho */
+    height: 100%;
+    background: linear-gradient(90deg, #241937 20%, #2f224a 20%, #2f224a 40%, #241937 40%, #241937 60%, #2f224a 60%, #2f224a 80%, #241937 80%);
+    background-size: 50px 100%;
+    transform: translateZ(-70vw); /* Alejar aún más la pared frontal */
+}
+
+/* Pared derecha */
+.wall.right-wall {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 150%; /* Aumentar aún más el ancho de la pared lateral */
+    height: 100%;
+    background: linear-gradient(90deg, #241937 20%, #2f224a 20%, #2f224a 40%, #241937 40%, #241937 60%, #2f224a 60%, #2f224a 80%, #241937 80%);
+    background-size: 50px 100%;
+    transform-origin: right center;
+    transform: rotateY(90deg) translateX(70vw); /* Rotar y alejar más la pared lateral */
+}
+
+.wall {
+    flex: 8;
+    background: linear-gradient(90deg, #241937 20%, #2f224a 20%, #2f224a 40%, #241937 40%, #241937 60%, #2f224a 60%, #2f224a 80%, #241937 80%);
+    background-size: 50px 100%;
+}
+
+.floor {
+    flex: 2;
+    background-color: #2b2b38;
+    box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.5);
+}
+
+
+
+
+.tv-container {
+    position: absolute;
+    bottom: 20px;  /* Ajuste para que la TV esté en el suelo */
+    left: 50px;    /* Ajuste para que la TV esté a la izquierda */
+    width: 180px;  /* Ajusta el tamaño general de la televisión */
+    z-index: 10;
+}
+
+.antenna {
+    position: absolute;
+    top: -30px; /* Ajusta la altura de la antena */
+    left: 50px; /* Centra la antena */
+    width: 60px;
+    height: 60px;
+    background: #9B4315;
+    border-radius: 50%;
+    z-index: -2;
+    box-shadow: -40px -100px 0 -32px #FFCE49, 40px -100px 0 -32px #FFCE49;
+}
+
+.antenna:before {
+    content: "";
+    bottom: 50px;
+    left: 1px;
+    position: absolute;
+    height: 80px;
+    width: 2px;
+    background: #FFCE49;
+    transform: rotate(340deg);
+}
+
+.antenna:after {
+    content: "";
+    bottom: 50px;
+    left: 50px;
+    position: absolute;
+    height: 80px;
+    width: 2px;
+    background: #FFCE49;
+    transform: rotate(20deg);
+}
+
+.legs {
+    position: absolute;
+    bottom: -50px; /* Mueve las piernas hacia abajo */
+    left: 50px;
+    width: 20px;
+    height: 60px;
+    background: #9B4315;
+    z-index: -2;
+    transform: rotate(15deg);
+}
+
+.legs:before {
+    content: "";
+    position: absolute;
+    bottom: 40px;
+    left: 140px;
+    width: 20px;
+    height: 60px;
+    background: #9B4315;
+    transform: rotate(330deg);
+}
+
+.knobs {
+    position: absolute;
+    top: 30px;
+    left: 140px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #FFCE49;
+    box-shadow: 0 30px 0 0 #FFCE49;
+}
+
+.tv {
+    position: relative;
+    width: 180px;
+    height: 120px;
+    background: #417c76;
+    border-radius: 50% / 10%;
+    z-index: 1;
+}
+
+.tv:after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -20px;
+    width: 240px;
+    height: 140px;
+    background: #9B4315;
+    z-index: -1;
+    border-radius: 10px;
+    box-shadow: 0 0 0 5px #FFCE49;
+}
+
+.buttons {
+    position: absolute;
+    bottom: 20px;
+    left: 50px;
+}
+
+.button {
+    width: 20px;
+    height: 6px;
+    background: #9B4315;
+    margin-bottom: 4px;
+}
+
+.button-1 {
+    background: #6F230B;
+}
+
+.button-2 {
+    background: #9B4315;
+}
+
+.button-3 {
+    background: #FFCE49;
+}
