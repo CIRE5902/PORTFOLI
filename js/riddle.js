@@ -91,4 +91,56 @@ document.addEventListener("DOMContentLoaded", () => {
       document.getElementById("lamp").classList.toggle("off");
     }
   });
-  
+
+  $(document).ready(function () {
+    $('.slider').each(function () {
+        var $this = $(this);
+        var $group = $this.find('.slide-group');
+        var $slides = $this.find('.slide');
+        var buttonArray = [];
+        var currentIndex = 0;
+
+        // Función para mover al índice del slide seleccionado
+        function move(newIndex) {
+            var animateLeft, slideLeft;
+
+            if ($group.is(':animated') || currentIndex === newIndex) {
+                return;
+            }
+
+            // Actualiza el botón activo
+            buttonArray[currentIndex].removeClass('active');
+            buttonArray[newIndex].addClass('active');
+
+            if (newIndex > currentIndex) {
+                slideLeft = '100%';
+                animateLeft = '-100%';
+            } else {
+                slideLeft = '-100%';
+                animateLeft = '100%';
+            }
+
+            // Muestra el slide correspondiente
+            $slides.eq(newIndex).css({ left: slideLeft, display: 'block' });
+            $group.animate({ left: animateLeft }, function () {
+                $slides.eq(currentIndex).css({ display: 'none' });
+                $slides.eq(newIndex).css({ left: 0 });
+                $group.css({ left: 0 });
+                currentIndex = newIndex;
+            });
+        }
+
+        // Genera los botones de canal y asigna el evento de clic a cada uno
+        $.each($slides, function (index) {
+            var $button = $('<button type="button" class="slide-btn"></button>');
+            if (index === currentIndex) {
+                $button.addClass('active');
+            }
+            $button.on('click', function () {
+                move(index);  // Mueve al canal correspondiente cuando se hace clic
+            }).appendTo('.slide-buttons');
+            buttonArray.push($button);
+        });
+    });
+});
+
