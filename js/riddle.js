@@ -100,35 +100,46 @@ document.addEventListener("DOMContentLoaded", () => {
         var buttonArray = [];
         var currentIndex = 0;
 
+        const videoUrls = [
+          "https://geo.dailymotion.com/player.html?video=x873kpf",
+          "https://geo.dailymotion.com/player.html?video=x7vsfd8",
+          "https://geo.dailymotion.com/player.html?video=x8x2aoe",
+          "https://geo.dailymotion.com/player.html?video=x8x3nvw"
+      ];      
         // Función para mover al índice del slide seleccionado
         function move(newIndex) {
-            var animateLeft, slideLeft;
-
-            if ($group.is(':animated') || currentIndex === newIndex) {
-                return;
-            }
-
-            // Actualiza el botón activo
-            buttonArray[currentIndex].removeClass('active');
-            buttonArray[newIndex].addClass('active');
-
-            if (newIndex > currentIndex) {
-                slideLeft = '100%';
-                animateLeft = '-100%';
-            } else {
-                slideLeft = '-100%';
-                animateLeft = '100%';
-            }
-
-            // Muestra el slide correspondiente
-            $slides.eq(newIndex).css({ left: slideLeft, display: 'block' });
-            $group.animate({ left: animateLeft }, function () {
-                $slides.eq(currentIndex).css({ display: 'none' });
-                $slides.eq(newIndex).css({ left: 0 });
-                $group.css({ left: 0 });
-                currentIndex = newIndex;
-            });
-        }
+          var animateLeft, slideLeft;
+      
+          if ($group.is(':animated') || currentIndex === newIndex) {
+              return;
+          }
+      
+          // Actualiza el botón activo
+          buttonArray[currentIndex].removeClass('active');
+          buttonArray[newIndex].addClass('active');
+      
+          if (newIndex > currentIndex) {
+              slideLeft = '100%';
+              animateLeft = '-100%';
+          } else {
+              slideLeft = '-100%';
+              animateLeft = '100%';
+          }
+      
+          // Muestra el slide correspondiente
+          $slides.eq(newIndex).css({ left: slideLeft, display: 'block' });
+          $group.animate({ left: animateLeft }, function () {
+              $slides.eq(currentIndex).css({ display: 'none' });
+              $slides.eq(newIndex).css({ left: 0 });
+              $group.css({ left: 0 });
+              currentIndex = newIndex;
+      
+              // Cambia el video del canal al correspondiente en el array videoUrls
+              const $iframe = $slides.eq(newIndex).find("iframe");
+              $iframe.attr("src", videoUrls[newIndex]); // Actualiza el src del iframe con la URL del nuevo canal
+          });
+      }
+      
 
         // Genera los botones de canal y asigna el evento de clic a cada uno
         $.each($slides, function (index) {

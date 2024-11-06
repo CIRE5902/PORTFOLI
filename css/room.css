@@ -21,6 +21,9 @@
   top: 15px;
   overflow: hidden;
   height: 120px;
+  background: #b08d55;
+  /* box-shadow: 0 0 0 6px #b08d55; */
+  border-radius: 5% / 50%;
 }
 
 /* Paredes */
@@ -138,7 +141,7 @@
 #lamp .bulb_wrapper {
   position: absolute;
   width: 500px;
-  height: 250px;
+  height: 200px;
   overflow: hidden;
   margin-left: -185px;
   z-index: -1;
@@ -274,8 +277,8 @@
   top: 150px;
   width: 200px;
   height: 150px;
-  background: #2d3a3a;
-  border-radius: 50% / 10%;
+  /* background: #2d3a3a; */
+  /* border-radius: 50% / 10%; */
 }
 
 .tv:before {
@@ -283,10 +286,10 @@
   position: absolute;
   top: 10%;
   bottom: 10%;
-  right: -5%;
-  left: -5%;
-  background: inherit;
-  border-radius: 5% / 50%;
+  /* right: -5%;
+  left: -5%; */
+  /* background: inherit; */
+  /* border-radius: 5% / 50%; */
 }
 
 .tv:after {
