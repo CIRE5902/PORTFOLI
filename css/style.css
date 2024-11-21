@@ -435,31 +435,22 @@ main {
   border-radius: 15px;
 }
 
-/* Hover de íconos sociales
-.linkedin:hover {
-  background: linear-gradient(45deg, #0077b5, #00a0dc);
-  -webkit-background-clip: text;
-  color: transparent;
-}
+/* Hover de íconos sociales */
+.social-icon.linkedin:hover {
+    fill: #0077B5; /* Azul de LinkedIn */
+  }
 
-.mail:hover {
-  background: linear-gradient(45deg, #d44638, #ff5722);
-  -webkit-background-clip: text;
-  color: transparent;
-}
-
-.github:hover {
-  background: linear-gradient(45deg, #333, #6e5494);
-  -webkit-background-clip: text;
-  color: transparent;
-}
-
-.figma:hover {
-  background: linear-gradient(45deg, #0acf83, #a259ff);
-  -webkit-background-clip: text;
-  color: transparent;
-} */
-
+  .social-icon.mail:hover {
+      fill: #D44638; /* Rojo de Gmail */
+  }
+  
+  .social-icon.github:hover {
+      fill: #000000; /* Negro de GitHub */
+  }
+  
+  .social-icon.figma:hover {
+      fill: #F24E1E; /* Naranja de Figma */
+  }
 /* ========== 9. Botones ========== */
 .btn {
   margin-top: 20px;
