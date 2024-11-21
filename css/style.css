@@ -265,8 +265,10 @@ main {
 .eric {
   --text-primary: #2C2F33;
   --text-secondary: #4F545C;
-  animation: ericBackgroundAnimation 10s ease infinite;
-  background-size: 400% 400%;
+  --bg-primary: #d9c9f3   ;
+  --bg-secondary: #d9c9f3    ;
+  /* animation: ericBackgroundAnimation 10s ease infinite;
+  background-size: 400% 400%; */
 }
 
 .theme-icon {
