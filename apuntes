@@ -121,97 +121,220 @@
 
     <main class="content">
 
-        <div class="row">
-            <section class="col">
-
-                <div class="title">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24px"
-                        height="24px">
-                        <path
-                            d="M12 2L1 9l11 7 9.84-6.27c.09-.16.16-.34.16-.53s-.07-.37-.16-.53L12 2zm7.75 7.43L12 13.76 4.25 9.43 12 5.24l7.75 4.19zM19 10.92v3.66c0 1.44-2.89 2.61-7 2.61-4.11 0-7-1.17-7-2.61v-3.66L2 11v3.66C2 17.54 6.48 19 12 19s10-1.46 10-4.34V11l-3 1.92z" />
-                    </svg>
-                    <h2>EDUCATION</h2>
+        <div class="timeline">
+            <div class="container left-container">
+                <img src="../images/quibac.jpeg" alt="Quibac">
+                <div class="text-box">
+                    <h2>Toyota</h2>
+                    <small>2021 - 2022</small>
+                    <p>asfdsfasdgadfasdfasdfasdfasdfasdfasdfasdfadsfadsfadsfasdfadfadf</p>
+                    <span class="left-container-arrow"></span>
                 </div>
+            </div>
 
-                <div class="contents">
-
-                    <div class="box">
-                        <div class="box-year-icon">
-                            <h4>09/2023 - 06/2024</h4><img class="box-icon" src="../images/copernic.png" alt="Copernic">
-                        </div>
-                        <h3>Web Application Development (DAW)</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-                    </div>
-
-                    <div class="box">
-                        <div class="box-year-icon">
-                            <h4>09/2021 - 06/2023</h4><img class="box-icon" src="../images/copernic.png" alt="Copernic">
-                        </div>
-                        <h3>Network System Administration (ASIR)</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-                    </div>
-
-                    <div class="box">
-                        <div class="box-year-icon">
-                            <h4>09/2018 - 06/2021</h4><img class="box-icon" src="../images/copernic.png" alt="Copernic">
-                        </div>
-                        <h3>Microcomputer Systems and Networks (SMIX)</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-                    </div>
-
+            <div class="container left-container">
+                <img src="../images/canroca.png" alt="Quibac">
+                <div class="text-box">
+                    <h2>Toyota</h2>
+                    <small>2021 - 2022</small>
+                    <p>asfdsfasdgadfasdfasdfasdfasdfasdfasdfasdfadsfadsfadsfasdfadfadf</p>
+                    <span class="left-container-arrow"></span>
                 </div>
-            </section>
+            </div>
 
-            <!--   *******  Education Section Ends  *******   -->
-
-            <!--   *******  Experience Section Starts  *******  -->
-
-            <section class="col">
-
-                <div class="title">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24px"
-                        height="24px">
-                        <path
-                            d="M20 6h-4V4c0-1.1-.9-2-2-2h-4c-1.1 0-2 .9-2 2v2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-6 0h-4V4h4v2zm6 14H4V8h16v12zm-4-9H8v2h8v-2z" />
-                    </svg>
-                    <h2>EXPERIENCE</h2>
+            <div class="container left-container">
+                <img src="../images/softgam.png" alt="Quibac">
+                <div class="text-box">
+                    <h2>Toyota</h2>
+                    <small>2021 - 2022</small>
+                    <p>asfdsfasdgadfasdfasdfasdfasdfasdfasdfasdfadsfadsfadsfasdfadfadf</p>
+                    <span class="left-container-arrow"></span>
                 </div>
-
-                <div class="contents">
-
-                    <div class="box">
-                        <div class="box-year-icon">
-                            <h4>02/2024 - 08/2024</h4><img class="box-icon" src="../images/softgam.png" alt="Softgam">
-                        </div>
-                        <h3>WEB APPLICATION DEVELOPMENT TECHNICIAN</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-                    </div>
-
-                    <div class="box">
-                        <div class="box-year-icon">
-                            <h4>09/2022 - 02/2023</h4><img class="box-icon" src="../images/canroca.png" alt="CanRoca">
-                        </div>
-                        <h3>NETWORK SYSTEM ADMINISTRATION TECHNICIAN</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-                    </div>
-
-                    <div class="box">
-                        <div class="box-year-icon">
-                            <h4>06/2022 - 07/2022</h4><img class="box-icon" src="../images/quibac.jpeg" alt="Quibac">
-                        </div>
-                        <h3>NETWORK SYSTEM ADMINISTRATION TECHNICIAN</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-                    </div>
-
-                </div>
-            </section>
+            </div>
         </div>
+
+
     </main>
 
 </body>
+
+
+
+
+
+
+
+
+
+
+
+
+@import '../base/base.css';
+@import '../base/reset.css';
+@import '../base/typography.css';
+@import '../components/buttons.css';
+@import '../components/icons.css';
+@import '../layout/layout.css';
+@import '../utilities/helpers.css';
+@import '../utilities/variables.css';
+
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 100px auto;
+}
+
+.container {
+    padding: 10px 50px;
+    position: relative;
+    width: 50%;
+    /* background: rgba(0, 0, 0, 0.3); */
+    animation: movedown 1s linear forwards;
+    opacity: 0;
+}
+
+@keyframes movedown {
+    0% {
+        opacity: 1;
+        transform: translateY(-30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.container:nth-child(1) {
+    animation-delay: 1s;
+}
+
+.container:nth-child(2) {
+    animation-delay: 2s;
+}
+
+.container:nth-child(3) {
+    animation-delay: 3s;
+}
+
+
+.text-box {
+    padding: 20px 30px;
+    position: relative;
+    border-radius: 6px;
+    font-size: 15px;
+    background-color: #a285d1;
+}
+
+.left-container {
+    left: 0;
+}
+
+.right-container {
+    left: 50%;
+}
+
+.container img {
+    position: absolute;
+    width: 40px;
+    border-radius: 50%;
+    left: -20px;
+    top: 32px;
+    z-index: 1;
+    border: 2px solid #a285d1;
+}
+
+.right-container img {
+    left: -20px;
+}
+
+.timeline::after {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 100%;
+    /* background: #fff; */
+    background-color: #a285d1;
+    top: 0;
+    left: 50%;
+    margin-left: -3px;
+    z-index: -1;
+    animation: moveline 6s linear forwards;
+}
+
+@keyframes moveline {
+    0% {
+        height: 0;
+    }
+
+    100% {
+        height: 100%;
+    }
+}
+
+.text-box h2 {
+    font-weight: 600;
+}
+
+.text-box small {
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.left-container-arrow {
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 28px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid #fff;
+    right: -15px;
+}
+
+.right-container-arrow {
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 28px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid #fff;
+    left: -15px;
+}
+
+@media screen and (max-width: 600px){
+    .timeline{
+        margin: 50px auto;
+    }
+    .timeline::after{
+        left: 31px;
+    }
+    .container{
+        width: 100%;
+        padding-left: 80px;
+        padding-right: 25px;
+    }
+    .text-box{
+        font-size: 13px;
+    }
+    .text-box small{
+        margin-bottom: 10px;
+    }
+    .right-container{
+        left: 0;
+    }
+    .left-container img, .right-container img{
+        left: 10px;
+    }
+    .left-container-arrow, .right-container-arrow{
+        border-right: 15px solid #fff;
+        border-left: 0;
+        left: -15px;
+    }
+    
+}
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/animation

@@ -128,14 +128,6 @@
 }
 
 /* ========== 11. Contenido Principal (boxes, secciones, etc.) ========== */
-.content {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  /* width: calc(100% - 80px); */
-  padding: 100px 50px 30px 50px;
-  gap: 10px;
-}
 
 .content-profile-riddle {
   display: grid;
@@ -434,10 +426,6 @@
   cursor: pointer;
 }
 
-.selected-language {
-  padding: 5px;
-}
-
 .selected-language img {
   width: 60px;
 }
@@ -452,13 +440,6 @@
   border: 1px solid #ccc;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   z-index: 1;
-}
-
-.language-options div {
-  padding: 5px;
-  display: flex;
-  justify-content: center;
-  cursor: pointer;
 }
 
 .language-options div:hover {

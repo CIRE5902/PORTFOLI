@@ -58,6 +58,10 @@
     justify-content: center;
     cursor: pointer;
   }
+
+  .selected-language {
+    padding: 5px;
+  }  
   
   .language-options div:hover {
     background-color: #e0e0e0;
