@@ -34,7 +34,7 @@ const translations = {
         menuStudies: "Trajectory",
         menuContact: "Contact",
         menuStack: "Stack",
-        mainTitle: 'Hi, it\'s <span class="animate-title">Éric</span>',
+        mainTitle: 'Hi, i\'m <span class="animate-title">Éric</span>',
         mainDescription: 'I\'m a <span class="animate-description">Web Developer</span>',
         btnCV: "Resume",
         btnAvailable: "Available",
