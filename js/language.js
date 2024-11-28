@@ -9,8 +9,8 @@ const translations = {
         menuHome: "Inicio",
         menuAbout: "Sobre",
         menuProjects: "Proyectos",
-        menuStudies: "Estudios",
-        menuExperience: "Experiencia",
+        menuStudies: "Trayectoria",
+        menuContact: "Contacto",
         menuStack: "Stack",
         mainTitle: 'Hola, soy <span class="animate-title">Éric</span>',
         mainDescription: 'Soy <span class="animate-description">Desarrollador Web</span>',
@@ -31,8 +31,8 @@ const translations = {
         menuHome: "Home",
         menuAbout: "About",
         menuProjects: "Projects",
-        menuStudies: "Studies",
-        menuExperience: "Experience",
+        menuStudies: "Trajectory",
+        menuContact: "Contact",
         menuStack: "Stack",
         mainTitle: 'Hi, it\'s <span class="animate-title">Éric</span>',
         mainDescription: 'I\'m a <span class="animate-description">Web Developer</span>',
@@ -53,8 +53,8 @@ const translations = {
         menuHome: "Inici",
         menuAbout: "Sobre",
         menuProjects: "Projectes",
-        menuStudies: "Estudis",
-        menuExperience: "Experiència",
+        menuStudies: "Trajectòria",
+        menuContact: "Contacte",
         menuStack: "Stack",
         mainTitle: 'Hola, sóc <span class="animate-title">Éric</span>',
         mainDescription: 'Sóc <span class="animate-description">Desenvolupador Web</span>',
@@ -73,7 +73,7 @@ function changeLanguage(language) {
     document.getElementById("menu-about").textContent = translations[language].menuAbout;
     document.getElementById("menu-projects").textContent = translations[language].menuProjects;
     document.getElementById("menu-studies").textContent = translations[language].menuStudies;
-    document.getElementById("menu-experience").textContent = translations[language].menuExperience;
+    document.getElementById("menu-contact").textContent = translations[language].menuContact;
     document.getElementById("menu-stack").textContent = translations[language].menuStack;
     document.getElementById("main-title").innerHTML = translations[language].mainTitle;
     document.getElementById("main-description").innerHTML = translations[language].mainDescription;    
