@@ -36,17 +36,17 @@
   
   /* Hover de íconos sociales */
   .social-icon.linkedin:hover {
-      fill: #0077B5; /* Azul de LinkedIn */
+      fill: #a285d1; /* Azul de LinkedIn */
     }
   
     .social-icon.mail:hover {
-        fill: #D44638; /* Rojo de Gmail */
+        fill: #a285d1; /* Rojo de Gmail */
     }
     
     .social-icon.github:hover {
-        fill: #000000; /* Negro de GitHub */
+        fill: #a285d1; /* Negro de GitHub */
     }
     
     .social-icon.figma:hover {
-        fill: #F24E1E; /* Naranja de Figma */
+        fill: #a285d1; /* Naranja de Figma */
     }
