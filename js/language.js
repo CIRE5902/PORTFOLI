@@ -1,8 +1,8 @@
 const translations = {
     es: {
         thirdStudies: "TÉCNICO SUPERIOR EN DESARROLLO DE APLICACIONES WEB",
-        secondStudies: "TÉCNICO SUPERIOR EN DESARROLLO DE APLICACIONES WEB",
-        firstStudies: "TÉCNICO SUPERIOR EN DESARROLLO DE APLICACIONES WEB",
+        secondStudies: "TÉCNICO SUPERIOR EN ADMINISTRACIÓN DE SISTEMAS INFORMÁTICOS EN RED",
+        firstStudies: "TÉCNICO SUPERIOR EN SISTEMAS MICROINFORMÁTICOS Y REDES",
         thirdExperience: "TÉCNICO SUPERIOR EN DESARROLLO DE APLICACIONES WEB",
         secondExperience: "TÉCNICO SUPERIOR EN ADMINISTRACIÓN DE SISTEMAS INFORMÁTICOS EN RED",
         firstExperience: "TÉCNICO SUPERIOR EN ADMINISTRACIÓN DE SISTEMAS INFORMÁTICOS EN RED",
@@ -22,9 +22,9 @@ const translations = {
         stackTitle: "Stack"
     },
     en: {
-        thirdStudies: "WEB APPLICATIONS DEVELOPMENT TECHNICIAN",
-        secondStudies: "WEB APPLICATIONS DEVELOPMENT TECHNICIAN",
-        firstStudies: "WEB APPLICATIONS DEVELOPMENT TECHNICIAN",
+        thirdStudies: "HIGHER TECHNICIAN IN WEB APPLICATION DEVELOPMENT",
+        secondStudies: "HIGHER TECHNICIAN IN NETWORK SYSTEM ADMINISTRATION",
+        firstStudies: "HIGHER TECHNICIAN IN MICROCOMPUTER SYSTEMS AND NETWORKS",
         thirdExperience: "WEB APPLICATIONS DEVELOPMENT TECHNICIAN",
         secondExperience: "COMPUTER SYSTEMS ADMINISTRATION TECHNICIAN",
         firstExperience: "COMPUTER SYSTEMS ADMINISTRATION TECHNICIAN",
@@ -45,8 +45,8 @@ const translations = {
     },
     ca: {
         thirdStudies: "TÈCNIC SUPERIOR EN DESENVOLUPAMENT D'APLICACIONS WEB",
-        secondStudies: "TÈCNIC SUPERIOR EN DESENVOLUPAMENT D'APLICACIONS WEB",
-        firstStudies: "TÈCNIC SUPERIOR EN DESENVOLUPAMENT D'APLICACIONS WEB",
+        secondStudies: "TÈCNIC SUPERIOR EN ADMINISTRACIÓ DE SISTEMES INFORMÀTICS EN XARXA",
+        firstStudies: "TÈCNIC SUPERIOR EN SISTEMES MICROINFORMÀTICS I XARXES",
         thirdExperience: "TÈCNIC SUPERIOR EN DESENVOLUPAMENT D'APLICACIONS WEB",
         secondExperience: "TÈCNIC SUPERIOR EN ADMINISTRACIÓ DE SISTEMES INFORMÀTICS EN XARXA",
         firstExperience: "TÈCNIC SUPERIOR EN ADMINISTRACIÓ DE SISTEMES INFORMÀTICS EN XARXA",
@@ -72,11 +72,11 @@ function changeLanguage(language) {
     document.getElementById("menu-home").textContent = translations[language].menuHome;
     document.getElementById("menu-about").textContent = translations[language].menuAbout;
     document.getElementById("menu-projects").textContent = translations[language].menuProjects;
-    document.getElementById("menu-studies").textContent = translations[language].menuStudies;
+    // document.getElementById("menu-studies").textContent = translations[language].menuStudies;
     document.getElementById("menu-contact").textContent = translations[language].menuContact;
     document.getElementById("menu-stack").textContent = translations[language].menuStack;
     document.getElementById("main-title").innerHTML = translations[language].mainTitle;
-    document.getElementById("main-description").innerHTML = translations[language].mainDescription;    
+    document.getElementById("main-description").innerHTML = translations[language].mainDescription;
     document.getElementById("btn-cv").textContent = translations[language].btnCV;
     document.getElementById("btn-available").textContent = translations[language].btnAvailable;
     document.getElementById("experience-title").textContent = translations[language].experienceTitle;

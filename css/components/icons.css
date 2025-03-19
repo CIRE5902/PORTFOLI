@@ -50,3 +50,8 @@
     .social-icon.figma:hover {
         fill: #a285d1; /* Naranja de Figma */
     }
+
+    .iconosContacto{
+      width: 30px;
+      height: 30px;
+    }

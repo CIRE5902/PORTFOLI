@@ -28,6 +28,7 @@
 
 /* Paredes */
 .room {
+  border-radius: 10px;
   width: 90%;
   height: 90%;
   perspective: 1000px;

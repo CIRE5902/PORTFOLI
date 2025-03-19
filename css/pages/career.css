@@ -1,4 +1,4 @@
-@import '../base/base.css';
+/* @import '../base/base.css';
 @import '../base/reset.css';
 @import '../base/typography.css';
 @import '../components/buttons.css';
@@ -63,6 +63,15 @@
     }
 }
 
+@keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
 .contents:nth-child(1) .box:nth-child(1),
 .contents:nth-child(2) .box:nth-child(1) {
     animation-delay: 0.4s;
@@ -80,8 +89,10 @@
 
 .col .contents .box:hover {
     box-shadow: 0px 3px 12px 0px #a285d1;
-    /* border: 1px solid; */
 }
+.box:hover .box-icon {
+    animation: bounce 0.5s ease-in-out;
+  }
 
 .col .contents .box::before {
     content: '';
@@ -117,6 +128,13 @@
     color: #666;
     font-size: 17px;
 }
+.box ul{
+    color: black;
+    padding: 15px;
+}
+.box li{
+    padding: 5px;
+}
 
 @media(max-width: 768px) {
     .row {
@@ -126,4 +144,4 @@
     .row .col:nth-child(2) {
         margin-top: 30px;
     }
-}
+} */

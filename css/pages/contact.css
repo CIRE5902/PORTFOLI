@@ -1,0 +1,65 @@
+@import '../base/base.css';
+@import '../base/reset.css';
+@import '../base/typography.css';
+@import '../components/buttons.css';
+@import '../components/icons.css';
+@import '../layout/layout.css';
+@import '../utilities/helpers.css';
+@import '../utilities/variables.css';
+
+.contact-title {
+    display: flex;
+    align-items: center;
+}
+
+.contact-title h1 {
+    text-transform: capitalize;
+    font-size: 60px;
+}
+
+.contact-form {
+    /* background-color: aqua; */
+}
+
+.contact-info {
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+    /* border-radius: 10px; */
+    /* border: 10px solid blue; */
+}
+
+.contact-det {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.contact-details {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.contact-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.social-section {
+    display: flex;
+    flex-direction: row;
+}
+
+.contact-section div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-details div a {
+    text-decoration: none;
+    color: inherit;
+}
