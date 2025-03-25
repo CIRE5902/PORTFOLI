@@ -19,6 +19,23 @@ body {
   flex-direction: column;
   text-align: left;
   /* width: calc(100% - 80px); */
-  padding: 100px 50px 30px 50px;
+  /* padding: 100px 50px 30px 50px; */
+  padding: 100px 150px 30px 250px;
   gap: 10px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  /* width: calc(100% - 80px); */
+  /* padding: 100px 50px 30px 50px; */
+  padding: 100px 150px 30px 250px;
+  gap: 10px;
+}
+
+@media only screen and (max-width: 950px) {
+  .content {
+    padding: 100px 50px 30px 50px;
+  }
 }

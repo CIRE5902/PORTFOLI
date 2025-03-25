@@ -168,7 +168,7 @@
   
 
   /* responsive */
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 950px) {
   .navbar {
     bottom: 0;
     width: 100vw;
@@ -201,7 +201,7 @@
   }
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 950px) {
   .navbar {
     top: 0;
     width: 65px;
@@ -209,7 +209,7 @@
   }
 
   .navbar:hover {
-    width: 16rem;
+    width: 15rem;
   }
 
   .navbar:hover .logo svg {
