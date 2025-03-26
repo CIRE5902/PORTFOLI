@@ -6,6 +6,7 @@
 @import '../layout/layout.css';
 @import '../utilities/helpers.css';
 @import '../utilities/variables.css';
+@import '../components/buttonFollow.css';
 
 .contact-title {
     width: 100%;
@@ -40,7 +41,7 @@
 
 .contact-details {
     width: 100%;
-    gap: 30px;
+    gap: 50px;
     margin-top: 50px;
     display: flex;
     flex-direction: column;
@@ -60,6 +61,14 @@
 .enlaceWhatsapp {
     text-decoration: none;
     color: inherit;
+}
+
+.contact-details-othersocial {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 25px;
 }
 
 /* .contact-details-social-firstGroup,
