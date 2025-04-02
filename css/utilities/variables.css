@@ -1,34 +1,35 @@
 :root {
     /* Valores predeterminados (light mode) */
-    --text-primary: #333333;
-    --text-secondary: #666666;
-    --bg-primary: #F9F9F9;
-    --bg-secondary: #FFFFFF;
-    --cards: #FFFFFF;
+    --text-primary: #151515;
+    --text-secondary: #404040;
+    --bg-primary: #FDFDFD;
+    --bg-secondary: #F5F5F5;
+    --cards: #F7F7F7;
     --transition-speed: 600ms;
   }
   
   .dark {
     --text-primary: #EEEEEE;
     --text-secondary: #BBBBBB;
-    --bg-primary: #1e1e1e;
-    --bg-secondary: #1e1e1e;
-    --cards: #232323;
+    --bg-primary: #242427;
+    --bg-secondary: #1F1F22;
+    --cards: #151515;
   }
   
   .light {
-    --text-primary: #333333;
-    --text-secondary: #666666;
-    --bg-primary: #F9F9F9;
-    --bg-secondary: #FFFFFF;
-    --cards: #FFFFFF;
+    --text-primary: #151515;
+    --text-secondary: #404040;
+    --bg-primary: #FDFDFD;
+    --bg-secondary: #F5F5F5;
+    --cards: #F7F7F7;
   }
   
   .eric {
-    --text-primary: #2C2F33;
-    --text-secondary: #4F545C;
-    --bg-primary: #d9c9f3;
-    --bg-secondary: #d9c9f3;
+    --text-primary: #151515; /* Texto oscuro para buen contraste */
+    --text-secondary: #404040; /* Texto secundario gris claro */
+    --bg-primary: #D1C6E0; /* Lila suave claro para fondo principal */
+    --bg-secondary: #B59ED2; /* Lila oscuro para secciones secundarias */
+    --cards: #F7F7F7; /* Fondo blanco para las tarjetas */
   }
 
   

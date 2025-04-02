@@ -178,20 +178,26 @@
   border-color: hsla(0, 0%, 100%, .1);
   outline-color: #1a1a1a;
   color: var(--text-primary);
+  background-color: var(--cards);
 }
 
-.box-experience,
+/* .box-experience,
 .box-education {
   overflow-y: scroll;
-}
-
-/* .box-experience-items, .box-education-items{
-    overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scrollbar-color: #a285d1;
+  scrollbar-width: thin;
 } */
 
+.box-experience-items, .box-education-items{
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scrollbar-color: #a285d1;
+  scrollbar-width: thin;}
 
-.box-experience,
-.box-education,
+
+/* .box-experience, */
+/* .box-education, */
 .box-project,
 .box-tech,
 .box-media {
