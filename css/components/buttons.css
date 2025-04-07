@@ -1,98 +1,149 @@
 /* ========== 9. Botones ========== */
 .btn {
-    margin-top: 20px;
-    padding: 15px;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    width: 400px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-  }
-  
-  .btn-mode {
-    background: none;
-    border: none;
-    color: white;
-  }
-  
-  .btn p {
-    font-size: 24px;
-    font-weight: bold;
-  }
-  
-  .btn-icon {
-    width: 30px;
-    height: 30px;
-    transition: transform 0.3s ease;
-  }
-  
-  .btn:hover .btn-icon {
-    transform: rotate(15deg);
-  }
-  
-  /* Botón de resume */
-  .btn-resume {
-    /* background-color: #a285d1; */
-    text-decoration: none;
-    transition: 0.4s ease;
-    border: 2px solid #a285d1;
-    color: #a285d1;
-  
-  }
-  
-  .btn-resume:hover {
-    background-color: #a285d1;
-    color: #ffffff;
-    fill: #ffffff;
-    box-shadow: 0 0 10px #a285d1, 0 0 40px #a285d1, 0 0 80px #a285d1;
-  }
-  
-  .btn-resume:hover::before,
-  .btn-resume:hover::after {
-    border-color: transparent;
-  }
-  
-  /* Botón de disponibilidad */
-  .btn-available {
-    background-color: #a285d1;
-  }
-  
-  .btn-available:hover {
-    box-shadow: inset 10px 10px 30px #825aaf, inset -10px -10px 30px #c5a5f1;
-    /* Sombras lilas invertidas */
-  }
-  
-  .btn-available:hover {
-    background: transparent;
-    border: 2px #a285d1;
-    /* color: #ffffff;  */
-    box-shadow: 0 0 10px #a285d1, 0 0 40px #a285d1, 0 0 80px #a285d1;
-  }
-  
-  .btn-available:hover::before,
-  .btn-available:hover::after {
-    border-color: transparent;
-  }
-  
-  .btn-available svg,
-  .btn-resume svg {
-    width: 30px;
-    height: 30px;
-  }
-  
-  .interaction-icon {
-    position: absolute;
-    top: 5px;
-    right: 10px;
-    font-size: 18px;
-    color: rgba(255, 255, 255, 0.7);
-    opacity: 0;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-  }
-  
-  .btn:hover .interaction-icon {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 400px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  border: none;
+}
+
+.btn-mode {
+  background: none;
+  border: none;
+  color: white;
+}
+
+.btn p {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.btn-icon {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease;
+}
+
+.btn:hover .btn-icon {
+  transform: rotate(15deg);
+}
+
+/* Botón de resume */
+.btn-resume {
+  /* background-color: #a285d1; */
+  text-decoration: none;
+  transition: 0.4s ease;
+  border: 2px solid #a285d1;
+  color: #a285d1;
+
+}
+
+.btn-send {
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+
+.btn-resume:hover {
+  background-color: #a285d1;
+  color: #ffffff;
+  fill: #ffffff;
+  box-shadow: 0 0 10px #a285d1, 0 0 40px #a285d1, 0 0 80px #a285d1;
+}
+
+.btn-resume:hover::before,
+.btn-resume:hover::after {
+  border-color: transparent;
+}
+
+/* Botón de disponibilidad */
+.btn-available,
+.btn-send {
+  background-color: #a285d1;
+}
+
+.btn-available:hover,
+.btn-send:hover {
+  background: transparent;
+  border: 2px #a285d1;
+  /* color: #ffffff;  */
+  box-shadow: 0 0 10px #a285d1, 0 0 40px #a285d1, 0 0 80px #a285d1;
+}
+
+.btn-available:hover::before,
+.btn-available:hover::after,
+.btn-send:hover::before,
+.btn-send:hover::after {
+  border-color: transparent;
+}
+
+.btn-available svg,
+.btn-resume svg {
+  width: 30px;
+  height: 30px;
+}
+
+/* .interaction-icon {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.7);
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+} */
+
+.btn:hover .interaction-icon {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+.btn-send {
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.btn-send:hover .send-icon {
+  transform: rotate(10deg);
+}
+
+/* .btn-send.clicked {
+  background-color: #cff5b3 !important;
+  border-color: #cff5b3 !important;
+  color: #6AAA3B !important;
+} */
+
+.btn-send.clicked .send-icon {
+  animation: flyaway 1.3s forwards;
+  fill: #6AAA3B;
+}
+
+/* Animación de vuelo del icono */
+@keyframes flyaway {
+  0% {
+    transform: rotate(10deg);
+    top: auto;
+    right: 25px;
+    height: 24px;
     opacity: 1;
-    transform: scale(1.2);
   }
+  40% {
+    transform: translate(50px, -50px) rotate(-20deg);
+  }
+  100% {
+    transform: translate(300px, -200px) rotate(60deg);
+    opacity: 0;
+    height: 0;
+  }
+}

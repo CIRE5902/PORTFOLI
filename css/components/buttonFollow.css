@@ -32,7 +32,13 @@
 .buttonFollow img {
     height: 40px;
     width: 40px;
-    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.buttonFollow ul:hover img {
+    opacity: 1;
+    visibility: visible;
 }
 
 .buttonFollow ul:hover .text {

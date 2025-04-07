@@ -1,57 +1,59 @@
 /* ========== 8. Iconos y Botones ========== */
 
 .sidebar-icon {
-    width: 60px;
-    height: 60px;
-    display: inline-block;
-    object-fit: cover;
-    margin-right: 15px;
-    font-size: 50px;
-    color: whitesmoke;
-  }
-  
-  .main-avatar {
-    height: 150px;
-    width: 150px;
-    border-radius: 50%;
-  }
-  
-  .social-icon {
-    width: 50px;
-    height: 50px;
-    transition: transform 0.3s ease;
-    fill: var(--text-primary);
-  }
-  
-  .btn-icon {
-    width: 30px;
-    height: 30px;
-  }
-  
-  .box-icon {
-    height: 30px;
-    width: 30px;
-    border-radius: 15px;
-  }
-  
-  /* Hover de íconos sociales */
-  .social-icon.linkedin:hover {
-      fill: #a285d1; /* Azul de LinkedIn */
-    }
-  
-    .social-icon.mail:hover {
-        fill: #a285d1; /* Rojo de Gmail */
-    }
-    
-    .social-icon.github:hover {
-        fill: #a285d1; /* Negro de GitHub */
-    }
-    
-    .social-icon.figma:hover {
-        fill: #a285d1; /* Naranja de Figma */
-    }
+  width: 60px;
+  height: 60px;
+  display: inline-block;
+  object-fit: cover;
+  margin-right: 15px;
+  font-size: 50px;
+  color: whitesmoke;
+}
 
-    .iconosContacto{
-      width: 30px;
-      height: 30px;
-    }
+.main-avatar {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+}
+
+.social-icon {
+  width: 50px;
+  height: 50px;
+  transition: transform 0.3s ease;
+  fill: var(--text-primary);
+}
+
+.instagram,
+.codepen {
+  color: var(--text-primary);
+}
+
+.btn-icon {
+  width: 30px;
+  height: 30px;
+}
+
+.box-icon {
+  height: 30px;
+  width: 30px;
+  border-radius: 15px;
+}
+
+/* Hover de íconos sociales */
+.social-icon.linkedin:hover,
+.social-icon.mail:hover,
+.social-icon.github:hover,
+.social-icon.figma:hover,
+.social-icon.instagram:hover,
+.social-icon.codepen:hover {
+  color: #a285d1;
+  fill: #a285d1;
+  filter: drop-shadow(0 0 6px #a285d1);
+  transition: all 0.3s ease;
+}
+
+
+.iconosContacto {
+  width: 30px;
+  height: 30px;
+}
