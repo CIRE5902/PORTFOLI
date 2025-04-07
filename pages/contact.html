@@ -3,9 +3,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script defer src="../js/theme.js"></script>
     <script defer src="../js/language.js"></script>
-    <script defer src="../js/buttonSend.js"></script>
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <script defer src="../js/emailForm.js"></script>
+    <!-- <script defer src="../js/buttonSend.js"></script> -->
     <link rel="stylesheet" href="../css/pages/contact.css" />
 </head>
 
@@ -242,20 +240,21 @@
             <div>
                 <h2>I'm very resposive to messages</h2>
             </div>
-            <form id="contact-form">
+            <form action="https://formspree.io/f/xwplwbvo" method="POST">
                 <div class="form-row">
                     <input type="text" name="name" placeholder="Name" required>
                     <input type="email" name="email" placeholder="Email" required>
-                  </div>
-                  <input type="text" name="subject" placeholder="Subject" required>
-                  <textarea name="message" rows="4" placeholder="Message" required></textarea>
-                  <button type="submit" class="btn btn-send">
+                </div>
+                <input type="text" name="subject" placeholder="Subject" required>
+                <textarea name="message" rows="4" placeholder="Message" required></textarea>
+                <button type="submit" class="btn btn-send">
                     <p>Send Message</p>
-                    <svg fill="currentColor" class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                      <path d="M462,54.955L355.371,437.187l-135.92-128.842L353.388,167l-179.53,124.074L50,260.973L462,54.955z
+                    <svg fill="currentColor" class="social-icon" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512">
+                        <path d="M462,54.955L355.371,437.187l-135.92-128.842L353.388,167l-179.53,124.074L50,260.973L462,54.955z
                         M202.992,332.528v124.517l58.738-67.927L202.992,332.528z" />
                     </svg>
-                  </button>
+                </button>
             </form>
 
         </div>
