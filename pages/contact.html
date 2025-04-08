@@ -239,24 +239,32 @@
             <div>
                 <h2>I'm very resposive to messages</h2>
             </div>
-            <form name="contact" method="POST" data-netlify="true">
+            <form name="contact" method="POST" data-netlify="true" id="contact-form"
+                onsubmit="handleFormSubmission(event)">
                 <input type="hidden" name="form-name" value="contact">
+
                 <div class="form-row">
-                  <input type="text" name="name" placeholder="Name" required>
-                  <input type="email" name="email" placeholder="Email" required>
+                    <input type="text" name="name" placeholder="Name" required>
+                    <input type="email" name="email" placeholder="Email" required>
                 </div>
+
                 <input type="text" name="subject" placeholder="Subject" required>
                 <textarea name="message" rows="4" placeholder="Message" required></textarea>
+
                 <button type="submit" class="btn btn-send">
-                  <p>Send Message</p>
-                  <svg fill="currentColor" class="social-icon" xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 512 512">
-                    <path d="M462,54.955L355.371,437.187l-135.92-128.842L353.388,167l-179.53,124.074L50,260.973L462,54.955z
+                    <p>Send Message</p>
+                    <svg fill="currentColor" class="social-icon" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512">
+                        <path d="M462,54.955L355.371,437.187l-135.92-128.842L353.388,167l-179.53,124.074L50,260.973L462,54.955z
                     M202.992,332.528v124.517l58.738-67.927L202.992,332.528z" />
-                  </svg>
+                    </svg>
                 </button>
-              </form>              
+
+                <div id="form-response" style="display: none; padding-top: 20px;"></div>
+            </form>
         </div>
     </main>
 
 </body>
+
+<script src="../js/emailForm.js"></script>
