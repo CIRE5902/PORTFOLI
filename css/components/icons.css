@@ -57,3 +57,7 @@
   width: 30px;
   height: 30px;
 }
+
+.btn-send:hover .social-icon {
+  transform: translateX(10px);
+}
