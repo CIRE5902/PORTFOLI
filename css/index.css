@@ -4,9 +4,11 @@
 @import './components/buttons.css';
 @import './components/icons.css';
 @import './components/room.css';
+@import './components/cards.css';
 @import './layout/layout.css';
 @import './utilities/helpers.css';
 @import './utilities/variables.css';
+
 
 /* ========== 7. Animaciones ========== */
 
@@ -162,23 +164,6 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 20px;
-}
-
-.box-experience,
-.box-education,
-.box-project,
-.box-tech,
-.box-spotify,
-.box-books {
-  overflow: hidden;
-  padding: 15px;
-  border-radius: 10px;
-  transition: background-color var(--transition-speed);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  border-color: hsla(0, 0%, 100%, .1);
-  outline-color: #1a1a1a;
-  color: var(--text-primary);
-  background-color: var(--cards);
 }
 
 /* .box-experience,
