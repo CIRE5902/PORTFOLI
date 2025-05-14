@@ -61,3 +61,40 @@
 .btn-send:hover .social-icon {
   transform: translateX(5px);
 }
+
+
+
+
+    .icon-container {
+        position: relative;
+        width: 24px;
+        height: 24px;
+    }
+
+    .icon-default,
+    .icon-hovered {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .icon-default {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    .icon-hovered {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    div:hover .icon-default {
+        opacity: 0;
+        transform: scale(1.2);
+    }
+
+    div:hover .icon-hovered {
+        opacity: 1;
+        transform: scale(1);
+    }
