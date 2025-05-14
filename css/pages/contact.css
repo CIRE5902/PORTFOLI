@@ -143,3 +143,10 @@
         grid-template-rows: 1fr 1fr 1fr 1fr;
     }
 }
+
+
+
+
+.social-media-box {
+    transition: background-color var(--transition-speed), box-shadow 0.3s ease, transform 0.3s ease;
+}
