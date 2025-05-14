@@ -59,28 +59,5 @@
 }
 
 .btn-send:hover .social-icon {
-  transform: translateX(10px);
-}
-
-
-
-
-.icon-default {
-  opacity: 1;
-  transform: scale(1);
-}
-
-.icon-hovered {
-  opacity: 0;
-  transform: scale(0.8);
-}
-
-.svg-hover:hover .icon-default {
-  opacity: 0;
-  transform: scale(1.2);
-}
-
-.svg-hover:hover .icon-hovered {
-  opacity: 1;
-  transform: scale(1);
+  transform: translateX(5px);
 }
