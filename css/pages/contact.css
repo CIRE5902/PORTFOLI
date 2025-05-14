@@ -147,6 +147,6 @@
 
 
 
-.social-media-box {
+.social-media-box:hover {
     transition: background-color var(--transition-speed), box-shadow 0.3s ease, transform 0.3s ease;
 }
