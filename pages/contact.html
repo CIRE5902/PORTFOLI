@@ -32,7 +32,7 @@
         <ul class="navbar-nav">
             <li class="logo">
                 <a href="../index.html" class="nav-link">
-                    <span class="link-text logo-text">Main</span>
+                    <span class="link-text logo-text" id="menuMenu">Main</span>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="nav-icon">
                         <path
                             d="M12.293 7.293a1 1 0 011.414 0L18 11.586l-4.293 4.293a1 1 0 11-1.414-1.414L15.586 12l-3.293-3.293a1 1 0 010-1.414z" />
@@ -45,7 +45,7 @@
             <li class="nav-item">
                 <a href="../index.html" class="nav-link">
                     <img src="../images/avatar.png" alt="Inicio Icon" class="nav-icon">
-                    <span class="link-text" id="menu-home">Home</span>
+                    <span class="link-text" id="menuHome">Home</span>
                 </a>
             </li>
 
@@ -56,7 +56,7 @@
                         <circle cx="12" cy="8" r="4" />
                         <path d="M12 12c-3.31 0-6 2.69-6 6v2h12v-2c0-3.31-2.69-6-6-6z" />
                     </svg>
-                    <span class="link-text" id="menu-about">About</span>
+                    <span class="link-text" id="menuAbout">About</span>
                 </a>
             </li>
 
@@ -68,7 +68,7 @@
                         <path
                             d="M8.59 16.34L3.25 12l5.34-4.34L7.16 6 0 12l7.16 6 1.43-1.66zm7.82-8.68L20.75 12l-5.34 4.34 1.43 1.66L24 12l-7.16-6-1.43 1.66zm-6.69 14.12L11.93 2h-1.95l-2.19 19.78h1.95z" />
                     </svg>
-                    <span class="link-text" id="menu-projects">Projects</span>
+                    <span class="link-text" id="menuProjects">Projects</span>
                 </a>
             </li>
 
@@ -94,7 +94,7 @@
                         <path
                             d="M12 2L2 7l10 5 10-5-10-5zm0 18v-6l-8-4v4l8 4zm8-4v-4l-8 4v6l8-4zm-16-.35l8 4.36 8-4.36v.84l-8 4.36-8-4.36v-.84z" />
                     </svg>
-                    <span class="link-text" id="menu-stack">Stack</span>
+                    <span class="link-text" id="menuStack">Stack</span>
                 </a>
             </li>
 
@@ -105,7 +105,7 @@
                         <path
                             d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-2 8H6v-2h12v2zm-3 4H6v-2h9v2zm3-8H6V6h12v2z" />
                     </svg>
-                    <span class="link-text" id="menu-contact">Contact</span>
+                    <span class="link-text" id="menuContact">Contact</span>
                 </a>
             </li>
 
@@ -124,7 +124,7 @@
     <main class="content">
 
         <div class="contact-info">
-            <div class="contact-title">
+            <div class="contactTitle">
                 <h1>contact me</h1>
             </div>
             <div class="contact-details">
@@ -142,7 +142,7 @@
                                 <path
                                     d="M6.6 10.2c1.2 2.4 3.2 4.4 5.6 5.6l2-2c.2-.2.5-.3.8-.2 1 .3 2 .5 3 .5.5 0 1 .4 1 .9v3.2c0 .6-.5 1-1 1-8.3 0-15-6.7-15-15 0-.5.4-1 1-1h3.2c.5 0 .9.5.9 1 0 1 0 2 .4 3 .1.3 0 .6-.2.8l-2 2z" />
                             </svg>
-                            <p>Call me on</p>
+                            <p id="callTitle">Call me</p>
                             <p>+34 611 48 95 90</p>
                         </a>
                     </div>
@@ -153,7 +153,7 @@
                                 <path
                                     d="M12 2C8.13 2 5 5.13 5 8.5c0 3.5 7 11.5 7 11.5s7-8 7-11.5c0-3.37-3.13-6.5-7-6.5zm0 10c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3z" />
                             </svg>
-                            <p>Where I am?</p>
+                            <p id="ubicationTitle">Where I am?</p>
                             <p>Terrassa</p>
                         </a>
                     </div>
@@ -227,10 +227,10 @@
         </div>
         <div class="contact-form box-card">
             <div>
-                <h1>Send me an Email</h1>
+                <h1 id="sendTitle">Send me an email</h1>
             </div>
             <div>
-                <h2>I'm very resposive to messages</h2>
+                <h2 id="resposiveTitle">I'm very resposive to messages</h2>
             </div>
             <form name="contact" method="POST" netlify>
                 <input type="hidden" name="form-name" value="contact">
@@ -241,7 +241,7 @@
                 <input type="text" name="subject" placeholder="Subject" required>
                 <textarea name="message" rows="4" placeholder="Message" required></textarea>
                 <button type="submit" class="btn btn-send">
-                    <p>Send Message</p>
+                    <p id="sendMessage">Send Message</p>
                     <svg fill="currentColor" class="social-icon" xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 512 512">
                         <path d="M462,54.955L355.371,437.187l-135.92-128.842L353.388,167l-179.53,124.074L50,260.973L462,54.955z

@@ -7,6 +7,7 @@ const translations = {
       menuStudies: "Trayectoria",
       menuContact: "Contacto",
       menuStack: "Stack",
+      menuMenu: "MENÚ",
     },
     home: {
       thirdStudies: "TÉCNICO SUPERIOR EN DESARROLLO DE APLICACIONES WEB",
@@ -25,8 +26,12 @@ const translations = {
       stackTitle: "Stack"
     },
     contact: {
-      contactTitle: "Contacto",
-      contactIntro: "¿Quieres ponerte en contacto conmigo? Rellena el formulario."
+      contactTitle: "Contactame",
+      callTitle: "Llámame",
+      ubicationTitle: "Donde estoy?",
+      sendTitle: "Envíame un email",
+      resposiveTitle: "Soy muy receptivo a los mensajes",
+      sendMessage: "Enviar mensaje"
     }
   },
   en: {
@@ -37,6 +42,7 @@ const translations = {
       menuStudies: "Trajectory",
       menuContact: "Contact",
       menuStack: "Stack",
+      menuMenu: "MAIN",
     },
     home: {
       thirdStudies: "HIGHER TECHNICIAN IN WEB APPLICATION DEVELOPMENT",
@@ -55,8 +61,12 @@ const translations = {
       stackTitle: "Stack"
     },
     contact: {
-      contactTitle: "Contact",
-      contactIntro: "Want to get in touch with me? Fill out the form."
+      contactTitle: "Contact me",
+      callTitle: "Call me",
+      ubicationTitle: "Where I am?",
+      sendTitle: "Send me an email",
+      resposiveTitle: "I'm very resposive to messages",
+      sendMessage: "Send message"
     }
   },
   ca: {
@@ -67,6 +77,7 @@ const translations = {
       menuStudies: "Trajectòria",
       menuContact: "Contacte",
       menuStack: "Stack",
+      menuMenu: "MENÚ",
     },
     home: {
       thirdStudies: "TÈCNIC SUPERIOR EN DESENVOLUPAMENT D'APLICACIONS WEB",
@@ -85,8 +96,12 @@ const translations = {
       stackTitle: "Stack"
     },
     contact: {
-      contactTitle: "Contacte",
-      contactIntro: "Vols contactar amb mi? Omple el formulari."
+      contactTitle: "Contacta'm",
+      callTitle: "Truca'm",
+      ubicationTitle: "On sóc?",
+      sendTitle: "Envia'm un email",
+      resposiveTitle: "Sóc molt receptiu als missatges",
+      sendMessage: "Enviar missatge"
     }
   }
 };
