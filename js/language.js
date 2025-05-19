@@ -1,5 +1,6 @@
 const translations = {
-    es: {
+  es: {
+    home: {
         thirdStudies: "TÉCNICO SUPERIOR EN DESARROLLO DE APLICACIONES WEB",
         secondStudies: "TÉCNICO SUPERIOR EN ADMINISTRACIÓN DE SISTEMAS INFORMÁTICOS EN RED",
         firstStudies: "TÉCNICO SUPERIOR EN SISTEMAS MICROINFORMÁTICOS Y REDES",
@@ -21,7 +22,13 @@ const translations = {
         projectsTitle: "Proyectos",
         stackTitle: "Stack"
     },
-    en: {
+    contact: {
+      contactTitle: "Contacto",
+      contactIntro: "¿Quieres ponerte en contacto conmigo? Rellena el formulario."
+    }
+  },
+  en: {
+    home: {
         thirdStudies: "HIGHER TECHNICIAN IN WEB APPLICATION DEVELOPMENT",
         secondStudies: "HIGHER TECHNICIAN IN NETWORK SYSTEM ADMINISTRATION",
         firstStudies: "HIGHER TECHNICIAN IN MICROCOMPUTER SYSTEMS AND NETWORKS",
@@ -43,7 +50,13 @@ const translations = {
         projectsTitle: "Projects",
         stackTitle: "Stack"
     },
-    ca: {
+    contact: {
+      contactTitle: "Contact",
+      contactIntro: "Want to get in touch with me? Fill out the form."
+    }
+  },
+  ca: {
+    home: {
         thirdStudies: "TÈCNIC SUPERIOR EN DESENVOLUPAMENT D'APLICACIONS WEB",
         secondStudies: "TÈCNIC SUPERIOR EN ADMINISTRACIÓ DE SISTEMES INFORMÀTICS EN XARXA",
         firstStudies: "TÈCNIC SUPERIOR EN SISTEMES MICROINFORMÀTICS I XARXES",
@@ -64,65 +77,65 @@ const translations = {
         studiesTitle: "Estudis",
         projectsTitle: "Projectes",
         stackTitle: "Stack"
+    },
+    contact: {
+      contactTitle: "Contacte",
+      contactIntro: "Vols contactar amb mi? Omple el formulari."
     }
+  }
 };
 
-// Función para cambiar el idioma
-function changeLanguage(language) {
-    document.getElementById("menu-home").textContent = translations[language].menuHome;
-    document.getElementById("menu-about").textContent = translations[language].menuAbout;
-    document.getElementById("menu-projects").textContent = translations[language].menuProjects;
-    // document.getElementById("menu-studies").textContent = translations[language].menuStudies;
-    document.getElementById("menu-contact").textContent = translations[language].menuContact;
-    document.getElementById("menu-stack").textContent = translations[language].menuStack;
-    document.getElementById("main-title").innerHTML = translations[language].mainTitle;
-    document.getElementById("main-description").innerHTML = translations[language].mainDescription;
-    document.getElementById("btn-cv").textContent = translations[language].btnCV;
-    document.getElementById("btn-available").textContent = translations[language].btnAvailable;
-    document.getElementById("experience-title").textContent = translations[language].experienceTitle;
-    document.getElementById("studies-title").textContent = translations[language].studiesTitle;
-    document.getElementById("projects-title").textContent = translations[language].projectsTitle;
-    document.getElementById("stack-title").textContent = translations[language].stackTitle;
-    document.getElementById("firstStudies").textContent = translations[language].firstStudies;
-    document.getElementById("secondStudies").textContent = translations[language].secondStudies;
-    document.getElementById("thirdStudies").textContent = translations[language].thirdStudies;
-    document.getElementById("firstExperience").textContent = translations[language].firstExperience;
-    document.getElementById("secondExperience").textContent = translations[language].secondExperience;
-    document.getElementById("thirdExperience").textContent = translations[language].thirdExperience;
+function changeLanguage(language, page) {
+  const global = translations[language]?.global || {};
+  const pageContent = translations[language]?.[page] || {};
+  const content = { ...global, ...pageContent };
 
-    localStorage.setItem('selectedLanguage', language);
+  for (const id in content) {
+    const el = document.getElementById(id);
+    if (el) {
+      const text = content[id];
+      el[text.includes('<span') ? 'innerHTML' : 'textContent'] = text;
+    }
+  }
+
+  localStorage.setItem('selectedLanguage', language);
 }
 
-// Cargar idioma guardado al iniciar
+function setupLanguageSelector(page) {
+  const selector = document.getElementById('languageSelector');
+  const options = document.querySelector('.language-options');
+
+  selector?.addEventListener('click', () => {
+    selector.classList.toggle('show-options');
+  });
+
+  options?.addEventListener('click', (e) => {
+    const selected = e.target.closest('div[data-lang]');
+    if (selected) {
+      const lang = selected.getAttribute('data-lang');
+      const imgSrc = selected.querySelector('img').src;
+      document.getElementById('selectedLanguage').innerHTML = `<img src="${imgSrc}" alt="Bandera">`;
+      selector.classList.remove('show-options');
+      changeLanguage(lang, page);
+    }
+  });
+
+  window.addEventListener('click', (e) => {
+    if (!selector?.contains(e.target)) {
+      selector.classList.remove('show-options');
+    }
+  });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
-    const savedLanguage = localStorage.getItem('selectedLanguage') || 'es';
-    changeLanguage(savedLanguage);
+  const page = document.body.getAttribute('data-page') || 'home';
+  const savedLanguage = localStorage.getItem('selectedLanguage') || 'es';
+  changeLanguage(savedLanguage, page);
 
-    const savedFlagSrc = document.querySelector(`div[data-lang="${savedLanguage}"] img`).src;
-    document.getElementById('selectedLanguage').innerHTML = `<img src="${savedFlagSrc}" alt="Bandera">`;
-});
+  const selectedFlag = document.querySelector(`div[data-lang="${savedLanguage}"] img`);
+  if (selectedFlag) {
+    document.getElementById('selectedLanguage').innerHTML = `<img src="${selectedFlag.src}" alt="Bandera">`;
+  }
 
-const languageSelector = document.getElementById('languageSelector');
-const languageOptions = document.querySelector('.language-options');
-
-languageSelector.addEventListener('click', function () {
-    languageSelector.classList.toggle('show-options');
-});
-
-languageOptions.addEventListener('click', function (e) {
-    if (e.target.closest('div[data-lang]')) {
-        const selectedOption = e.target.closest('div[data-lang]');
-        const language = selectedOption.getAttribute('data-lang');
-        const imgSrc = selectedOption.querySelector('img').src;
-
-        document.getElementById('selectedLanguage').innerHTML = `<img src="${imgSrc}" alt="Bandera">`;
-        languageSelector.classList.remove('show-options');
-        changeLanguage(language);
-    }
-});
-
-window.addEventListener('click', function (e) {
-    if (!languageSelector.contains(e.target)) {
-        languageSelector.classList.remove('show-options');
-    }
+  setupLanguageSelector(page);
 });
