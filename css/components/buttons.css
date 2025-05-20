@@ -50,6 +50,14 @@
   font-size: 12px;
   cursor: pointer;
   width: auto;
+  max-width: 400px;
+
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
 }
 
 
@@ -92,39 +100,14 @@
   height: 30px;
 }
 
-/* .interaction-icon {
-  position: absolute;
-  top: 5px;
-  right: 10px;
-  font-size: 18px;
-  color: rgba(255, 255, 255, 0.7);
-  opacity: 0;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-} */
-
 .btn:hover .interaction-icon {
   opacity: 1;
   transform: scale(1.2);
 }
 
-.btn-send {
-  position: relative;
-  overflow: hidden;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  gap: 12px;
-}
-
 .btn-send:hover .send-icon {
   transform: rotate(10deg);
 }
-
-/* .btn-send.clicked {
-  background-color: #cff5b3 !important;
-  border-color: #cff5b3 !important;
-  color: #6AAA3B !important;
-} */
 
 .btn-send.clicked .send-icon {
   animation: flyaway 1.3s forwards;
@@ -140,9 +123,11 @@
     height: 24px;
     opacity: 1;
   }
+
   40% {
     transform: translate(50px, -50px) rotate(-20deg);
   }
+
   100% {
     transform: translate(300px, -200px) rotate(60deg);
     opacity: 0;
