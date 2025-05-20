@@ -26,7 +26,7 @@ const translations = {
       stackTitle: "Stack"
     },
     contact: {
-      contactTitle: "Contactame",
+      contactTitle: "CONTACTAME",
       callTitle: "Llámame",
       ubicationTitle: "Donde estoy?",
       sendTitle: "Envíame un email",
@@ -61,7 +61,7 @@ const translations = {
       stackTitle: "Stack"
     },
     contact: {
-      contactTitle: "Contact me",
+      contactTitle: "CONTACT ME",
       callTitle: "Call me",
       ubicationTitle: "Where I am?",
       sendTitle: "Send me an email",
@@ -96,7 +96,7 @@ const translations = {
       stackTitle: "Stack"
     },
     contact: {
-      contactTitle: "Contacta'm",
+      contactTitle: "CONTACTA'M",
       callTitle: "Truca'm",
       ubicationTitle: "On sóc?",
       sendTitle: "Envia'm un email",

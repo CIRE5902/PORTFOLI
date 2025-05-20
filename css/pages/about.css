@@ -1,0 +1,57 @@
+@import '../base/base.css';
+@import '../base/reset.css';
+@import '../base/typography.css';
+@import '../components/buttons.css';
+@import '../components/icons.css';
+@import '../components/cards.css';
+@import '../layout/layout.css';
+@import '../utilities/helpers.css';
+@import '../utilities/variables.css';
+@import '../components/buttonSend.css';
+
+.about {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* .about-title {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+} */
+/* .about-title div{
+    grid-column: span 1;
+} */
+
+.about-txtimg {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.about-txtimg-info {
+    margin-top: 45px;
+    text-align: left;
+    overflow-wrap: break-word;
+
+}
+
+.about-txtimg-info strong {
+    color: #a285d1;
+}
+
+.about-txtimg-info-text p {
+    margin-top: 15px;
+    line-height: 1.5;
+}
+
+
+.about-txtimg-image {
+    padding: 50 0 0 50;
+    overflow: hidden;
+    height: 600px;
+}
+
+.about-txtimg-image img {
+    max-width: 100%;
+    height: auto;
+}
