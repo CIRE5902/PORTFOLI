@@ -24,11 +24,14 @@
 } */
 
 .about-txtimg {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); */
+    display: flex;
+    flex-direction: row;
 }
 
 .about-txtimg-info {
+    flex: 1;
     margin-top: 45px;
     text-align: left;
     overflow-wrap: break-word;
@@ -46,13 +49,23 @@
 
 
 .about-txtimg-image {
-    padding: 50 0 0 50;
+    padding: 75 0 0 75;
     overflow: hidden;
-    height: 600px;
+    height: 450px;
 }
 
 .about-txtimg-image img {
     max-width: 100%;
     height: auto;
     max-height: 100%;
+}
+
+@media screen and (max-width: 1150px) {
+    .about-txtimg {
+        flex-direction: column-reverse;
+    }
+
+    .about-txtimg-image {
+        padding: 0;
+    }
 }
