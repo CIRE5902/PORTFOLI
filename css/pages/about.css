@@ -7,7 +7,6 @@
 @import '../layout/layout.css';
 @import '../utilities/helpers.css';
 @import '../utilities/variables.css';
-@import '../components/buttonSend.css';
 
 .about {
     display: flex;
@@ -49,23 +48,82 @@
 
 
 .about-txtimg-image {
-    padding: 75 0 0 75;
-    overflow: hidden;
-    height: 450px;
+    padding: 50 0 0 75;
 }
 
-.about-txtimg-image img {
+.about-txtimg-image-img {
+    overflow: hidden;
+    height: 400px;
+    margin-bottom: 20px;
+    position: relative;
+
+}
+
+.about-txtimg-image-img img {
     max-width: 100%;
     height: auto;
     max-height: 100%;
 }
 
-@media screen and (max-width: 1150px) {
+.about-txtimg-socialMedia ul {
+    padding: 15px;
+}
+
+.about-txtimg-socialMedia ul {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    list-style: none;
+    gap: 20px;
+}
+
+.about-txtimg-socialMedia ul li a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.about-txtimg-socialMedia ul li div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    padding: 5px;
+    width: 200px;
+}
+
+.about-txtimg-socialMedia ul li div:hover {
+    background-color: #a285d1;
+    color: #ffffff;
+    fill: #ffffff;
+    box-shadow: 0 0 10px #a285d1, 0 0 40px #a285d1, 0 0 80px #a285d1;
+  }
+
+  .about-txtimg-socialMedia ul li div:hover .aboutIcons {
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+  }
+
+@media screen and (max-width: 1250px) {
     .about-txtimg {
         flex-direction: column-reverse;
     }
 
     .about-txtimg-image {
         padding: 0;
+    }
+
+
+}
+
+@media screen and (max-width: 550px) {
+    .about-txtimg-socialMedia ul span {
+        /* display: none; */
+    }
+
+    .about-txtimg-socialMedia ul {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+
+    .about-txtimg-image-img {
+        height: auto;
     }
 }
