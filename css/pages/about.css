@@ -110,9 +110,6 @@
 }
 
 @media screen and (max-width: 550px) {
-    .about-txtimg-socialMedia ul span {
-        /* display: none; */
-    }
 
     .about-txtimg-socialMedia ul {
         grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -120,15 +117,6 @@
 
     .about-txtimg-image-img {
         height: auto;
-    }
-
-    .cube-container,
-    .image-buttons {
-        display: none;
-    }
-
-    .imagenEric {
-        display: block;
     }
 
     .imageCube {
