@@ -107,7 +107,7 @@
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-    border: 2px #a285d1;
+    border: 2px solid #a285d1;
 }
 
 .contact-form textarea {
