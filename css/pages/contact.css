@@ -40,10 +40,6 @@
     flex-direction: column;
 }
 
-.contact-details-social {
-    width: 100%;
-    gap: 30px;
-}
 
 .social-media-box a {
     text-decoration: none;
