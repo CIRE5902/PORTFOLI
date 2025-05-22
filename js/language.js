@@ -41,10 +41,10 @@ const translations = {
     },
     contact: {
       contactTitle: "CONTACTAME",
-      callTitle: "Llámame",
-      ubicationTitle: "Donde estoy?",
-      sendTitle: "Envíame un email",
-      resposiveTitle: "Soy muy receptivo a los mensajes",
+      // callTitle: "Llámame",
+      // ubicationTitle: "Donde estoy?",
+      // sendTitle: "Envíame un email",
+      // resposiveTitle: "Soy muy receptivo a los mensajes",
       sendMessage: "Enviar mensaje"
     }
   },
@@ -90,10 +90,10 @@ const translations = {
     },
     contact: {
       contactTitle: "CONTACT ME",
-      callTitle: "Call me",
-      ubicationTitle: "Where I am?",
-      sendTitle: "Send me an email",
-      resposiveTitle: "I'm very resposive to messages",
+      // callTitle: "Call me",
+      // ubicationTitle: "Where I am?",
+      // sendTitle: "Send me an email",
+      // resposiveTitle: "I'm very resposive to messages",
       sendMessage: "Send message"
     }
   },
@@ -139,10 +139,10 @@ const translations = {
     },
     contact: {
       contactTitle: "CONTACTA'M",
-      callTitle: "Truca'm",
-      ubicationTitle: "On sóc?",
-      sendTitle: "Envia'm un email",
-      resposiveTitle: "Sóc molt receptiu als missatges",
+      // callTitle: "Truca'm",
+      // ubicationTitle: "On sóc?",
+      // sendTitle: "Envia'm un email",
+      // resposiveTitle: "Sóc molt receptiu als missatges",
       sendMessage: "Enviar missatge"
     }
   }
