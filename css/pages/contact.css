@@ -105,9 +105,9 @@
     transition: all 0.3s ease;
 }
 
-.contact-form input:focus,
-.contact-form textarea:focus {
-  border: 2px solid #a285d1 !important;
+.contact-form input,
+.contact-form textarea {
+  border: 2px solid #a285d1;
 }
 
 .contact-form textarea {
