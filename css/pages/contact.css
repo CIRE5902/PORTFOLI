@@ -33,12 +33,12 @@
     /* border: 10px solid blue; */
 }
 
-.contact-details {
+/* .contact-details {
     width: 100%;
     margin-top: 50px;
     display: flex;
     flex-direction: column;
-}
+} */
 
 
 .social-media-box a {
@@ -57,6 +57,7 @@
     flex-direction: row;
     gap: 25px;
     width: 100%;
+    margin-top: 50px;
 }
 
 /* .contact-details-social-firstGroup,
