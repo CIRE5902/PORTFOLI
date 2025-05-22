@@ -1,6 +1,11 @@
-h1{
+h1 {
     font-size: 45px;
     font-weight: 700;
     letter-spacing: -0.5px;
     line-height: 1.2;
+}
+
+h1:hover {
+    background-color: #a285d1;
+    box-shadow: 0 0 10px #a285d1, 0 0 40px #a285d1, 0 0 80px #a285d1;
 }
