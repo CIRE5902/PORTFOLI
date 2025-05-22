@@ -16,7 +16,14 @@
   border-radius: 50%;
 }
 
-.social-icon {
+.socialIcon {
+  width: 50px;
+  height: 50px;
+  transition: transform 0.3s ease;
+  fill: var(--text-primary);
+}
+
+.contactIcon {
   width: 50px;
   height: 50px;
   transition: transform 0.3s ease;
@@ -40,12 +47,12 @@
 }
 
 /* Hover de íconos sociales */
-.social-icon.linkedin:hover,
-.social-icon.mail:hover,
-.social-icon.github:hover,
-.social-icon.figma:hover,
-.social-icon.instagram:hover,
-.social-icon.codepen:hover {
+.socialIcon.linkedin:hover,
+.socialIcon.mail:hover,
+.socialIcon.github:hover,
+.socialIcon.figma:hover,
+.socialIcon.instagram:hover,
+.socialIcon.codepen:hover {
   color: #a285d1;
   fill: #a285d1;
   filter: drop-shadow(0 0 6px #a285d1);
@@ -68,6 +75,6 @@
   height: 32px;
 }
 
-.btn-send:hover .social-icon {
+.btn-send:hover .socialIcon {
   transform: translateX(5px);
 }
