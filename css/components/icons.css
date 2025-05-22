@@ -63,6 +63,11 @@
   height: 30px;
 }
 
+.iconoDefault {
+  width: 24px;
+  height: 24px;
+}
+
 .btn-send:hover .social-icon {
   transform: translateX(5px);
 }

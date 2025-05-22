@@ -131,6 +131,15 @@
 
 /* ========== 11. Contenido Principal (boxes, secciones, etc.) ========== */
 
+.mainSlogan{
+  color: #a285d1;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+}
+
 .content-profile-riddle {
   display: grid;
   grid-template-columns: 0.6fr 1fr;

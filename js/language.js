@@ -23,6 +23,7 @@ const translations = {
       experienceTitle: "Experiencia",
       studiesTitle: "Estudios",
       projectsTitle: "Proyectos",
+      mainSlogan: "...sin tiempo para rendirse",
       stackTitle: "Stack"
     }, about: {
       aboutTitle: "SOBRE MÍ",
@@ -71,6 +72,7 @@ const translations = {
       experienceTitle: "Experience",
       studiesTitle: "Studies",
       projectsTitle: "Projects",
+      mainSlogan: "...no time to give up",
       stackTitle: "Stack"
     }, about: {
       aboutTitle: "ABOUT ME",
@@ -119,6 +121,7 @@ const translations = {
       experienceTitle: "Experiència",
       studiesTitle: "Estudis",
       projectsTitle: "Projectes",
+      mainSlogan: "...sense temps per rendir-se",
       stackTitle: "Stack"
     }, about: {
       aboutTitle: "SOBRE MI",

@@ -1,0 +1,22 @@
+@import '../base/base.css';
+@import '../base/reset.css';
+@import '../base/typography.css';
+@import '../components/buttons.css';
+@import '../components/icons.css';
+@import '../components/cards.css';
+@import '../layout/layout.css';
+@import '../utilities/helpers.css';
+@import '../utilities/variables.css';
+
+.contact-title {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.image{
+    width: 100%;
+    height: calc(100vh - 180px);
+}
+
