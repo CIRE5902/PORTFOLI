@@ -150,7 +150,7 @@
         transform 0.3s ease;
 }
 
-.social-media-box:hover {
+.social-media-box a:hover {
     /* Aquí van los cambios de estilo al hacer hover */
     fill: #a285d1;
     color: #a285d1;
