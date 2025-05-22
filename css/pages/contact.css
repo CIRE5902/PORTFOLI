@@ -50,6 +50,8 @@
     color: inherit;
     display: flex;
     flex-direction: row;
+    align-items: center;
+    gap: 10px;
 }
 
 .contact-details-othersocial {
