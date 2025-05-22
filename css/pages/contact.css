@@ -162,4 +162,5 @@
     background-color: var(--cards);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     transform: scale(1.05);
+    box-shadow: 0 0 10px #a285d1, 0 0 40px #a285d1, 0 0 80px #a285d1;
 }
