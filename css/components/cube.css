@@ -91,7 +91,7 @@
 .image-buttons input {
     width: 45px;
     height: 45px;
-    border: 2px solid var(--text-primary);;
+    border: 2px solid var(--text-primary);
 }
 
 .image-buttons input:focus {
