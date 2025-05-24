@@ -9,8 +9,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
-<body>
-    <!-- Idioma -->
+<body data-page="home">
     <header class="top-bar">
         <div class="icon-wrapper" data-tooltip="Idioma">
             <div class="language-selector" id="languageSelector">
@@ -48,18 +47,18 @@
             <li class="nav-item">
                 <a href="#" class="nav-link">
                     <img src="images/avatar.png" alt="Inicio Icon" class="nav-icon">
-                    <span class="link-text" id="menu-home">Home</span>
+                    <span class="link-text" id="menuHome">Home</span>
                 </a>
             </li>
 
             <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="/pages/about.html" class="nav-link">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24px"
                         height="24px">
                         <circle cx="12" cy="8" r="4" />
                         <path d="M12 12c-3.31 0-6 2.69-6 6v2h12v-2c0-3.31-2.69-6-6-6z" />
                     </svg>
-                    <span class="link-text" id="menu-about">About</span>
+                    <span class="link-text" id="menuAbout">About</span>
                 </a>
             </li>
 
@@ -71,7 +70,7 @@
                         <path
                             d="M8.59 16.34L3.25 12l5.34-4.34L7.16 6 0 12l7.16 6 1.43-1.66zm7.82-8.68L20.75 12l-5.34 4.34 1.43 1.66L24 12l-7.16-6-1.43 1.66zm-6.69 14.12L11.93 2h-1.95l-2.19 19.78h1.95z" />
                     </svg>
-                    <span class="link-text" id="menu-projects">Projects</span>
+                    <span class="link-text" id="menuProjects">Projects</span>
                 </a>
             </li>
 
@@ -97,18 +96,18 @@
                         <path
                             d="M12 2L2 7l10 5 10-5-10-5zm0 18v-6l-8-4v4l8 4zm8-4v-4l-8 4v6l8-4zm-16-.35l8 4.36 8-4.36v.84l-8 4.36-8-4.36v-.84z" />
                     </svg>
-                    <span class="link-text" id="menu-stack">Stack</span>
+                    <span class="link-text" id="menuStack">Stack</span>
                 </a>
             </li>
 
             <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="/pages/contact.html" class="nav-link">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24px"
                         height="24px">
                         <path
                             d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-2 8H6v-2h12v2zm-3 4H6v-2h9v2zm3-8H6V6h12v2z" />
                     </svg>
-                    <span class="link-text" id="menu-contact">Contact</span>
+                    <span class="link-text" id="menuContact">Contact</span>
                 </a>
             </li>
 
@@ -128,9 +127,12 @@
         <div class="content-profile-riddle">
             <div class="content-profile">
                 <img src="images/avatar.png" class="main-avatar" alt="Avatar">
-                <h1 id="main-title">Hi, its <span class="animate-title">Éric</span></h1>
-                <h2 id="main-description">I'm a <span class="animate-description">Web Developer</span></h2>
-
+                <h1 id="mainTitle">Hi, its <span class="animate-title">Éric</span></h1>
+                <h2 id="mainDescription">I'm a <span class="animate-description">Web Developer</span></h2>
+                <div class="mainSlogan">
+                    <p id="mainSlogan">...sin tiempo para rendirse</p>
+                    <p>&#9889; &#9996;</p>
+                </div>
                 <a class="btn btn-resume" href="otros/CV_ERIC_PEREZ_VERA.pdf" target="_blank" download>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-file-earmark-text"
                         viewBox="0 0 16 16">
@@ -138,7 +140,7 @@
                         <path
                             d="M12 4.5L8.5 1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5zM6 9.5h4a.5.5 0 0 1 0 1H6a.5.5 0 0 1 0-1zm0-3h4a.5.5 0 0 1 0 1H6a.5.5 0 0 1 0-1zm0 6h2a.5.5 0 0 1 0 1H6a.5.5 0 0 1 0-1z" />
                     </svg>
-                    <p id="btn-cv">Resume</p>
+                    <p id="btnCV">Resume</p>
                     <i class="fa fa-hand-pointer interaction-icon"></i>
                 </a>
 
@@ -147,32 +149,33 @@
                         <path fill-rule="evenodd"
                             d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
                     </svg>
-                    <p id="btn-available">Available</p>
+                    <p id="btnAvailable">Available</p>
                     <i class="fa fa-hand-pointer interaction-icon"></i>
                 </div>
 
                 <div class="social-links">
                     <a href="https://www.linkedin.com/in/ericperezvera" target="_blank" aria-label="LinkedIn">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="social-icon linkedin" viewBox="0 0 448 512">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="socialIcon linkedin" viewBox="0 0 448 512">
                             <path
                                 d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" />
                         </svg>
                     </a>
                     <a href="mailto:ericperezvera02@gmail.com" target="_blank" aria-label="Email">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="social-icon mail" viewBox="0 0 512 512">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="socialIcon mail" viewBox="0 0 512 512">
                             <path
                                 d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z" />
                         </svg>
 
                     </a>
                     <a href="https://github.com/CIRE5902" target="_blank" aria-label="GitHub">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="social-icon github" viewBox="0 0 496 512">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="socialIcon github" viewBox="0 0 496 512">
                             <path
                                 d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
                         </svg>
                     </a>
                     <a href="https://www.figma.com/@d5318559_4aaa_4" target="_blank" aria-label="Figma">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="social-icon figma" viewBox="0 0 384 512">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="social-icon figma"
+                            viewBox="0 0 384 512">
                             <path
                                 d="M14 95.8C14 42.9 56.9 0 109.8 0H274.2C327.1 0 370 42.9 370 95.8C370 129.3 352.8 158.8 326.7 175.9C352.8 193 370 222.5 370 256C370 308.9 327.1 351.8 274.2 351.8H272.1C247.3 351.8 224.7 342.4 207.7 326.9V415.2C207.7 468.8 163.7 512 110.3 512C57.5 512 14 469.2 14 416.2C14 382.7 31.2 353.2 57.2 336.1C31.2 319 14 289.5 14 256C14 222.5 31.2 193 57.2 175.9C31.2 158.8 14 129.3 14 95.8zM176.3 191.6H109.8C74.2 191.6 45.4 220.4 45.4 256C45.4 291.4 74 320.2 109.4 320.4C109.5 320.4 109.7 320.4 109.8 320.4H176.3V191.6zM207.7 256C207.7 291.6 236.5 320.4 272.1 320.4H274.2C309.7 320.4 338.6 291.6 338.6 256C338.6 220.4 309.7 191.6 274.2 191.6H272.1C236.5 191.6 207.7 220.4 207.7 256zM109.8 351.8C109.7 351.8 109.5 351.8 109.4 351.8C74 352 45.4 380.8 45.4 416.2C45.4 451.7 74.6 480.6 110.3 480.6C146.6 480.6 176.3 451.2 176.3 415.2V351.8H109.8zM109.8 31.4C74.2 31.4 45.4 60.2 45.4 95.8C45.4 131.4 74.2 160.2 109.8 160.2H176.3V31.4H109.8zM207.7 160.2H274.2C309.7 160.2 338.6 131.4 338.6 95.8C338.6 60.2 309.7 31.4 274.2 31.4H207.7V160.2z" />
                         </svg>
@@ -227,7 +230,7 @@
         </div>
         <div>
             <div class="box-experience-education">
-                <section class="box-experience">
+                <section class="box-experience box-card">
                     <div class="box-title">
                         <!-- <i class="profile-details-icon fas fa-briefcase"></i> -->
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24px"
@@ -235,7 +238,7 @@
                             <path
                                 d="M20 6h-4V4c0-1.1-.9-2-2-2h-4c-1.1 0-2 .9-2 2v2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-6 0h-4V4h4v2zm6 14H4V8h16v12zm-4-9H8v2h8v-2z" />
                         </svg>
-                        <h3 id="experience-title">Experience</h3>
+                        <h3 id="experienceTitle">Experience</h3>
                     </div>
                     <div class="box-experience-items">
                         <div class="box-item">
@@ -271,7 +274,7 @@
                     </div>
                 </section>
 
-                <section class="box-education">
+                <section class="box-education box-card">
                     <div class="box-title">
                         <!-- <i class="fa-solid fa-graduation-cap"></i> -->
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24px"
@@ -279,7 +282,7 @@
                             <path
                                 d="M12 2L1 9l11 7 9.84-6.27c.09-.16.16-.34.16-.53s-.07-.37-.16-.53L12 2zm7.75 7.43L12 13.76 4.25 9.43 12 5.24l7.75 4.19zM19 10.92v3.66c0 1.44-2.89 2.61-7 2.61-4.11 0-7-1.17-7-2.61v-3.66L2 11v3.66C2 17.54 6.48 19 12 19s10-1.46 10-4.34V11l-3 1.92z" />
                         </svg>
-                        <h3 id="studies-title">Education</h3>
+                        <h3 id="studiesTitle">Education</h3>
                     </div>
                     <div class="box-education-items">
                         <div class="box-item">
@@ -319,7 +322,7 @@
             </div>
 
             <div class="box-projects">
-                <div class="box-project">
+                <div class="box-project box-card">
                     <div class="box-title">
                         <!-- <i class="fas fa-laptop-code"></i> -->
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24px"
@@ -327,7 +330,7 @@
                             <path
                                 d="M8.59 16.34L3.25 12l5.34-4.34L7.16 6 0 12l7.16 6 1.43-1.66zm7.82-8.68L20.75 12l-5.34 4.34 1.43 1.66L24 12l-7.16-6-1.43 1.66zm-6.69 14.12L11.93 2h-1.95l-2.19 19.78h1.95z" />
                         </svg>
-                        <h3 id="projects-title">Projects</h3>
+                        <h3 id="projectsTitle">Projects</h3>
                     </div>
                     <div class="box-image">
                         <img src="images/comingsoon.png" alt="Projects">
@@ -335,7 +338,7 @@
                 </div>
 
                 <div class="box-media">
-                    <div class="box-spotify">
+                    <div class="box-spotify box-card">
                         <iframe style="border-radius:12px"
                             src="https://open.spotify.com/embed/track/0RIxcgcVWvMqUN27uHk05T?utm_source=generator&theme=0"
                             width="100%" height="80" frameborder="0"
@@ -343,7 +346,7 @@
                             loading="lazy"></iframe>
                     </div>
 
-                    <div class="box-books">
+                    <div class="box-books box-card">
                         <div class="carousel-container">
                             <div class="carousel-track">
                                 <a href="https://www.goodreads.com/book/show/17281807-mazinger-z-1-de-3?from_search=true&from_srp=true&qid=w7Ozo9QPF4&rank=1"
@@ -382,7 +385,7 @@
                     </div>
                 </div>
 
-                <div class="box-tech">
+                <div class="box-tech box-card">
                     <div class="box-title">
                         <!-- <i class="fas fa-layer-group"></i> -->
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24px"
@@ -390,7 +393,7 @@
                             <path
                                 d="M12 2L2 7l10 5 10-5-10-5zm0 18v-6l-8-4v4l8 4zm8-4v-4l-8 4v6l8-4zm-16-.35l8 4.36 8-4.36v.84l-8 4.36-8-4.36v-.84z" />
                         </svg>
-                        <h3 id="stack-title">Stack</h3>
+                        <h3 id="stackTitle">Stack</h3>
                     </div>
                     <div class="box-tech-categorys">
 
