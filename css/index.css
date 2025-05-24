@@ -189,11 +189,13 @@
   scrollbar-width: thin;
 } */
 
-.box-experience-items, .box-education-items{
+.box-experience-items,
+.box-education-items {
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
   scrollbar-color: #a285d1;
-  scrollbar-width: thin;}
+  scrollbar-width: thin;
+}
 
 
 /* .box-experience, */
@@ -502,7 +504,7 @@
 }
 
 @media (max-width: 1450px) {
-.content-riddle{
-  display: none;
-}
+  .content-riddle {
+    display: none;
+  }
 }
