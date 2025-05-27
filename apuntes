@@ -3,3 +3,72 @@ https://israelherrera.dev/
 https://www.me.toinfinite.dev/
 https://www.anish7.me/contact
 https://www.anish7.me/about
+
+
+----------------------------------
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Stack Item</title>
+  <style>
+    .stack-card {
+      max-width: 150px;
+      width: 100%;
+      background: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      position: relative;
+      text-align: center;
+      font-family: sans-serif;
+    }
+
+    .stack-icons {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      display: flex;
+      gap: 6px;
+    }
+
+    .stack-icons a,
+    .stack-icons span {
+      font-size: 14px;
+      color: #888;
+      text-decoration: none;
+    }
+
+    .stack-image {
+      width: 50px;
+      height: 50px;
+      object-fit: contain;
+    }
+
+    .stack-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: #333;
+      margin-top: 6px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 🧱 Stack Card Ejemplo -->
+  <div class="stack-card">
+    <div class="stack-icons">
+      <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" title="Ver más">🔗</a>
+      <span title="Destacado">⭐</span>
+    </div>
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" class="stack-image">
+    <div class="stack-title">JavaScript</div>
+  </div>
+
+</body>
+</html>
+-----------------------------
