@@ -6,6 +6,7 @@
     --bg-secondary: #F5F5F5;
     --cards: #F7F7F7;
     --transition-speed: 600ms;
+    --muted: 240 5% 20%;
   }
   
   .dark {
@@ -25,28 +26,9 @@
   }
   
   .eric {
-    --text-primary: #151515; /* Texto oscuro para buen contraste */
-    --text-secondary: #404040; /* Texto secundario gris claro */
-    --bg-primary: #D1C6E0; /* Lila suave claro para fondo principal */
-    --bg-secondary: #B59ED2; /* Lila oscuro para secciones secundarias */
-    --cards: #F7F7F7; /* Fondo blanco para las tarjetas */
+    --text-primary: #151515;
+    --text-secondary: #404040;
+    --bg-primary: #D1C6E0; 
+    --bg-secondary: #B59ED2; 
+    --cards: #F7F7F7; 
   }
-
-  
-
-.theme-icon {
-    display: none;
-  }
-  
-  .dark #darkIcon {
-    display: block;
-  }
-  
-  .light #lightIcon {
-    display: block;
-  }
-  
-  .eric #ericIcon {
-    display: block;
-  }
-  

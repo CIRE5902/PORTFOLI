@@ -1,3 +1,19 @@
+.theme-icon {
+  display: none;
+}
+
+.dark #darkIcon {
+  display: block;
+}
+
+.light #lightIcon {
+  display: block;
+}
+
+.eric #ericIcon {
+  display: block;
+}
+
 .nav-icon,
 .theme-icon {
   width: 30px;

@@ -58,9 +58,10 @@
 
 .about-txtimg-socialMedia ul {
     padding: 15px;
-}
 
-.about-txtimg-socialMedia ul {
+    width: auto;
+    height: auto;
+    
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     list-style: none;
@@ -146,6 +147,6 @@
 @media screen and (min-width: 1250px) {
     .about-txtimg-socialMedia ul {
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 15px 50px;
+        gap: 15px 75px;
     }
 }
