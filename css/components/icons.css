@@ -78,3 +78,8 @@
 .btn-send:hover .socialIcon {
   transform: translateX(5px);
 }
+
+.iconoStack{
+font-size: 20px;
+  color: #a285d1;
+}
