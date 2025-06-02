@@ -131,7 +131,11 @@
 
 /* ========== 11. Contenido Principal (boxes, secciones, etc.) ========== */
 
-.mainSlogan{
+.mainTitle {
+  width: auto;
+}
+
+.mainSlogan {
   color: #a285d1;
   font-weight: bold;
   display: flex;
@@ -174,6 +178,7 @@
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 20px;
 }
+
 /* .box-github{
   margin-top: 20px;
   display: grid;

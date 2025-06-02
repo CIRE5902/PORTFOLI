@@ -79,7 +79,7 @@
   transform: translateX(5px);
 }
 
-.iconoStack{
-font-size: 20px;
+.stack-icons span{
+  font-size: 20px;
   color: #a285d1;
 }
