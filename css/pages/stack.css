@@ -55,3 +55,16 @@
 .stack-category-subcategory {
     padding: 10px 0 0 10px;
 }
+
+
+@media (min-width: 950px) {
+
+    .stack-category-items,
+    .stack-category-subcategory-items {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+
+    .stack-category-title span {
+        font-size: 24px;
+    }
+}
