@@ -21,7 +21,7 @@
 .stack {
     width: 100%;
     gap: 30px;
-    margin-top: 100px;
+    margin-top: 30px;
     display: grid;
     grid-template-columns: 1fr;
 }
@@ -34,14 +34,14 @@
     gap: 20px;
 }
 
-.stack-category-title{
+.stack-category-title {
     display: flex;
     flex-direction: row;
     gap: 10px;
 }
 
-.stack-category-title span{
-font-size: 16px;
+.stack-category-title span {
+    font-size: 16px;
 }
 
 .stack-category-items,
@@ -55,4 +55,3 @@ font-size: 16px;
 .stack-category-subcategory {
     padding: 10px 0 0 10px;
 }
-

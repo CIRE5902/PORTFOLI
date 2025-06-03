@@ -46,6 +46,19 @@ const translations = {
       // sendTitle: "Envíame un email",
       // resposiveTitle: "Soy muy receptivo a los mensajes",
       sendMessage: "Enviar mensaje"
+    },
+    stack: {
+      titleDevelop: "Desarrollo",
+      titleLanguages: "Lenguajes",
+      titleFrameworks: "Frameworks y Librerías",
+      titleTools: "Herramientas",
+      titleDatabases: "Bases de Datos",
+      titleSystems: "Sistemas e Infraestructura",
+      titleOs: "Sistemas Operativos",
+      titleWs: "Servicios Web",
+      titleTools2: "Herramientas",
+      titleHelp: "Ayuda",
+      titleWr: "Recursos Web",
     }
   },
   en: {
@@ -95,6 +108,19 @@ const translations = {
       // sendTitle: "Send me an email",
       // resposiveTitle: "I'm very resposive to messages",
       sendMessage: "Send message"
+    },
+    stack: {
+      titleDevelop: "Develop",
+      titleLanguages: "Languages",
+      titleFrameworks: "Frameworks and Libraries",
+      titleTools: "Tools",
+      titleDatabases: "Databases",
+      titleSystems: "Systems & Infrastructure",
+      titleOs: "Operating Systems",
+      titleWs: "Web Services",
+      titleTools2: "Tools",
+      titleHelp: "Help",
+      titleWr: "Web Resources",
     }
   },
   ca: {
@@ -144,6 +170,19 @@ const translations = {
       // sendTitle: "Envia'm un email",
       // resposiveTitle: "Sóc molt receptiu als missatges",
       sendMessage: "Enviar missatge"
+    },
+    stack: {
+      titleDevelop: "Desenvolupament",
+      titleLanguages: "Llenguatges",
+      titleFrameworks: "Frameworks i Llibreries",
+      titleTools: "Eines",
+      titleDatabases: "Bases de Dades",
+      titleSystems: "Sistemes i Infraestructura",
+      titleOs: "Sistemes Operatius",
+      titleWs: "Serveis Web",
+      titleTools2: "Eines",
+      titleHelp: "Ajuda",
+      titleWr: "Recursos Web",
     }
   }
 };
