@@ -35,7 +35,8 @@
 }
 
 /* Botón de resume */
-.btn-resume {
+.btn-resume,
+.btn-project {
   /* background-color: #a285d1; */
   text-decoration: none;
   transition: 0.4s ease;
@@ -61,7 +62,8 @@
 }
 
 
-.btn-resume:hover {
+.btn-resume:hover,
+.btn-project:hover {
   background-color: #a285d1;
   color: #ffffff;
   fill: #ffffff;
@@ -69,7 +71,9 @@
 }
 
 .btn-resume:hover::before,
-.btn-resume:hover::after {
+.btn-resume:hover::after,
+.btn-project:hover::before,
+.btn-project:hover::after {
   border-color: transparent;
 }
 
@@ -114,23 +118,17 @@
   fill: #6AAA3B;
 }
 
-/* Animación de vuelo del icono */
-@keyframes flyaway {
-  0% {
-    transform: rotate(10deg);
-    top: auto;
-    right: 25px;
-    height: 24px;
-    opacity: 1;
-  }
-
-  40% {
-    transform: translate(50px, -50px) rotate(-20deg);
-  }
-
-  100% {
-    transform: translate(300px, -200px) rotate(60deg);
-    opacity: 0;
-    height: 0;
-  }
+.btn-project {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: #000;
+  padding: 0.75rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s;
+  width: 80%;
+  padding: 10px;
+  align-self: center;
 }

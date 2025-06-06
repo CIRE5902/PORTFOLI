@@ -8,7 +8,6 @@
 @import '../utilities/helpers.css';
 @import '../utilities/variables.css';
 @import '../components/buttonSend.css';
-/* @import '../components/buttonFollow.css'; */
 
 .contact-title {
     width: 100%;
