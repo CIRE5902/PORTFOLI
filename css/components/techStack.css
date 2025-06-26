@@ -6,19 +6,9 @@
 }
 
 .stack-image {
-    width: 32px;
-    height: 32px;
+    width: 52px;
+    height: 52px;
     object-fit: contain;
-
-    filter: saturate(1.5) contrast(1.2);
-}
-
-.stack-setup{
-    max-width: 750px;
-    width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
 }
 
 .stack-title {
@@ -44,8 +34,6 @@
 .stack-card:hover .stack-title {
     visibility: visible;
     opacity: 1;
-
-    transform: scale(1.05) rotate(-1deg);
 }
 
 .stack-card {
@@ -54,8 +42,8 @@
     /* Sombra ligera para profundidad */
     background: #f5f5f5;
     /* Blanco para el interior de la tarjeta */
-    width: 65px;
-    height: 65px;
+    width: 75px;
+    height: 75px;
     border-radius: 15px;
     display: flex;
     flex-direction: column;
@@ -63,14 +51,7 @@
     justify-content: center;
     transition: box-shadow 0.3s ease;
     padding: 10px;
-
-    border: 3px solid black;
-    border-radius: 10px;
-    box-shadow: 6px 6px 0 #000;
-    background-color: #fff;
-    background-image: radial-gradient(#000 1px, transparent 1px);
-    background-size: 6px 6px;
-    background-position: 0 0;}
+}
 
 .stack-title {
     font-size: 14px;
@@ -87,4 +68,13 @@
         width: 64px;
         height: 64px;
     }
+}
+
+/* Individual cards + hover */
+.stack-card {
+    box-shadow: inset 0 0 20px #a285d1;
+}
+
+.stack-card:hover {
+    box-shadow: inset 0 0 30px #a285d1;
 }
