@@ -4,6 +4,8 @@
     <script defer src="js/theme.js"></script>
     <script defer src="js/language.js"></script>
     <script defer src="js/riddle.js"></script>
+    <script src="https://www.goat1000.com/tagcanvas.min.js"></script>
+    <script src="js/globe.js" defer></script>
     <link rel="stylesheet" href="css/index.css" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap" rel="stylesheet" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -323,7 +325,7 @@
 
             <div class="box-projects">
                 <div class="box-project box-card">
-                    <div class="box-title">
+                    <div class="box-title box-title-project">
                         <!-- <i class="fas fa-laptop-code"></i> -->
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24px"
                             height="24px">
@@ -386,7 +388,7 @@
                 </div>
 
                 <div class="box-tech box-card">
-                    <div class="box-title">
+                    <div class="box-title box-title-tech">
                         <!-- <i class="fas fa-layer-group"></i> -->
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24px"
                             height="24px">
@@ -396,12 +398,37 @@
                         <h3 id="stackTitle">Stack</h3>
                     </div>
                     <div class="box-tech-categorys">
+                        <div class="globe-section" onclick="location.href='pages/stack.html'">
+                            <canvas id="tagCanvas"></canvas>
 
-                        <img src="images/stack.png" alt="stack">
-                        <div class="middle">
-                            <div class="view-overlay">View Stack</div>
+                            <!-- Lista oculta de logos -->
+                            <div id="tags" style="display: none;">
+                                <ul>
+                                    <li><a href="#"><img src="icons/html.svg" alt="HTML" class="tech-icons" width="20"
+                                                height="20" /></a></li>
+                                    <li><a href="#"><img src="icons/css.svg" alt="CSS" class="tech-icons" width="20"
+                                                height="20" /></a></li>
+                                    <li><a href="#"><img src="icons/javascript.svg" alt="JS" class="tech-icons"
+                                                width="20" height="20" /></a></li>
+                                    <li><a href="#"><img src="icons/react.svg" alt="React" class="tech-icons" width="20"
+                                                height="20" /></a></li>
+                                    <li><a href="#"><img src="icons/java.svg" alt="Java" class="tech-icons" width="20"
+                                                height="20" /></a></li>
+                                    <li><a href="#"><img src="icons/laravel.svg" alt="Laravel" class="tech-icons"
+                                                width="20" height="20" /></a></li>
+                                    <li><a href="#"><img src="icons/vue.svg" alt="Vue" class="tech-icons" width="20"
+                                                height="20" /></a></li>
+                                    <li><a href="#"><img src="icons/php.svg" alt="Php" class="tech-icons" width="20"
+                                                height="20" /></a></li>
+                                    <li><a href="#"><img src="icons/sql.svg" alt="Sql" class="tech-icons" width="20"
+                                                height="20" /></a></li>
+                                    <li><a href="#"><img src="icons/git.svg" alt="Git" class="tech-icons" width="20"
+                                                height="20" /></a></li>
+                                    <li><a href="#"><img src="icons/linux.svg" alt="Linux" class="tech-icons" width="20"
+                                                height="20" /></a></li>
+                                </ul>
+                            </div>
                         </div>
-
                     </div>
 
                 </div>
@@ -428,5 +455,4 @@
             </div> -->
 
     </main>
-
 </body>
