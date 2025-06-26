@@ -8,6 +8,7 @@ const translations = {
       menuContact: "Contacto",
       menuStack: "Stack",
       menuMenu: "MENÚ",
+      menuTheme: "Tema",
     },
     home: {
       thirdStudies: "TÉCNICO SUPERIOR EN DESARROLLO DE APLICACIONES WEB",
@@ -70,6 +71,7 @@ const translations = {
       menuContact: "Contact",
       menuStack: "Stack",
       menuMenu: "MAIN",
+      menuTheme: "Theme",
     },
     home: {
       thirdStudies: "HIGHER TECHNICIAN IN WEB APPLICATION DEVELOPMENT",
@@ -132,6 +134,7 @@ const translations = {
       menuContact: "Contacte",
       menuStack: "Stack",
       menuMenu: "MENÚ",
+      menuTheme: "Tema",
     },
     home: {
       thirdStudies: "TÈCNIC SUPERIOR EN DESENVOLUPAMENT D'APLICACIONS WEB",
